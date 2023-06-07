@@ -52,3 +52,109 @@ description: Weekly Schedule for OPS445 Course
 | | - Variables and parameters | |
 | | - Fruitful functions and void functions | |
 | | **Automate with Python: Chapter 3 & 4:** Functions, Lists | |
+
+## Week 4
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Basic Data Structures and String Manipulation:** | **Think Python: Chapter 5 Conditionals and recursion** | [Lab 4: Basic Data Structure & String Manipulation](/A-Labs/lab4.md) |
+| - Integers | - Boolean expression | |
+| - Strings | - Logical operators | |
+| - Tuples | - Conditional execution | |
+| - Lists | - Alternative execution | |
+| - Dictionaries | - Chained conditionals | |
+| - Sets | - Nested conditionals | |
+| | - Recursion | |
+| | - Infinite recursion | |
+| | - Keyboard Input | |
+| | **Automate with Python: Chapter 5 & 6:** Dictionaries and structuring data, Manipulating Strings | |
+
+## Week 5
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Files, Exceptions:** | **Think Python: Chapter 14 - Files** | [Lab 5: Files & Error Handling](/A-Labs/lab5.md) |
+| - File Handling | - Reading and writing | |
+| - Error Handling | - Format operator | |
+| - Builtin error types | - Filenames and paths | |
+| | - Catching exception | |
+| | - Databases | |
+| | - Picking | |
+| | - Pipes | |
+| | - Writing modules | |
+| | **Automate with Python: Chapter 9 & 10:** Reading and Writing Files, Organizing Files | |
+
+## Week 6
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Review and Catch-up** | | |
+
+## Week 7
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Mid-Term Test** | | [Assignment 1](/B-Assignments/assignment1.md) |
+| - Topics: Lab 1 to Lab 5 and All topics covered from week 1 to week 5 | | |
+
+## Week 8
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Classes:** | **Think Python: Chapter 15 - Classes and objects** | [Lab 6: Writing Python Classes](/A-Labs/lab6.md) |
+| - Components of a class | - Programmer-defined types | |
+| - Classes and objects | - Attributes | |
+| | - Instances and return values | |
+| | - Objects are mutable | |
+| | - Copying | |
+| | **Automate with Python: Chapter 16 - Classes and functions** | |
+| | - Pure functions | |
+| | - Modifiers | |
+| | - Prototyping versus planning | |
+
+## Week 9
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Classes:** | **Think Python: Chapter 17 - Classes and methods** | [Lab 7: Classes, Objects & scope](/A-Labs/lab7.md) |
+| - Designing classes | - The \_\_init\_\_ method | |
+| - Understanding scope | - The \_\_str\_\_ method | |
+| | - The \_\_repr\_\_ method | |
+| | - Operator overloading | |
+| | - Type-based dispatch | |
+| | - Polymorphism | |
+
+## Week 10
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Configuration management:** | | [Lab 8: Configuration management](/A-Labs/lab8.md) |
+| - Fabric | | |
+
+## Week 11
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Python Networking** | | [Lab 9: Ansible](/A-Labs/lab9.md) |
+| - Ansible | | |
+| - Network Client | | |
+| - Network Server | | |
+| Asynchronous Python Networking | | |
+
+## Week 12
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Complete Assignment 2** | | [Assignment 2](/B-Assignments/assignment2.md) |
+
+## Week 13
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Final Assessment Review** | | |
+
+## Week 14
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| **Final Assessment** | | |
