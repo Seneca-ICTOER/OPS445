@@ -302,7 +302,7 @@ vmlab | SUCCESS => {
 }
 ```
 
-[Click here for complete sample contents of the above](https://wiki.cdot.senecacollege.ca/wiki/OPS445_Ansible_setup)
+[Click here for complete sample contents of the above](/C-ExtraResources/ansible-setup.md)
 
 
 
