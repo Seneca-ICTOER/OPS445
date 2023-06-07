@@ -10,12 +10,12 @@ description: Landing Page for OPS445 Course
 
 ### Quick Links
 
-| Weekly Schedule (ADD LINK) | [Course Outline](https://scs.senecac.on.ca/course/ops445) |
+| [Weekly Schedule](./weekly-schedule.md) | [Course Outline](https://scs.senecac.on.ca/course/ops445) |
 | :---: | :---: |
 
 ### Assignments
 
-| Assignment 1 (ADD LINK) | Assignment 2 (ADD LINK) |
+| [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) |
 | :---: | :---: |
 
 
