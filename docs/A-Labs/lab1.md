@@ -162,13 +162,13 @@ mkdir ~/ops445/a1
 mkdir ~/ops445/a2
 ```
   
-## Investigation 2 - Python on Matrix =
+## Investigation 2 - Python on Matrix
   
 Matrix can not provide a graphical user interface, but it is a useful alterntative for Python development and testing. We will recommend that you use Matrix for **Lab 8 and 9**, once you have become familiar with the fundamentals on your virtual machine.
 
 If you connect to the VPN using your host Windows machine, you should be able to connect using your Linux virtual machine as well. If you are running natively, you should talk to your instructor for other options.
 
-### Part I - Python Versions on Matrix
+### Part 1 - Python Versions on Matrix
 
    - You can access the Python Interpreter on Matrix from a Linux machine or a Windows 10 machine.
 
@@ -200,7 +200,7 @@ If you connect to the VPN using your host Windows machine, you should be able to
      - type exit() at the "\>\>\>" prompt to exit from the Python interactive shell.
 - Compare the list of keywords and symbols for Python version 2 and version 3. Which keyword(s) is/are remove from version 2 in version 3?
 
-### Part II - git and github.com
+### Part 2 - git and github.com
 
 **Task 1: Create a Github.com account**
 
@@ -271,7 +271,7 @@ python3 sample.py test 2>/dev/null
 
 ## Investigation 3 - exploring and using Python's built-in functions
 
-### Part I - Interactive (learning) mode: using the Python Interactive Shell
+### Part 1 - Interactive (learning) mode: using the Python Interactive Shell
 
 - In this mode, you can instruct the Python Interpreter to execute python statement or python expression one at a time, call a function, or display the representation of a python data object.
 - To start the Python version 3 Interactive shell, type the command
@@ -377,7 +377,7 @@ ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__', '__debug__'
 >>> type(print)
 ```
 
-### Part II - Script (execution) mode: creating Python script
+### Part 2 - Script (execution) mode: creating Python script
 
 - In this part we will start writing our very first python script. The scripts we are going to try will be very basic and it is use to help us practice the language syntax and explore the foundational coding skills, such as:
      - sending text to the screen,
@@ -488,7 +488,7 @@ Before moving on to the next step make sure you identify any and all errors in "
 
 In Python, a data object is used to store data for use later in the program. This data can be a string, integer, decimal number, characters, etc. We will only be covering string and integer objects in this lab. You will learn and use other Python built-in data object types in future labs.
 
-### String Objects
+**String Objects**
 
 String objects contain text to be used in your program. Examples of strings could be user-names, full-names, item descriptions, etc. We will now demonstrate how to assign a string to an object and how to display contents stored in a string object.
 
@@ -548,7 +548,7 @@ python3 ./CheckLab1.py -f -v lab1b
    8. Before proceeding, make certain that you identify any and all errors in "lab1b.py". When the check script tells you everything is "ok", you may proceed to the next step.
    9. If using GitHub, repeat the steps to commit your lab1b.py file.
 
-### Integer Objects
+**Integer Objects**
 
 In Python, integer objects are used to store an integer numbers that can be used for mathematical operations (discussed in the next section). Integers do NOT contain decimals, and they can be signed (+ or -) or unsigned. Here we will store integers in a object, perform math operations, and display the results.
 
@@ -632,7 +632,7 @@ python3 ./CheckLab1.py -f -v lab1c
    11. Before moving on to the next step make sure you identify any and all errors in "lab1c.py". When the check script tells you everything is "ok", you may proceed to the next step. Add lab1c.py to the repo and commit the change.
 
 
-## Investigation 5 - exploring on how to get Python to do maths
+## Investigation 5 - exploring on how to get Python to do math
 
 In the previous section, you performed a couple of simple mathematical operations. In this section, you will learn some additional mathematical operations.
 
