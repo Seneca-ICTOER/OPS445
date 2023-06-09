@@ -25,7 +25,6 @@ Below is a table with links to useful online Python reference sites (by category
 | - [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets) | - [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) | - [String Comparisons](https://docs.python.org/3/library/string.html) | |
 | | - [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) | | |
 
-
 ## Investigation 1: Data Structures
 
 In this investigation, you will learn several data structure objects commonly used in Python scripting. These include **lists**, **tuples**, **sets**, and **dictionaries**.
@@ -105,7 +104,6 @@ t3 = t2[2:3]
 for item in t1:
     print('item: ' + item)
 ```
-
 
 ### Part 2 - Sets
 
@@ -192,13 +190,11 @@ new_list = list(temporary_set)  # '''set()''' can make lists into sets. '''list(
 print(new_list)
 ```
 
-
 **Create a Python Script Demonstrating Comparing Sets**
 
 **NOTE**
 
 If your professor is asking you to submit labs on GitHub, first follow their instructions on Blackboard to clone the lab4 repository.
-
 
 **Perform the Following Instructions**
 
@@ -269,8 +265,6 @@ python3 ./CheckLab4.py -f -v lab4a
 ```
 
   4. Before proceeding, make certain that you identify all errors in lab4a.py. When the checking script tells you everything is OK - proceed to the next step.
-
-
 
 **Create a Python Script Demonstrating Comparing Lists**
 
@@ -344,8 +338,6 @@ python3 ./CheckLab4.py -f -v lab4b
 
   4. Before proceeding, make certain that you identify all errors in lab4b.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 3 - Dictionaries
 
 In Python, a **dictionary** is a set of key-value pairs. Dictionaries are **unordered**, like sets, however any value can be retrieved from a dictionary if you know the key. This section will go over how to create, access, and change dictionaries, giving you a new powerful tool to store and manipulate data.
@@ -408,7 +400,6 @@ print(dict_york.keys())
 ```
 
    - You should notice that value for the 'Province' key has been changed back to 'ON'.
-
    - The lists that contain the values and keys of the dictionary are not real python lists - they are "views of the dictionary" and therefore are immutable. You could change these views into usable lists by using the list() function:
 
 ```python
@@ -425,7 +416,6 @@ for key in list_of_keys:
 for value in dict_york.values():
     print(value)
 ```
-
 
 **Create a Python Script for Managing Dictionaries**
 
@@ -516,13 +506,11 @@ python3 ./CheckLab4.py -f -v lab4c
 
   4. Before proceeding, make certain that you identify all errors in lab4c.py. When the checking script tells you everything is OK proceed to the next step.
 
-
 ## Investigation 2: Strings
 
 Strings are basically a list of characters (bits of text). This section will investigate strings in more detail such as **cutting strings into sub-strings**, **joining strings**, **formatting strings**, **searching through strings**, and **matching strings against patterns**.
 
 Strings are **immutable** data objects - this means that once a string is created, it cannot be modified. In order to make a change inside a string, you would first make a copy of the part of the string (i.e. sub-string) for manipulation.
-
 
 ### Part 1 - Strings and Substrings
 
@@ -649,7 +637,6 @@ print(substring)
 
   11. The real power found in substrings goes beyond just manually writing index values and getting back words. The next part of this investigation will cover how to search through a string for a specific word, letter, number, and return the index to that search result.
 
-
 **Create a Python Script Demostrating Substrings**
 
 **Perform the Following Instructions**
@@ -768,8 +755,6 @@ python3 ./CheckLab4.py -f -v lab4d
 
   4. Before proceeding, make certain that you identify all errors in lab4d.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 2 - Searching and Validating
 
 This second part will study how to look for specific character(s) in a string object and also how to verify that a given string object contains only certain type of characters.
@@ -855,7 +840,6 @@ if __name__ == '__main__':
 
 Can you create a similar python function called is_digits() to check whether a string object contains only numeric digits? Do you still remember what does the built-in function input() do? It prompts the user on the keyboard and return whatever the user typed as a string!
 
-
 **Create a Python script to validate user input**
 
 **Perform the following instructions**
@@ -914,7 +898,6 @@ python3 ./CheckLab4.py -f -v lab4e
 
   4. Before proceeding, make certain that you identify all errors in lab4e.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
 ## Lab 4 Sign-Off (Completing the lab)
 
 Capture and name the output of `python3 ./CheckLab4.py -f -v` as lab4\_\[seneca\_id\].txt.
@@ -923,7 +906,6 @@ Upload the following files individually to blackboard:
 
 - [x] `lab4_[seneca_id].txt`
 - [x] `lab4a.py, lab4b.py, lab4c.py, lab4d.py, and lab4e.py`
-
 
 ## Lab Review
 
