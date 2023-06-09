@@ -127,7 +127,6 @@ Ubuntu should have the required software (with the exception of VS Code) already
 
    - Follow the instructions to [install VS Code on Windows](https://code.visualstudio.com/download). Now you will be able to complete most tasks on Windows, and switch to a minimal Linux environment when needed.
 
-
 ### Task: Verify The Python Interpreter
 
 **A few background information about the Python programming language**
@@ -268,7 +267,6 @@ python3 sample.py 2>/dev/null
 python3 sample.py test 2>/dev/null
 ```
 
-
 ## Investigation 3 - exploring and using Python's built-in functions
 
 ### Part 1 - Interactive (learning) mode: using the Python Interactive Shell
@@ -392,7 +390,6 @@ You will learn to create a simple python script in this section. This python scr
 **Perform the following steps:**
 
    1. Create a new Python file in your ~/ops445/lab1 directory. Call it lab1a.py. The first Python code we will write is going to call the print() function. A function is code that has been defined somewhere. Functions can take arguments, use these arguments in some way, and then usually, but not always, return a result. The first function we will use is the "print()" functions, it's sole purpose is to send data to the screen.
-
    2. Add the following line into your source code file:
 
 ```python
@@ -444,7 +441,6 @@ print('Hello world')
 
    - Note that the file will need execute permissions even though you ran it just fine earlier. Why is that?
 
-
 **Submitting Your Lab Work Through GitHub**
 
 If you cloned your lab through GitHub, perform the following now:
@@ -466,7 +462,6 @@ git push
 
 Your first script is now submitted. The process for each part of the lab will be similar.
 
-
 **Submitting Your Lab Work Through Blackboard**
 
 If you did not clone your lab through GitHub, you may download the check script by following these steps:
@@ -482,7 +477,6 @@ python3 ./CheckLab1.py -f -v lab1a
 ```
  
 Before moving on to the next step make sure you identify any and all errors in "lab1a.py". When the check script tells you everything is "ok", you may proceed to the next step.
-
 
 ## Investigation 4 - exploring Python's built-in Data Objects
 
@@ -590,7 +584,6 @@ print('The sum is: ' + sum)
 ```
 
    - What happened? Did you receive an error? This may have been the first time you've seen this error, but it won't be the last. What we tried to do is combine a string with a number, and this won't work.
-
    - In order concatenate a sting and an integer object, we will have to use another builtin function called "str()" to convert an integer object to a string first. The "str()" function will return a string of your number and provide it as a argument to "print()". This function will not change the value of your object, your object is still an integer object.
 
    6. Issue the following:
@@ -690,7 +683,6 @@ python3 ./CheckLab1.py -f -v lab1d
    - Before moving on to the next step make sure you identify any and all errors in "lab1d.py".
 
    5. When the check script tells you everything is "ok", you may proceed to the next step. Add your file to the repo, and make a commit.
-
 
 ## Lab 1 Sign-Off
 
