@@ -14,12 +14,10 @@ description: Lab 8 for Students to Complete and Submit
 3. Create Fabric scripts utilizing Fabric's API and environment objects to define tasks for the **fab** command.
 4. Use the **fab** command to execute fabric script to perform pre-defined tasks on remote Linux machines.
 
-
 ### Prerequisites
 
 1. Has the user account named "student" and password for your VM with access port on myvmlab.senecacollege.ca
 2. Regular account on Matrix.senecacollege.ca
-
 
 ### Overview
 
@@ -29,7 +27,6 @@ Fabric is a Python library and command-line tool for streamlining the use of SSH
    2. a set of Python APIs that you can use and call in your Python functions to make executing shell commands over SSH much easier.
 
 We are going to use the Fabric API to define tasks and use the **fab** command to execute those tasks on one or more remote Linux machines.
-
 
 ## Reference
 
@@ -50,7 +47,6 @@ We are going to use the Fabric API to define tasks and use the **fab** command t
         - configure sudoers using the visudo command
         - using the yum command to install, remove, and update rpm packages
 
-
 ## Investigation 1: The Fabric Environment
 
 The Fabric environment consists of the following components:
@@ -65,8 +61,6 @@ The Fabric environment consists of the following components:
 
         1. running the ssh server daemon
         2. use public key (or password based) authentication for ssh connections
-
-
 
 ### Part 1 - Configure and test your controller workstation
 
@@ -171,8 +165,6 @@ Options:
 6. **--user**
 7. **--initial-sudo-password-prompt**
 
-
-
 ### Part 2: Connect to VM in myvmlab.senecacollege.ca
 
 You should have received an email from ITS containing the following information:
@@ -232,8 +224,6 @@ tmpfs                      177960       0    177960   0% /run/user/1002
   3. The three shell commands: hostname, id, and df were executed sequentially. Compare the outputs above with the previous results when executing the corresponding commands in the login shell.
   4. Please note that your VM was configured to ask for the user's password for every SSH connection attemp. We are going to change that behaviour next.
 
-
-
 ### Part 3: Set up SSH login with public key authentication
 
 In order for you to run multiple tasks on multiple remote machines without typing in the password for each connection, you need to configure your VM to accept SSH public key authentication in addtion to password authentication. You've done this in both OPS245 and OPS345, and here is a summary of how to do it between your account on matrix and your VM:
@@ -265,8 +255,6 @@ uid=1002(student) gid=1002(student) groups=1002(student),10(wheel)
 
   5. If you got similar result as shown above, you have successfully configured your controller workstation and your VM to use public key authentication.
 
-
-
 ## Investigation 2: Running the fab command in ad-hoc mode
 
 The fab command relies on SSH to make the connection to the remote machine before executing the intended commands. The fab command can run in ad-hoc mode:
@@ -276,7 +264,6 @@ fab [options] -- [shell commands]
 ```
 
 When running the fab command in ad-hoc mode, it is very similar to running the SSH with commands attached at the end.
-
 
 ### Part 1: running non-privileged shell commands on remote machines
 
@@ -299,17 +286,13 @@ Disconnecting from myvmlab.senecacollege.ca:7200... done.
 
 Note that there is no password prompting if you complete "Part 3" successfully, otherwise, the SSH server daemon on your VM will prompt you for a password. The output from the fab's ad-hoc mode is not much different from the SSH command with shell command attached at the end, however, please note that the additional information on the output from the fab command can be very useful for record keeping purpose - what has been done and whether the commands had been carried out successfully or not.
 
-
-
 ### Part 2: running privileged commands on remote machines
 
 **WARNING** 
 
 **Running privileged commands incorrectly with sudo may cause irreparable damage to your remote machine.**
 
-
 We say that running an ad-hoc fab command is very similar to the SSH command with shell commands attached at the end. Let's try both with privileged commands, like the "yum" command.
-
 
 **Run the "yum" command on remote machine with SSH**
 
@@ -439,7 +422,6 @@ sudo: no tty present and no askpass program specified
 
   6. The above error indicated that you need a tty for the SSH session to prompt you for the sudo password. Please look up the ssh man page to find out the option which turn on a tty for the SSH session.
 
-
 **Run the privileged yum command on remote machine using ad-hoc fab command**
 
   1. Let's try the corresponding ad-hoc fab command on your VM:
@@ -454,7 +436,6 @@ fab --host=myvmlab.senecacollege.ca --port=7200 --user=student -- 'sudo yum inst
 fab --host=myvmlab.senecacollege.ca --port=7200 --user=student -- 'sudo yum remove tree -y'
 ```
 
-
 ## Investigation 3: Running the fab command in script mode
 
 From Investigation 2, we can see that running **fab** in ad-hoc mode is quick, straightforward, and easy. However, the rich output generated can not be easily captured and processed. If you have a need to capture and process the output generated by the commands executed on the remote machines, the solution is to run the **fab** command in script mode.
@@ -464,8 +445,6 @@ The first step in running the **fab** command in script mode is to create a fabr
 Let's start with a simple fabric script file to demonstrate some basic concepts that use the API from the Fabric python library.
 
 On matrix, cd to your lab8 directory under ops445 and create a simple fabric script file named **fabfile.py** (this is the default filename used by the fab command when you invoke it without the '-f' option):
-
-
 
 ### Part 1: Non-privileged task example
 
@@ -534,8 +513,6 @@ In the above output from the **fab** command, you have:
 
 You should get used to the above messages from the **fab** command. It's a lot of output but it's important to understand where each piece of information is coming from, so you are able to debug problems when they happen.
 
-
-
 ### Part 2: Privileged Tasks Examples
 
 **Create privileged tasks: install and remove rpm package on remote machines**
@@ -600,7 +577,6 @@ fab removePackage
 
 fab removePackage:tree
 ```
-
 
 ### Part 3: Create remote task for updating rpm packages
 
@@ -694,7 +670,6 @@ Disconnecting from myvmlab.senecacollege.ca:7200... done.
 [raymond.chan@mtrx-node05pd lab8]$
 ```
 
-
 ## Lab Exercise: Create a Fabric task called makeUser()
 
 1. Study the Fabric API run(), sudo(), local(), and put() and utilize them to create a new Fabric task called makeUser()
@@ -708,7 +683,6 @@ Disconnecting from myvmlab.senecacollege.ca:7200... done.
 3. Add the makeUser() to your final version of fabfile.py.
 4. Run the new task makeUser() on your VM.
 5. Verify and confirm that your new makeUser() task is working correctly.
-
 
 ## Lab 8 Sign-Off (SHOW INSTRUCTOR)
 
