@@ -19,7 +19,6 @@ Write Python code in order to:
   - **Obtain properties and manipulate list object** - using the built-in function: len(), min(), max(), and list object methods: copy(), sort(), append(), insert(), and remove()
   - **Looping through lists** - Looping (iteration) is the method of using loop to process items in a list object one at a time using the same code to reduce code repetition in your Python script. This will result in a better, more efficient and effective program execution.
 
-
 ## Investigation 1: Creating Simple Functions
 
 "In the context of computer programming, a **function** is a named sequence of statements that perform a computation" -- Think Python 2nd Edition by Allen Donway.
@@ -29,7 +28,6 @@ Usually, a **function** contains **programming code** and most likely placed nea
 When a Python program is run, the **function's code is read into the corresponding process memory**, waiting to be executed when the function is called. Until a Function is specifically called, its code will sit still in the memory.
 
 When creating programs that define and use functions, **a large programming task can be broken-down into smaller elements** (or **modules**). This is why creating programs that use functions is referred to as "**modular programming**".
-
 
 ### Four type of Functions
 
@@ -96,7 +94,6 @@ print('Stuff return from hello():',my_stuff)
 print('the object my_stuff is of type:',type(my_stuff))
 ```
 
-
 ### Part 2 - Function that does not take argument but returns a string
 
   1. Let's create a function that **returns** some data to the caller after the function is called. This function does not print out any text: instead; it creates new objects and at the end, returns one of the object named **greeting**, which is a string object containing 'Good Morning Terry'.
@@ -127,7 +124,6 @@ text = return_text_value()
 ```python
 print(text)
 ```
-
 
 ### Part 3 - Function that does not take argument but returns an number
 
@@ -181,13 +177,11 @@ print('my number is ' + str(number))
 print('my number is ' + str(return_number_value()))
 ```
 
-
 ### Part 4 - Creating a Python Script with Functions and use them in another Python script
 
 **NOTE**
 
 If your professor is asking you to submit labs on GitHub, first follow their instructions on Blackboard to clone the lab3 repository.
-
 
 **Creating a Python Script**
 
@@ -262,8 +256,6 @@ python3 ./CheckLab3.py -f -v lab3a
 
   4. Before proceeding, make certain that you identify any and all errors in lab3a.py. When the checking script tells you everything is OK before proceeding to the next step.
 
-
-
 ## Investigation 2: Functions With Arguments And Return Values
 
 ### Part 1 - Providing Functions With Arguments
@@ -337,7 +329,6 @@ square(sum_numbers(5, 5))
 ```
 
    - **NOTE**: Running functions with multiple arguments is the same. When call a function as an argument of another function, the **inner-most function will run first**, and the return the value from that will be used as the argument for the **outer function**. In the example below, **sum\_numbers(5, 5)** will return **10**, thus providing that result to be square with that value **square(10)**.
-
 
 **Practice Creating a Function that Accepts Arguments and Returns a Value**
 
@@ -415,7 +406,6 @@ python3 ./CheckLab3.py -f -v lab3b
 ```
 
   3. Before proceeding, make certain that you identify any and all errors in lab3b.py. When the checking script tells you everything is OK - proceed to the next step.
-
 
 **Passing up Multiple Arguments and Using Conditional Statements**
 
@@ -531,7 +521,6 @@ python3 ./CheckLab3.py -f -v lab3c
 ```
 
   4. Before proceeding, make certain that you identify any and all errors in lab3c.py. When the checking script tells you everything is OK - proceed to the next step.
-
 
 ### Part 2 - Launching Linux command and controlling its process with builtin functions in os and subprocess modules
 
@@ -649,7 +638,6 @@ print(stdout)
 
   5. Sometimes you will be able to use purely python code to get your job done, but often you will need to call existing system commands. It's important to learn how to call them and how to interact with those external processes.
 
-
 **Practice Running System Commands From Python**
 
 **Perform the Following Instructions:**
@@ -689,8 +677,6 @@ python3 ./CheckLab3.py -f -v lab3d
 
   3. Before proceeding, make certain that you identify any and all errors in lab3d.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Investigation 3: Using Lists
 
 **List** is one of the important **data-types** in Python. A list is a series of **comma separated items found between two square brackets**. Items in a list can be any python objects: **strings**, **integers**, and even **other lists**. In this section, you will study lists and how to use them properly, and this will set the foundation for you to use lists effectively in later labs and assignments. It is important to realise that although lists may appear very similar to arrays in other languages, they are different in a number of aspects including the fact that they don't have a fixed size.
@@ -728,7 +714,6 @@ print(list1[0:5]) # Starting with index 0 and stopping before index 5
 print(list2[2:4]) # Starting with index 2 and stopping before index 4
 print(list3[3:])  # Starting with index 3 and going to the end
 ```
-
 
 **Practice Using Functions and Using the List Index**
 
@@ -811,8 +796,6 @@ python3 ./CheckLab3.py -f -v lab3e
 
   4. Before proceeding, make certain that you identify any and all errors in lab3e.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 2 - Manipulating Items in Lists
 
 There are a number of ways to obtain information about lists as well as change the data that is contained within a list. In this section, you will learn how to manipulate lists.
@@ -861,7 +844,6 @@ print("List length is " + str(length_of_list) +
       ", smallest element in the list is " + str(smallest_in_list) +
       ", largest element in the list is " + str(largest_in_list))
 ```
-
 
 ### Part 3 - Iterating Over Lists
 
@@ -925,7 +907,6 @@ delete_numbers(list_of_numbers)
 print(list_of_numbers)
 ```
 
-
 **Practice Functions, Lists, Loops**
 
 **Perform the Following Instructions:**
@@ -974,7 +955,8 @@ run lab3f.py
    - **Sample Run 2 (with import):**
 
 ```python
-from lab3f import *                                                                                                                         print(my_list)
+from lab3f import *
+print(my_list)
 # Will print [1, 2, 3, 4, 5]
 add_item_to_list(my_list)
 add_item_to_list(my_list)
@@ -997,8 +979,6 @@ python3 ./CheckLab3.py -f -v lab3f
 
   3. Before proceeding, make certain that you identify any and all errors in lab3f.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Lab 3 Sign Off (Completing the lab)
 
 **Run the CheckLab3.py script and capture the result**
@@ -1010,7 +990,6 @@ python3 ./CheckLab3.py -f -v &> lab3_[seneca_id].txt
 Submit the following files individually to Blackboard:
 - [x] `lab3_[seneca_id].txt`
 - [x] `lab3a.py, lab3b.py, lab3c.py, lab3d.py, lab3e.py, and lab3f.py`
-
 
 ## Lab Review
 
