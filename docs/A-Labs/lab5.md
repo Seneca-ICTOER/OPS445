@@ -29,13 +29,11 @@ Below is a table with links to useful online Python reference sites (by category
 | Opening Files | [Open File Usage](https://docs.python.org/3/library/functions.html#open) |
 | Using Classes | [Classes](https://docs.python.org/3/tutorial/classes.html) |
 
-
 ## Investigation 1: Working with Files
 
 You will now learn how to write Python scripts in order to open text files, to read the contents within a text file, to process the contents, and finally to write the processed contents back into a file. These operations are very common, and are used extensively in programming. Examples of file operations would include situations such as logging output, logging errors, reading and creating configuration/temporary files, etc.
 
 Files are accessed through the use of **file objects**. An **object** is a **storage location** which stores data in the form of **attributes** (variables) and **methods** (functions).
-
 
 ### Part 1 - Reading Data From Files
 
@@ -128,7 +126,6 @@ f.close()
 print(method2)
 ```
 
-
 **Create a Python Script Demonstrating Reading Files**
 
 **NOTE**
@@ -196,7 +193,6 @@ python3 ./CheckLab5.py -f -v lab5a
 ```
 
   4. Before proceeding, make certain that you identify all errors in lab5a.py. When the checking script tells you everything is OK - proceed to the next step.
-
 
 ### Part 2 - Writing To Files
 
@@ -330,7 +326,6 @@ f.close()
 cat file3.txt
 ```
 
-
 **Create a Python Script Demonstrating Writing to Files**
 
   1. Copy **~/ops445/lab5/lab5a.py** script to **~/ops445/lab5/lab5b.py** script (We need the previous read functions that you created).
@@ -456,12 +451,9 @@ python3 ./CheckLab5.py -f -v lab5b
 
   4. Before proceeding, make certain that you identify all errors in lab5b.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Investigation 2: Exceptions and Error Handling
 
 Running into errors in programming will be a common occurrence. You should expect that it will happen for any code that you write. In python, when an error occurs, the python interpreter raises an **exception**. This section will show you how to intercept these complaints from the python interpreter when they happen and to direct the python interpreter to continue running, or to stop executing your code with a more user-friendly error message.
-
 
 ### Part 1 - Handling Errors
 
@@ -489,9 +481,7 @@ TypeError: Can't convert 'int' object to str implicitly
   2. Click on the link 'https://docs.python.org/3/library/exceptions.html#concrete-exceptions.' and scroll or search for **TypeError**. Take a few moments to determine what a _TypeError_ exception error means.
 
    - You should have learned that the TypeError exception error indicates a mismatch of a type (i.e. string, int, float, list, etc). If Python doesn't know how to handle it, perhaps we could change the number into a string or change the string into a number or at least provide a more user-friendly error message.
-
    - If we don't want the user of our program to have to learn how to read Python exceptions (which is a very good idea), we can catch/trap/handle this error when it happens. This is done with a specific block of code called a [try clause](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) where you place code in-between the **try**: and the **except**: coding blocks. In a general sense, it works like a modified if-else statement, where the **try** statement acts as a test, and the **except** statement will or will not handle the exception depending if the python interpreter raises any exception when executing the code under the **try**: coding block. That is to say, If no error occurs in the code between the **try**: and the **except**: keywords, the python interpreter will skip the code under the **except**: coding block, but if an error occurs in the **try**: coding block, then the python interpreter will be directed to execute the code under the **except**: coding block, which can instruct the python interpreter to perform more user-friendly processing, like printing a more user-friendly error message.
-
    - Let's demonstrate how to handle our TypeError error with code that first does not contain an error and then similar code that DOES generate an error.
 
   3. The following code does **NOT** generate an error:
@@ -571,10 +561,7 @@ except:
 ```
 
    - When catching multiple exceptions, make certain to catch the lowest ones contained in the exception-hierarchy first. For example, if you put 'Exception' first, both 'OSError' and 'FileNotFoundError', would never get caught.
-
    - **TIP**: In python it's usually best to 'try:' and 'except:' code rather than to attempt to anticipate everything that could go wrong with **if** statements. For example, instead of checking to see if a file exists and we have read permissions, it can be better to just try and read the file and fail and catch any errors with 'OSError'.
-
-
 
 **Create a Python Script Which Handles Errors**
 
@@ -648,8 +635,6 @@ python3 ./CheckLab5.py -f -v lab5c
 
   4. Before proceeding, make certain that you identify any and all errors in lab5c.py. When the checking script tells you everything is OK before proceeding to the next step.
 
-
-
 ## Lab 5 Sign-Off (Completing the lab)
 
 Name the output of `./CheckLab5.py -f -v` as **lab5\_\[seneca\_id\].txt**
@@ -658,7 +643,6 @@ Name the output of `./CheckLab5.py -f -v` as **lab5\_\[seneca\_id\].txt**
 
 - [x] `lab5_[seneca_id].txt`
 - [x] `lab5a.py, lab5b.py, and lab5c.py`
-
 
 ## Lab Review
 
