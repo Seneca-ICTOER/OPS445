@@ -13,7 +13,6 @@ description: Lab 6 for Students to Complete and Submit
 
      - Python is an object oriented programming language. Python uses the concept of "object" to store data(attributes - data values) and code(methods - function code) efficiently for later use. By using objects, programming languages gain the advantage of making large/complex programs into smaller and modular codes, which can be used or shared with other users/programs. In Python, almost everything that we have used is actually an object with a specific purpose, however, starting in this lab we will create our own objects, and investigate different ways to use them.
 
-
 ## Python Reference
 
 In previous labs, you have been advised to make notes and use online references. This also apply to learning about object oriented programming.
@@ -27,7 +26,6 @@ Below is a table with links to online Python document for Classes and objects. P
 | Classes and functions | [Think Python Chapter 16](http://greenteapress.com/thinkpython2/html/thinkpython2017.html) |
 | Classes and methods | [Think Python Chapter 17](http://greenteapress.com/thinkpython2/html/thinkpython2018.html) |
 
-
 ### Key Concepts related to Python Class and Object
 
 - Programmer-defined types
@@ -40,11 +38,9 @@ Below is a table with links to online Python document for Classes and objects. P
 - Scopes and Namespaces: local, nonlocal, and global
 - Class definition syntax
 
-
 ## Investigation 1: Creating Classes
 
 In this first investigation you will be introduced to classes. A class is a blue print to creating an object, first we write what we want the object to contain inside the class, then we can instantiate(create the object) by providing the class type. Once an object is created, interacting with the object will look very familiar, because you have been using objects throughout the entire course, the only difference is these object will be created by you.
-
 
 ### Part 1 - Creating a Class
 
@@ -53,7 +49,6 @@ Each object of a class that we write in Python can contain values, functions, co
 **NOTE**
 
 If your professor is asking you to submit labs on GitHub, first follow their instructions on Blackboard to clone the lab6 repository.
-
 
 **Perform the Following Steps:**
 
@@ -96,8 +91,6 @@ class Student:
 ```
 
    3. This is the Student class, with this class multiple Student objects can be created. There are a number of parts of this script that should look familiar, such as functions, for loops, values. Functions indented underneath the class definition are called methods. Values starting with **self**. are called public attributes. In the next steps lets break down this class and explain each part in detail.
-
-
 
 ### Part 2 - Understanding Class Structure
 
@@ -232,7 +225,6 @@ def __init__(self, name, number):
 student3 = Student('Jen', '034686901')
 ```
 
-
 **Create a Python Script Demonstrating Classes**
 
    1. The following python script is broken. It has two major problems to fix and one new feature to add:
@@ -360,8 +352,6 @@ python3 ./CheckLab6.py -f -v lab6a
 
    4. Before proceeding, make certain that you identify all errors in lab6a.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Lab 6 Sign-Off (Completing the lab)
 
 Name the output of `./CheckLab6.py -f -v` as **lab6\_\[seneca\_id\].txt**
@@ -370,7 +360,6 @@ Name the output of `./CheckLab6.py -f -v` as **lab6\_\[seneca\_id\].txt**
 
 - [x] `lab6_[seneca_id].txt`
 - [x] `lab6a.py`
-
 
 ## Lab Review
 
