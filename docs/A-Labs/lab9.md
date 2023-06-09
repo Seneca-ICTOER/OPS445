@@ -14,13 +14,11 @@ description: Lab 9 for Students to Complete and Submit
   3. Explore and study a few Ansible's modules
   4. Explore, create, and run a few Ansible playbooks
 
-
 ## Overview
 
 Ansible is an agentless IT automation engine for automating cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT system administration tasks.
 
 Ansible uses no additional custom security infrastructure, and it uses a very simple human readable language called 'YAML', to compose an Ansible Playbook which allows you to describe the tasks you want to automate.
-
 
 ## Reference
 
@@ -28,7 +26,6 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
   - [Overview on how ansible works](https://www.ansible.com/overview/how-ansible-works)
   - [Ansible Latest User Guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
   - [A System Administrator's guide to getting started with Ansible](https://www.redhat.com/en/blog/system-administrators-guide-getting-started-ansible-fast)
-
 
 ## System requirements
 
@@ -41,14 +38,11 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
 - Your account on your managed machine is a sudoer and can run sudo with/without password.
 - Has Python 2.7+ installed on your managed machine(s).
 
-
-
 ## Investigation 1: The Ansible Package
 
 In this investigation, we explore the main components of the Ansible configuration management system and its operating environment. We also study a simple playbook for managing the configuration of a CentOS 7.x VM.
 
 You need at least two Linux systems for this lab: your account on matrix.senecacollege.ca to be used as the control machine and your assigned VM in myvmlab.senecacollege.ca as the managed machine. The Ansible package is already installed on matrix for you.
-
 
 ### Key Concepts when using Ansible
 
@@ -77,8 +71,6 @@ You need at least two Linux systems for this lab: your account on matrix.senecac
 
      - ansible-playbook remote_machine_id [-i inventory] setup_webserver.yaml
      - ansible-playbook remote_machine_id [-i inventory] firstrun.yaml
-
-
 
 ### Part 1: The Ansible package installed on matrix
 
@@ -113,7 +105,6 @@ usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
 ```
 
 Take a look of all the available command line options for the "ansible" command. There are a lots of options when running Ansible. Let's move on to try a few simple ones.
-
 
 ### Part 2: Sample runs for some of the Ad hoc commands
 
@@ -161,8 +152,6 @@ vmlab | CHANGED => {
 after **-a** is the arguments to the copy module, which specify the source file and the destination for the copy action.
 
 If you got the same "SUCCESS" message, login to the remote machine and check the directory "/tmp" for the file ansible_hosts.
-
-
 
 ### Part 3: Sample runs for using some Ansible's modules
 
@@ -265,8 +254,6 @@ vmlab | SUCCESS => {
 
 Depending on the status of the packages installed on your VM, the output may not exactly the same as shown above. Please read and try to understanding the meaning of the text return by ansible. If it's been updated instead, then run the command again.
 
-
-
 ### Part 4: Gather software and hardware information available on remote machine
 
 One of the core ansible module is called "setup", it is automatically called by ansible playbook to gather useful "facts" about remote hosts that can be used in ansible playbooks. It can also be executed directly by the ansible command (/usr/bin/ansible) to check out what "facts" are available on a remote host.
@@ -304,8 +291,6 @@ vmlab | SUCCESS => {
 
 [Click here for complete sample contents of the above](/C-ExtraResources/ansible-setup.md)
 
-
-
 ## Investigation 2: Ansible Playbook
 
 ### What is a playbook?
@@ -315,7 +300,6 @@ vmlab | SUCCESS => {
 * Playbook is like a to-do list for Ansible
 * Playbook is written in "YAML".
 * Playbook links a task to an ansible module and provide needed arguments to the module which requires them.
-
 
 ### Part 1: A playbook to update the /etc/motd file
 
@@ -356,8 +340,6 @@ vmlab   ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0
 ```
 
 Try to run it the 2nd time and pay attention to the result. What conclusion can you draw?
-
-
 
 ### Part 2: A playbook to install and start Apache Server
 
@@ -402,8 +384,6 @@ PLAY RECAP *********************************************************************
 vmlab : ok=3  changed=2  unreachable=0  failed=0  skipped=0  rescued=0  ignored=0
 ```
 
-
-
 ## Investigation 3: Using Playbook to configure an OPS445 Linux VM machine
 
 Assume you have just installed the latest version of CentOS 7.x on a VM with GNOME Desktop. You need to configure it so that you can use it for doing the Labs for OPS445.
@@ -443,14 +423,12 @@ Create an ansible playbook named "config_ops445.yml" using the appropriate modul
   - in order to test it, log into the VM with the newly created user (your Seneca_ID), install the 'tree' package with sudo, and check the directory structure with the 'tree' command
   - if everything is correct, capture its output for a successful run of your playbook to a file named "lab9\_\[seneca\_id\].txt"
 
-
 ## Lab 9 Sign-off (Show Instructor)
 
 ### Have the following items ready to show your instructor:
 
 * The Ansible playbook called "config\_ops445.yml" for configuring the VM.
 * The result of running the playbook "config\_ops445.yml". Save the result in a file called "lab9\_\[seneca\_id\].txt"
-
 
 ### Upload the following files to blackboard
 
