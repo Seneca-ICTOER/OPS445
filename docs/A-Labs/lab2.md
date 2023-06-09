@@ -29,7 +29,6 @@ Write Python code in order to:
   - **Process the inputted data** using **Looping Statements**.
     - Looping (iteration) is the ability for your script to repeatedly run the same block of codes over and over until a given condition is met. For example, an authentication process would allow your 3 attempts to provide the correct password, and it will deny you access after 3 attempts have been tried and failed.
 
-
 ## Investigation 1: User Input
 
 **NOTE**
@@ -71,9 +70,7 @@ python3 ./CheckLab2.py -f -v lab2a
 ```
 
   5. Before proceeding, make certain that you identify any and all errors in **lab2a.py**. When the check script tells you everything is **OK**, you may procede to the next step.
-  6. The above Python script **lab2a.py** is not very useful - the data are **hard wired** into the script: it displays the same output regardless of the number of times that this Python script is run.
-The built-in **input()** function can be used to accept data in **string form** from the user and assign a name to the string object (used to be called a variable). It is typical to place a question (or hint) as an argument in the input() function: this will aid the user in typing in the correct data.
-
+  6. The above Python script **lab2a.py** is not very useful - the data are **hard wired** into the script: it displays the same output regardless of the number of times that this Python script is run. The built-in **input()** function can be used to accept data in **string form** from the user and assign a name to the string object (used to be called a variable). It is typical to place a question (or hint) as an argument in the input() function: this will aid the user in typing in the correct data.
   7. Copy lab2a.py to lab2a1.py and replace the print() call in lab2a1.py with the following (you can just comment-out the print() call using a \# at the beginning of the line):
 
 ```python
@@ -95,7 +92,6 @@ print('The colour I typed in is: ' + colour)
 ```
 
   - Note what was displayed.
-
 
 **Practice Storing User Input data**
 
@@ -153,7 +149,6 @@ A command line argument is a data item that is passed to a program that can be u
 
   1. Use a temporary file for testing your work for this section.
   2. In order to access command line arguments in Python, we will need to use a special python object called **sys.argv** from the **sys** module. We can use the python keyword **import** to load the **sys** module so that we can access it in our python script. **sys.argv** is a list object which is used to hold everything given at the command line, including the command itself. The **sys** module is one of the built-in modules comes with the Python interpreter. By issuing the **import sys** statement at the top of a python script, it will load the code written by other person, each 'library' (or 'module') that gets loaded will give us extra functionality and objects to our python script.
-
   3. Start with the following line to import additional python objects:
 
 ```python
@@ -263,7 +258,6 @@ python3 ./CheckLab2.py -f -v lab2c
 
   4. Before proceeding, make certain that you identify any and all errors in **lab2c.py**. When the check script tells you everything is **OK**, you may procede to the next step.
 
-
 ## Investigation 2: Using Conditional Statements
 
 In computer programming, control flow statement can be used to change the execution path (flow) of a program. The [diagram here](https://en.wikipedia.org/wiki/Flowchart) may help you visualize it. In this section, you will focus on LOGIC control flow statements that are used to change the way each statement in a script being executed. The flow may be based on data (either via the input() function, or command arguments via the list object sys.argv) provided by the user. In this section, we will discuss several LOGIC control flow statements including: IF, and IF/ELIF/ELSE.
@@ -286,8 +280,7 @@ if True:
     print('This print is apart of the if statement')
 ```
 
-   - What happened when you ran this code? It is important to note a couple of things with the IF statement:
-When the expression in an IF statement **evaluates to True**, it runs the code that is indented underneath it. In this case, we can use the boolean value "True" to make this happen, or test to see if an expression is evaluated to true or false.
+   - What happened when you ran this code? It is important to note a couple of things with the IF statement: When the expression in an IF statement **evaluates to True**, it runs the code that is indented underneath it. In this case, we can use the boolean value "True" to make this happen, or test to see if an expression is evaluated to true or false.
    - However, if the expression in an IF statement evaluates to **False**, then it will not run the code indented underneath it. Any code not indented under the IF statement will perform normally as the main program and is NOT associated with the control flow statement.
    - Indentation means to start a line with spaces or tabs before your text. Using **indentation** will direct the script what code should be run as part of the IF statement and which code should be run regardless. Also, using indentation makes it easier for a programmer to identify Control Flow statements. From this point on, be VERY careful and consistent with indentation because it will affect how your code works.
 
@@ -317,7 +310,6 @@ if password == 'P@ssw0rd':
 ```
 
    - What happened? In the above example, you are making a comparison between the value you entered via the **input()** function, which in turn, was saved into the **password** object. The IF statement is using that object (named password), followed by == which represents **identical to**, followed by the string '**P@ssw0rd**' . Never use **=** to 'compare values since this is used to store the value into an object and may not allow IF statement to properly evaluate the expression! Also note that a **space is used to separate arguments with the IF statement**. The IF statement tests that expression to see if it is **True or False**. If that expression is **True**, it will run the code indented below. On the other hand, if that expression is **False**, it will not run the code. Try experimenting with different combinations of passwords.
-
    - If statements can also be used to compare numbers. We can do this by using comparison operators (such as: **==**, **!=**, **\>**, **\>=**, **<**, **<=**), but we can also use functions. The function **len()** can be used to return the number of characters in a word (plus other features). length of words and other objects. We can also use the **len()** function to give us the number of argumuents provided to our script by using 'len(sys.argv)' and it should return a number. Below we are also using '!='. Which stands for not eqal to.
 
   5. Try the following program:
@@ -452,7 +444,6 @@ In the first two investigations, you have been exposed to builtin function and s
 
 You will start to learn about the second major category of control flow statements by learning how to repeatedly executing a python statement or a series of python statements. Although, you will be learning other scripting techniques, the ability to know how to use different objects, CONDITIONAL and LOOPING control-flow statements will allow you to create useful and powerful script to assist you when managing your computer system (including virtual machines).
 
-
 ### Part 1 - Understanding While Loops
 
 **WHILE loops** may use the same type of expression found in IF statements. While the expression is evaluated to True, the code indented under the while loop will be repeated. When the expression becomes False the loop will stop repeating the indented code.
@@ -525,7 +516,6 @@ python3 ./CheckLab2.py -f -v lab2e
 
   3. Before proceeding, make certain that you identify any and all errors in **lab2e.py**. When the check script tells you everything is **OK**, you may proceed to the next step.
 
-
 ### Part 2 - Using While loops with script arguments
 
 You will now learn to make your Python scripts more flexible by getting numbers as arguments to be used with WHILE loops in your script. You will learn that all command line arguments captured by using the special object sys.argv are all strings (not numbers). Even the item provided at the command line is a pure number, it cannot be used in Mathematical operations unless it is converted into an integer object. You will be learning how to use the int() builtin function to convert a numeric string object into an integer object.
@@ -583,7 +573,6 @@ python3 ./CheckLab2.py -f -v lab2f
 ```
 
   4. Before proceeding, make certain that you identify any and all errors in **lab2f.py**. When the check script tells you everything is **OK**, you may proceed to the next step.
-
 
 ### Part 3 - Combining While loops with IF statements
 
@@ -661,7 +650,6 @@ python3 ./CheckLab2.py -f -v lab2g
 ```
 
   4. Before proceeding, make certain that you identify any and all errors in **lab2g.py**. When the check script tells you everything is **OK**, you may proceed to the next step.
-
 
 ## Lab 2 Sign-Off (Completing the lab)
 
