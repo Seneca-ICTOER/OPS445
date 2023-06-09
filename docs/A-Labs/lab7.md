@@ -29,19 +29,16 @@ First of all, let's review some of the basic concepts about class in Python.
 
 As you try to design the classes, you will quickly realise that there is a potentially infinite number of properties (attributes and methods) that any class can have. What you choose to include in your class definition should be guided by what you intend to do with it.
 
-
 ### Reference
 
 - Time object code: from **Think Python** by Allen B. Downey: [Chapter 16](http://greenteapress.com/thinkpython2/html/thinkpython2017.html) and [Chapter 17](http://greenteapress.com/thinkpython2/html/thinkpython2018.html)
 - Data object: [special method name](https://docs.python.org/3/reference/datamodel.html#special-method-names)
-
 
 ## Investigation 1: Objects and Functions
 
 **NOTE**
 
 If your professor is asking you to submit labs on GitHub, first follow their instructions on Blackboard to clone the lab7 repository.
-
 
 ### Part 1 - Simple Object Class with external functions
 
@@ -168,8 +165,6 @@ python3 ./CheckLab7.py -f -v lab7a
 
   8. Before proceeding, make certain that you identify all errors in lab7a.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 2 - Pure Function and Modifiers
 
 In Part 1, the sum_times() function will not make any change to any of the two time objects passed to it. This is called a pure function. In this part, we are going to create a function which changes the value (the three attributes) of a time object based on the integer value passed to the function. We call such type of function a **modifier**. The function we are going to add is called **change\_time(time, seconds)**: where **time** is the time object the function is going to modify, and **seconds** is the number of seconds the function will add to the time object.
@@ -268,8 +263,6 @@ python3 ./CheckLab7.py -f -v lab7b
 
   11. Before proceeding, make certain that you identify all errors in lab7b.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 3 - Another approach to perform operation on time objects
 
 In previous parts, we recognise the fact that a Time object is essentially a three-digit number in base 60. The "second" attribute is the "ones colume", the "minute" attribute is the "sixties column", and the hour attribute is the "60 x 60" column. This is why we have to carry over "second" to "minute" when the value of "second" exceeds 60, and we have to do the same for the "minute" attribute.
@@ -367,14 +360,11 @@ python3 ./CheckLab7.py -f -v lab7c
 
   9. Before proceeding, make certain that you identify all errors in lab7a.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Investigation 2 - Objects and Methods
 
 In the previous investigation, the functions that were defined for manipulating our time object are not tied directly to our time object. Given our time object alone, we won't be able to tell that there exist a function called sum\_times() which can be used to add two time objects and return their sum.
 
 To tie up those functions to our time objects, we only need to move those functions definition under the class block which defines our Time object. When we move an external function into a class block, we need to add an extra function parameter and make it the first in the parameter list. By convention, we always name it as **self**.
-
 
 ### Part 1 - Classes and Methods for our Time objects
 
@@ -481,8 +471,6 @@ python3 ./CheckLab7.py -f -v lab7d
 
   7. Before proceeding, make certain that you identify all errors in lab7d.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 2 - Special object methods
 
 Each programmer-defined object has a few special methods which can be used to manipulate the object, the one we already know is the **\_\_init\_\_** method, which python refers it as the object constructor, and we can associate code to this method in the class definition.
@@ -560,8 +548,6 @@ python3 ./CheckLab7.py -f -v lab7e
 
   9. Before proceeding, make certain that you identify all errors in lab7e.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Part 3 - Operator overloading
 
 Remember we define the sum_times() function to add to time objects and return their sum? After we moved the function definition under the class definition in lab7d.py, it became a class function, and method for the time object. It can be invoked by using the **Time.sum\_times(t1,t2)** syntax or **t1.sum\_times(t2)** syntax. However, there is also a way to invoke it by using a special function which ties to the '+' arithmetic operator.
@@ -616,14 +602,11 @@ python3 ./CheckLab7.py -f -v lab7f
 
   4. Before proceeding, make certain that you identify all errors in lab7f.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ## Investigation 3 - Objects and Scope
 
 Scope means where an object can be accessed, and how long that object exists.
 
 In this investigation, we will look at the types of scope you're most likely to run into and which are most likely to cause trouble for you. We will not be explicitly looking at class scope, nested functions, built-in objects, constants, and mutability.
-
 
 ### Part 1: Local Scope
 
@@ -656,7 +639,6 @@ print('print() call in main on a:',a)
 function2()
 print('print() call in main on a:',a)
 ```
-
 
 ### Part 2: Global Scope
 
@@ -739,12 +721,9 @@ python3 ./CheckLab7.py -f -v lab7i
 
   7. Before proceeding, make certain that you identify all errors in lab7i.py. When the checking script tells you everything is OK - proceed to the next step.
 
-
-
 ### Object/Instance Scope
 
 Every object can have attributes that exist for that object only. You create and access those attribute with the name of the object itself using the dot '.' notation. Note that these may not part of the **class** object's attribute. Each object has its own set of **instance** attributes. You will have seen that when you created objects in the Classes and Objects section above.
-
 
 ## Lab 7 Sign-Off (Completing the lab)
 
@@ -754,7 +733,6 @@ Name the output of `./CheckLab7.py -f -v` as **lab7\_\[seneca\_id\].txt**
 
 - [x] `lab7_[seneca_id].txt`
 - [x] `lab7a.py, lab7b.py, lab7c.py, lab7d.py, lab7e.py, lab7f.py, and lab7i.py.`
-
 
 ## Lab Review
 
