@@ -72,7 +72,7 @@ We will demonstrate the steps for setting up a Fedora Virtual Machine with Visua
    - When the Virtual Machine has rebooted, you should see a welcome screen along with some more configuration options. Disable Location, as this seems to cause crashes when running as a VM. Skip the step to connect online accounts.
    - Enter your name, and a password. Don't forget this password, as you will need it to become root.
 
-**Verify Python**
+#### Verify Python
 
 Fedora should have the required software (with the exception of VS Code) already installed. We will verify this before moving on.
 
@@ -81,7 +81,7 @@ Fedora should have the required software (with the exception of VS Code) already
    - Enter the command **git --version** and verify that the installed version is at least **git 1.2.** If no version of Python is installed, run **sudo dnf install git**.
    - Run **sudo dnf update** to update the system software.
 
-**Install Visual Studio Code and Extensions**
+#### Install Visual Studio Code and Extensions
 
 Visual Studio Code has an excellent Debugger for Python, and so it is the recommended editor for this course. However, you may use a different editor at your discretion. Pycharm Community also has a very good debugger, works on Fedora, and is free for students.
 
@@ -111,7 +111,7 @@ If your computer has less than 16 GB of RAM and has problems running a full virt
    - Search for "Ubuntu" and install the app that is published by Canonical.
    - Launch Ubuntu from the Start Menu. You will have a terminal-based Linux interface only. To access your Windows files, type cd /mnt/c. This will get you to the top of your Windows C drive.
 
-**Verify Python on Ubuntu**
+#### Verify Python on Ubuntu
 
 Ubuntu should have the required software (with the exception of VS Code) already installed. We will verify this before moving on.
 
@@ -119,11 +119,11 @@ Ubuntu should have the required software (with the exception of VS Code) already
    - Enter the command **git --version** and verify that the installed version is at least **git 1.2.** If no version of Python is installed, run **sudo apt install git**.
    - Run **sudo apt update && sudo apt upgrade** to update the system software.
 
-**Verify Python on Windows**
+#### Verify Python on Windows
 
    - Open your Windows command prompt and type **python --version**. If no version of Python is installed, it should give you instructions in how to install it, or go to [the Python Homepage](https://www.python.org/downloads/).
 
-**Install VS Code**
+#### Install VS Code
 
    - Follow the instructions to [install VS Code on Windows](https://code.visualstudio.com/download). Now you will be able to complete most tasks on Windows, and switch to a minimal Linux environment when needed.
 
@@ -142,7 +142,7 @@ Ubuntu should have the required software (with the exception of VS Code) already
 
 ### Task: Create directory structure for Labs and Assignments
 
-**Create directory structure using BASH commands**
+#### Create directory structure using BASH commands
 
    - Lets setup and reserve the following directories for storing and organizing files for labs and assignments. Execute the following commands at the command prompt:
 
@@ -171,21 +171,21 @@ If you connect to the VPN using your host Windows machine, you should be able to
 
    - You can access the Python Interpreter on Matrix from a Linux machine or a Windows 10 machine.
 
-**Login to matrix.senecacollege.ca from a Linux machine**
+#### Login to matrix.senecacollege.ca from a Linux machine
 
    - To login to matrix.senecacollege.ca you must have a active Seneca user account.
    - The following is a screen shot showing the login from a CentOS Linux (host or vm) system with an active Seneca user name:
 
 ![Centos SSH](/img/Centos_ssh.png "Centos SSH image")
 
-**Login to matrix.senecacollege.ca from a Windows 10 machine**
+#### Login to matrix.senecacollege.ca from a Windows 10 machine
 
    - Please follow the instruction at [Seneca Student VPN](https://inside.senecacollege.ca/its/services/vpn/studentvpn.html) to download and install the GlobalProtect VPN client and connect to the Seneca VPN to your Windows Machine.
    - Login to matrix.senecacollege.ca with your Seneca user name from Windows 10's run box.
 
 ![Windows 10 SSH](/img/Window10_ssh.png "Windows 10 SSH")
 
-**Identify and explore Python versions on Matrix**
+#### Identify and explore Python versions on Matrix
 
 - Once you are on matrix.senecacollege.ca, run the python command to start a Python version 2 interactive shell at the command prompt. The last line displayed should be \>\>\>. the \>\>\> sign is referred to as the Python interactive shell prompt.
      - python
@@ -201,12 +201,12 @@ If you connect to the VPN using your host Windows machine, you should be able to
 
 ### Part 2 - git and github.com
 
-**Task 1: Create a Github.com account**
+#### Task 1: Create a Github.com account
 
 - Start your web browser and go to github.com and use your own email to sign up for a new github account if you don't already have one.
 \[Note: Please be aware that Seneca's spam filter block email from github.com by default, if you use your Seneca email to sign up for an account on github.com, you might have to re-configure your email spam filter to allow confirmation email from github.com to reach your inbox.\]
 
-**Task 2: Add your public key to Github**
+#### Task 2: Add your public key to Github
 
 Follow the Github guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add your public key to your profile:
 
@@ -217,7 +217,7 @@ Follow the Github guide [here](https://docs.github.com/en/authentication/connect
 
 You will now have permission to clone repositories using **SSH**.
      
-**Task 3: Create a project and make a pull request on GitHub**
+#### Task 3: Create a project and make a pull request on GitHub
 
 Follow the Github "Hello World Guide" [here](https://guides.github.com/activities/hello-world/) to perform the following activities:
 
@@ -232,7 +232,7 @@ Please make the following **changes** when following the guide:
 - name the new repository using your **Seneca user name** instead of "hello-world".
 - add your full name, and OPS445 section to the README file, do not post any other personal information there.
 
-**Task 4: Clone a Github.com repository into a new directory on a Linux system**
+#### Task 4: Clone a Github.com repository into a new directory on a Linux system
 
 If your professor is asking you to submit labs on GitHub, follow their instructions now to clone the lab1 repository.
 
@@ -381,7 +381,7 @@ ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__', '__debug__'
      - sending text to the screen,
      - storing value in an data object
 
-**Task 1 - Python script using builtin Functions**
+#### Task 1 - Python script using builtin Functions
 
 **Creating the "Hello World" Python Script**
 
@@ -482,7 +482,7 @@ Before moving on to the next step make sure you identify any and all errors in "
 
 In Python, a data object is used to store data for use later in the program. This data can be a string, integer, decimal number, characters, etc. We will only be covering string and integer objects in this lab. You will learn and use other Python built-in data object types in future labs.
 
-**String Objects**
+### String Objects
 
 String objects contain text to be used in your program. Examples of strings could be user-names, full-names, item descriptions, etc. We will now demonstrate how to assign a string to an object and how to display contents stored in a string object.
 
@@ -542,7 +542,7 @@ python3 ./CheckLab1.py -f -v lab1b
    8. Before proceeding, make certain that you identify any and all errors in "lab1b.py". When the check script tells you everything is "ok", you may proceed to the next step.
    9. If using GitHub, repeat the steps to commit your lab1b.py file.
 
-**Integer Objects**
+### Integer Objects
 
 In Python, integer objects are used to store an integer numbers that can be used for mathematical operations (discussed in the next section). Integers do NOT contain decimals, and they can be signed (+ or -) or unsigned. Here we will store integers in a object, perform math operations, and display the results.
 
