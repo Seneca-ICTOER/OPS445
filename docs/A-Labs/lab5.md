@@ -15,7 +15,7 @@ So far, you have created Python scripts to get user's input at the command line 
 
 It is very important to provide logic in your Python script in case it **encounters an runtime error**. An example would be an invalid path-name or trying to write to a file which you don't have permission. The second investigation in this lab will look into how the Python interpreter **handle runtime errors** (commonly referred to as "exception handling") at run time, and learn how to write Python code that will allow the python interpreter to run gracefully even when problems occur during program execution.
 
-## Python Reference
+### Python Reference
 
 In previous labs, you have been advised to make notes and use online references. This also relates to working with files and learning about objected oriented programming. You may be "overwhelmed" with the volume of information involved in this lab.
 
