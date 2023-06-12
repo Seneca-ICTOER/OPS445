@@ -7,13 +7,13 @@ description: Lab 4 for Students to Complete and Submit
 
 # OPS445 Online Lab4
 
-## Objectives
+## Lab Objectives
 
 The **first investigation** in this lab will focus on Python's **Built-in Data Structures** objects. Each built-in data structure object has its own advantages and limitations. This lab will emphasize the most important differences between them.
 
 The **second investigation** will focus on string objects. You have been using and storing string in objects since our first class, however in this lab we will dive into the more complex nature of string object manipulation. Finally, this lab will cover how to use a variety of built-in functions and string object methods for searching and performing input validation.
 
-**Python Reference**
+### Python Reference
 
 As you develop your Python language skills, you may start to be "overwhelmed" with the volume of information that you have absorbed over these labs. One way to help is to learn to use online references effectively in order to obtain information regarding techniques and tools for manipulating various Python built-in objects in our Python scripts.
 
