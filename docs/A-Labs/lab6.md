@@ -13,7 +13,7 @@ description: Lab 6 for Students to Complete and Submit
 
      - Python is an object oriented programming language. Python uses the concept of "object" to store data(attributes - data values) and code(methods - function code) efficiently for later use. By using objects, programming languages gain the advantage of making large/complex programs into smaller and modular codes, which can be used or shared with other users/programs. In Python, almost everything that we have used is actually an object with a specific purpose, however, starting in this lab we will create our own objects, and investigate different ways to use them.
 
-## Python Reference
+### Python Reference
 
 In previous labs, you have been advised to make notes and use online references. This also apply to learning about object oriented programming.
 
