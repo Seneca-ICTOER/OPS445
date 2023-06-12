@@ -28,7 +28,7 @@ Fabric is a Python library and command-line tool for streamlining the use of SSH
 
 We are going to use the Fabric API to define tasks and use the **fab** command to execute those tasks on one or more remote Linux machines.
 
-## Reference
+### Reference
 
   1. These links are helpful for learning more about Fabric's features:
 
