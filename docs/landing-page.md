@@ -6,17 +6,14 @@ slug: /
 description: Landing Page for OPS445 Course
 ---
 
-# Welcome to OPS445 - Open System Automation
+# Welcome to OPS445
+
+## Open System Automation
 
 ### Quick Links
 
 | [Weekly Schedule](./weekly-schedule.md) | [Course Outline](https://scs.senecac.on.ca/course/ops445) |
-| :---: | :---: |
-
-### Assignments
-
-| [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) |
-| :---: | :---: |
+| [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) | :---: | :---: | :---: | :---: |
 
 ## What This Course is About
 
@@ -39,15 +36,11 @@ Most of the learning in this course occurs through interactive labs that give yo
 
 **During the Summer 2023 semester, OPS445 is taught by:**
 
-**Eric Brauer**
+**[Eric Brauer] (eric.brauer@senecacollege.ca)**
 
 ![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
 
 (Section **NAA**, **NCC**)
-
-eric.brauer@senecacollege.ca
-
-[Eric's web-site](https://ict.senecacollege.ca/~eric.brauer)
 
 ## Required Materials
 
