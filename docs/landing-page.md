@@ -36,7 +36,7 @@ Most of the learning in this course occurs through interactive labs that give yo
 
 **During the Summer 2023 semester, OPS445 is taught by:**
 
-**[Eric Brauer](eric.brauer@senecacollege.ca)**
+**[Eric Brauer](mailto:eric.brauer@senecacollege.ca)**
 
 ![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
 
