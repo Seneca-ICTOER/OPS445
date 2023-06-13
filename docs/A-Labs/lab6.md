@@ -5,7 +5,7 @@ sidebar_position: 6
 description: Lab 6 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab6
+# Lab 6: Writing Python Classes
 
 ## Lab Objectives
 

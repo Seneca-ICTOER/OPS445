@@ -5,7 +5,7 @@ sidebar_position: 9
 description: Lab 9 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab9
+# Lab 9: Ansible
 
 ## Objective
 

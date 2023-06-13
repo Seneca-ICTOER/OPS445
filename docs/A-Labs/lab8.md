@@ -5,7 +5,7 @@ sidebar_position: 8
 description: Lab 8 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab8
+# Lab 8: Configuration management
 
 ## Lab Objectives
 

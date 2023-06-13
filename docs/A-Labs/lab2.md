@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Lab 2 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab2
+# Lab 2: Understanding Python Code
 
 ## Lab Objectives
 

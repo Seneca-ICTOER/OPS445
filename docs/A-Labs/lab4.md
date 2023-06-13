@@ -5,7 +5,7 @@ sidebar_position: 4
 description: Lab 4 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab4
+# Lab 4: Basic Data Structure & String Manipulation
 
 ## Lab Objectives
 

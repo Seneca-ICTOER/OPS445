@@ -5,7 +5,7 @@ sidebar_position: 3
 description: Lab 3 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab3
+# Lab 3: Reusing Python Code
 
 ## Lab Objectives
 

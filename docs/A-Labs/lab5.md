@@ -5,7 +5,7 @@ sidebar_position: 5
 description: Lab 5 for Students to Complete and Submit
 ---
 
-# OPS445 Online Lab5
+# Lab 5: Files & Error Handling
 
 ## Lab Objectives
 
