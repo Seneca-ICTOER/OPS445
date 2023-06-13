@@ -1,6 +1,6 @@
 ---
 id: landing-page
-title: Welcome to OPS445 - Open System Automation
+title: Welcome to OPS445
 sidebar_position: 1
 slug: /
 description: Landing Page for OPS445 Course
@@ -12,8 +12,8 @@ description: Landing Page for OPS445 Course
 
 ### Quick Links
 
-| [Weekly Schedule](./weekly-schedule.md) | [Course Outline](https://scs.senecac.on.ca/course/ops445) |
-| [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) | :---: | :---: | :---: | :---: |
+| [Weekly Schedule](./weekly-schedule.md) | [Course Outline](https://scs.senecac.on.ca/course/ops445) | [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) |
+| :---: | :---: | :---: | :---: |
 
 ## What This Course is About
 
@@ -28,7 +28,7 @@ OPS445 will help you learn how to read, write, and maintain scripts which assist
 
 You will practice the writing of many scripts, reinforcing the importance of automation and reusable code. You will be introduced to powerful tools used in system administration, which will give you experience in solving problems more effectively. As a system administrator you will be responsible for maintaining more than just a few servers, you will learn the skills to manage large scale networks, in preparation for cloud computing.
 
-In this course you will use a ssd(in a usb enclosure) with your own computers to create VM using VMWare Workstation, similarly to other Linux courses. However, this time you will also use your account on matrix.senecacollege.ca for creating and testing scripts for each lab. This course can be broken up into 2 halves. The first half of this course will cover learning the python language. The second half of this course, will cover powerful administration systems, and allow you to apply your python knowledge to extend these systems.
+In this course, you will use a ssd(in a usb enclosure) with your own computers to create VM using VMWare Workstation, similarly to other Linux courses. However, this time you will also use your account on matrix.senecacollege.ca for creating and testing scripts for each lab. This course can be broken up into 2 halves. The first half of this course will cover learning the python language. The second half of this course, will cover powerful administration systems, and allow you to apply your python knowledge to extend these systems.
 
 ## Learning by Doing
 
@@ -36,7 +36,7 @@ Most of the learning in this course occurs through interactive labs that give yo
 
 **During the Summer 2023 semester, OPS445 is taught by:**
 
-**[Eric Brauer] (eric.brauer@senecacollege.ca)**
+**[Eric Brauer](eric.brauer@senecacollege.ca)**
 
 ![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
 
