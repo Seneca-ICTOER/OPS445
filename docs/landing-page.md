@@ -17,7 +17,7 @@ description: Landing Page for OPS445 Course
 
 ## What This Course is About
 
-This course is the fourth in a series of courses about Linux technologies
+This course is the fourth in a series of courses about Linux technologies.
 
 OPS445 will help you learn how to read, write, and maintain scripts which assist with common system administration tasks. The days of performing all administrative tasks manually has come to an end, now you must move forward into a world of automation.
 

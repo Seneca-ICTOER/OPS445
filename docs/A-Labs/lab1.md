@@ -5,9 +5,7 @@ sidebar_position: 1
 description: Lab 1 For Students to Complete and Submit
 ---
 
-# OPS445 Online Lab1
-
-**Introduction to git, github.com, and Python**
+# Lab 1: Introduction to git, github.com, and Python
 
 ## Lab Objectives
 
