@@ -5,7 +5,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OPS445 - Coure Title',
+  title: 'OPS445 - Open System Automation',
   tagline: 'OER Tag/Keyword',
   url: 'https://Seneca-ICTOER.github.io/',
   baseUrl: '/OPS445/',
@@ -17,7 +17,7 @@ module.exports = {
   projectName: 'OPS445',
   themeConfig: {
     navbar: {
-      title: 'OPS445 - Course Title',
+      title: 'OPS445 - Open System Automation',
       logo: {
         alt: 'Seneca College',
         src: 'img/logo.svg',
@@ -31,7 +31,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'OPS445 - Course Title',
+          title: 'OPS445 - Open System Automation',
           items: [
             {
               label: 'Contents',
