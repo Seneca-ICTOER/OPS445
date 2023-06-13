@@ -44,37 +44,22 @@ Most of the learning in this course occurs through interactive labs that give yo
 
 ## Required Materials
 
-Devices:	[Software and Hardware for Online Learning](https://www.senecacollege.ca/student-services-and-support/technical-requirements-for-online-learning.html)
+1. Devices:	[Software and Hardware for Online Learning](https://www.senecacollege.ca/student-services-and-support/technical-requirements-for-online-learning.html)
 
----
+2. **Solid State Drive (SSD) (Optional)	Minimum Capacity**: 100 GB
+3. **Account on matrix**
+    
+      - matrix.senecacollege.ca
+      - SSH access only after connected to Seneca VPN
 
-**Solid State Drive (SSD) (Optional)	Minimum Capacity**: 100 GB
-
----
-
-**Account on matrix**
-
-matrix.senecacollege.ca
-
-SSH access only after connected to Seneca VPN
-
----
-
-**Seneca VPN Client**: [Student VPN Client](https://inside.senecacollege.ca/its/services/vpn/)
-
----
-
-**Think Python** by Allen B. Downey (Available in print and [online](http://greenteapress.com/wp/think-python-2e/))
+4. **Seneca VPN Client**: [Student VPN Client](https://inside.senecacollege.ca/its/services/vpn/)
+5. **Think Python** by Allen B. Downey (Available in print and [online](http://greenteapress.com/wp/think-python-2e/))
 
 ![Think Python Book](/img/Thinkpython.png "Image of Think Python Book cover")
 
----
-
-**Automate the boring Stuff with Python** by AL Sweigart (Available in print and [online](https://automatetheboringstuff.com/))
+6. **Automate the boring Stuff with Python** by AL Sweigart (Available in print and [online](https://automatetheboringstuff.com/))
 
 ![Automate With Python Book](/img/Automatewithpython.png "Image of Automate With Python Book cover")
-
----
 
 ## FAQ
 
