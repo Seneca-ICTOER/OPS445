@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Sample Ansible Hosts for Lab 9
 ---
 
-# OPS445 Sample Ansible Hosts file
+# Sample Ansible Hosts file
 
 ```bash
 ...

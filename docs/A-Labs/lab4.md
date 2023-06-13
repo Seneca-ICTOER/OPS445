@@ -5,7 +5,7 @@ sidebar_position: 4
 description: Lab 4 for Students to Complete and Submit
 ---
 
-# Lab 4: Basic Data Structure & String Manipulation
+# Lab 4: Basic Data Structure and String Manipulation
 
 ## Lab Objectives
 

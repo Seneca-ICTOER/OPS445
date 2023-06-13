@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Weekly Schedule for OPS445 Course
 ---
 
-# OPS445 Python Weekly Schedule
+# Weekly Schedule
 
 ## Week 1
 

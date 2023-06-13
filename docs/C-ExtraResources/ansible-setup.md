@@ -5,7 +5,7 @@ sidebar_position: 1
 description: Ansible Setup File for Lab 9
 ---
 
-# OPS445 Ansible setup
+# Ansible setup
 
 ```bash
 vmlab | SUCCESS => {

@@ -6,11 +6,9 @@ slug: /
 description: Landing Page for OPS445 Course
 ---
 
-# Welcome to OPS445
+# Welcome to OPS445 - Open System Automation
 
-## Open System Automation
-
-### Quick Links
+## Quick Links
 
 | [Weekly Schedule](./weekly-schedule.md) | [Course Outline](https://scs.senecac.on.ca/course/ops445) | [Assignment 1](/B-Assignments/assignment1.md) | [Assignment 2](/B-Assignments/assignment2.md) |
 | :---: | :---: | :---: | :---: |

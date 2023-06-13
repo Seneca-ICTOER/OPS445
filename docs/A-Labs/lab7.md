@@ -5,7 +5,7 @@ sidebar_position: 7
 description: Lab 7 for Students to Complete and Submit
 ---
 
-# Lab 7: Classes, Objects & scope
+# Lab 7: Classes, Objects, and Scope
 
 ## Objectives
 

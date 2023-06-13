@@ -5,7 +5,7 @@ sidebar_position: 3
 description: Assignment 1 for Section NCC
 ---
 
-# OPS445/A1-S23-NCC
+# A1-S23-NCC
 
 ## Assignment 1
 

@@ -5,7 +5,7 @@ sidebar_position: 5
 description: Assignment 2 for Sections NAA and NCC
 ---
 
-# OPS445/A2-W23-NAANCC
+# A2-W23-NAANCC
 
 ## Assignment 2
 

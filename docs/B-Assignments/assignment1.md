@@ -5,25 +5,23 @@ sidebar_position: 1
 description: Home Page for Assignment 1
 ---
 
-# OPS445/Assignment 1
-
-## Assignment 1
+# Assignment 1
 
 Assignment instructions may differ depending on your section. '**Choose the correct section's assignment or you will lose marks!**'
 
-### Section NAA
+## Section NAA
 
 Instructions will be posted shortly.
 
 [\[Assignment 1\]](./assignment1naanbb.md)
 
-### Section NBB
+## Section NBB
 
 Instructions will be posted shortly.
 
 [\[Assignment 1\]](./assignment1naanbb.md)
 
-### Section NCC Summer2023
+## Section NCC Summer2023
 
 Instructions will be posted shortly.
 

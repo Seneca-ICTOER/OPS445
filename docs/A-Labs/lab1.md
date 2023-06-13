@@ -5,7 +5,7 @@ sidebar_position: 1
 description: Lab 1 For Students to Complete and Submit
 ---
 
-# Lab 1: Introduction to git, github.com, and Python
+# Lab 1: Introduction to Git, GitHub.com, and Python
 
 ## Lab Objectives
 

@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Assignment 1 For Sections NAA and NBB
 ---
 
-# OPS445/A1-S23-NAANBB
+# A1-S23-NAANBB
 
 ## Assignment 1
 

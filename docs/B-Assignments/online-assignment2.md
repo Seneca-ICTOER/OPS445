@@ -5,7 +5,7 @@ sidebar_position: 6
 description: Assignment 2 for Section NDD
 ---
 
-# OPS445 Online Assignment 2
+# Online Assignment 2
 
 ## Overview: du Improved
 

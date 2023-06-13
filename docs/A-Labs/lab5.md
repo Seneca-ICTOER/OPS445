@@ -5,7 +5,7 @@ sidebar_position: 5
 description: Lab 5 for Students to Complete and Submit
 ---
 
-# Lab 5: Files & Error Handling
+# Lab 5: Files and Error Handling
 
 ## Lab Objectives
 
