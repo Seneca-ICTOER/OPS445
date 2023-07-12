@@ -46,7 +46,7 @@ You need at least two Linux systems for this lab: your account on matrix.senecac
 
 ### Key Concepts when using Ansible
 
-- YAML - a human-readable data serialization language used by Ansible's playbooks. To know more, your can check out the [wikipedia page here](https://en.wikipedia.org/wiki/YAML) or a simple introduction [here](https://wiki.cdot.senecacollege.ca/wiki/Introduction_to_YAML)
+- YAML - a human-readable data serialization language used by Ansible's playbooks. To know more, your can check out the [wikipedia page here](https://en.wikipedia.org/wiki/YAML) or a simple introduction [here](/C-ExtraResources/introduction-to-yaml.md)
 - Control machine - the host on which you use Ansible to execute tasks on the managed machines
 - Managed machine - a host that is configured by the control machine
 - [Hosts file](/C-ExtraResources/sample-ansible-hosts.md) - contains information about machines to be managed - click [here](/C-ExtraResources/sample-ansible-hosts.md) for sample hosts file

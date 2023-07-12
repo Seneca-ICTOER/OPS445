@@ -1,5 +1,5 @@
 ---
-id: sample-ansible-hosts.md
+id: sample-ansible-hosts
 title: Sample Ansible Hosts
 sidebar_position: 2
 description: Sample Ansible Hosts for Lab 9
