@@ -21,9 +21,9 @@ Below is a table with links to useful online Python reference sites (by category
 
 | **Data Structures**	| **Lists & List Comprehension** | **Strings** | **Miscellaneous** |
 | :--- | :--- | :--- | :--- |
-| - [Tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) | - [Lists](https://docs.python.org/3/tutorial/introduction.html#lists) | - [Strings](https://docs.python.org/3/tutorial/introduction.html#strings) | - [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) |
-| - [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets) | - [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) | - [String Comparisons](https://docs.python.org/3/library/string.html) | |
-| | - [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) | | |
+| [Tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) | [Lists](https://docs.python.org/3/tutorial/introduction.html#lists) | [Strings](https://docs.python.org/3/tutorial/introduction.html#strings) | [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) |
+| [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets) | [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) | [String Comparisons](https://docs.python.org/3/library/string.html) | |
+| | [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) | | |
 
 ## Investigation 1: Data Structures
 
