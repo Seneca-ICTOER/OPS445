@@ -71,7 +71,15 @@ This Milestone will ask you to _refactor_ your code. This means modifying existi
 Use the check script to verify your work so far.
 
 ```bash
-python3 CheckA1.py -f -v TestAfter python3 CheckA1.py -f -v TestLeap python3 CheckA1.py -f -v TestMonMax
+python3 CheckA1.py -f -v TestAfter
+```
+
+```bash
+python3 CheckA1.py -f -v TestLeap
+```
+
+```bash
+python3 CheckA1.py -f -v TestMonMax
 ```
 
 **Feedback**
