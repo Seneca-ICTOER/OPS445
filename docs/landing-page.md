@@ -28,18 +28,6 @@ You will practice the writing of many scripts, reinforcing the importance of aut
 
 In this course, you will use a ssd(in a usb enclosure) with your own computers to create VM using VMWare Workstation, similarly to other Linux courses. However, this time you will also use your account on matrix.senecacollege.ca for creating and testing scripts for each lab. This course can be broken up into 2 halves. The first half of this course will cover learning the python language. The second half of this course, will cover powerful administration systems, and allow you to apply your python knowledge to extend these systems.
 
-## Learning by Doing
-
-Most of the learning in this course occurs through interactive labs that give you feedbacks as you work through each task. While this feedback may help, the solutions will still need to be found by you. There are many ways to solve each problem you may encounter in this course, letting you improve through practice. The way you solved a problem at the beginning of the semester may not be the way you solve it near the end of the semester. Trying to solve previous labs, after learning new material, may prove insightful.
-
-**During the Summer 2023 semester, OPS445 is taught by:**
-
-**[Eric Brauer](mailto:eric.brauer@senecacollege.ca)**
-
-![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
-
-(Section **NAA**, **NCC**)
-
 ## Required Materials
 
 1. Devices:	[Software and Hardware for Online Learning](https://www.senecacollege.ca/student-services-and-support/technical-requirements-for-online-learning.html)
@@ -58,6 +46,18 @@ Most of the learning in this course occurs through interactive labs that give yo
 6. **Automate the boring Stuff with Python** by AL Sweigart (Available in print and [online](https://automatetheboringstuff.com/))
 
 ![Automate With Python Book](/img/Automatewithpython.png "Image of Automate With Python Book cover")
+
+## Learning by Doing
+
+Most of the learning in this course occurs through interactive labs that give you feedbacks as you work through each task. While this feedback may help, the solutions will still need to be found by you. There are many ways to solve each problem you may encounter in this course, letting you improve through practice. The way you solved a problem at the beginning of the semester may not be the way you solve it near the end of the semester. Trying to solve previous labs, after learning new material, may prove insightful.
+
+**During the Summer 2023 semester, OPS445 is taught by:**
+
+**[Eric Brauer](mailto:eric.brauer@senecacollege.ca)**
+
+![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
+
+(Section **NAA**, **NCC**)
 
 ## FAQ
 
