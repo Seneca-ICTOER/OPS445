@@ -80,7 +80,7 @@ I will provide you feedback on **GitHub**. Check the **Issues** tab, and make an
   - Take the screenshots of the output of check scripts. Add the screenshots in the files named: milstone1_testBefore.jpg
   - Commit this file to the repository.
   - Commits must be done before the deadline, a 20% deduction of marks applies to late submissions per day.
-  - In addition submit the file milstone1_testBefore.jpg to Blackbaord, a link will be provided.
+  - In addition submit the file milstone1\_testBefore.jpg to Blackbaord, a link will be provided.
 
 ---
 
