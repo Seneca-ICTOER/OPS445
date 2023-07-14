@@ -80,7 +80,7 @@ You will need to complete the functions inside the provided file called `duim.py
 
        - Your function should check that a percent argument is a valid number between 0 and 100. It should fail if it isn't.
        - **total chars** refers to the total number of characters that the bar graph will be composed of. You can use equal signs `=` or any other character that makes sense, but the empty space **must be composed of spaces**, at least until you have passed the first milestone.
-       - The string returned by this function should only be composed of these two characters. For example, calling percent_to_graph(50, 10) should return:
+       - The string returned by this function should only be composed of these two characters. For example, calling `percent_to_graph(50, 10)` should return:
 
 ```bash
    '=====     '
@@ -247,7 +247,7 @@ Once you have achieved the Milestones, you will have to do the following to get 
 
        - Use the total size of the target directory to calculate percentage.
        - For each subdirectory of target directory, you will need to calculate a percentage, using the total of the target directory.
-       - Once you've calculated percentage, call `percent_to_graph` with a max_size of your choice.
+       - Once you've calculated percentage, call `percent_to_graph` with a max\_size of your choice.
        - For every subdirectory, print _at least_ the percent, the bar graph, and the name of the subdirectory.
        - The target directory **should not** have a bar graph.
 
@@ -270,7 +270,7 @@ It is expected that the additional features you provided should be useful, non-t
 ## The Assignment (due December 9, 11:59pm)
 
   - Be sure to make your final commit before the deadline. Don't forget to also use `git push` to push your code into the online repository!
-  - Then, copy the contents of your **duim.py** file into a2_yoursenecauser.py, and submit it to Blackboard along with a2_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
+  - Then, copy the contents of your **duim.py** file into a2\_yoursenecauser.py, and submit it to Blackboard along with a2\_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
 
 
 ## Rubric
