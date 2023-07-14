@@ -86,12 +86,12 @@ I will provide you feedback on **GitHub**. Check the **Issues** tab, and make an
 
 **Milestone 2**
 
-This Milestone will ask you to refactor your code. This means modifying existing code to make it more portable.
+This Milestone will ask you to _refactor_ your code. This means modifying existing code to make it more portable.
 
   1. Complete the `leap_year()` function, using the relevant code that’s already inside `after()`.
   2. Edit your `after()` function. Replace any code that calculates leap years with a `leap_year` function call.
   3. Verify that `after()` still works.
-  4. Complete the `dbda()` function. Given a starting date and number of days, `dbda()` should call either `before()` or `after()` inside of a loop and return the end date. A negative number of days should return a date _before_ start_date, and a postive number should return a date _after_ start_date.
+  4. Complete the `dbda()` function. Given a starting date and number of days, `dbda()` should call either `before()` or `after()` inside of a loop and return the end date. A negative number of days should return a date _before_ start\_date, and a postive number should return a date _after_ start\_date.
 
 **Check Your Work**
 
