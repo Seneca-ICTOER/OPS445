@@ -288,9 +288,7 @@ Note that there is no password prompting if you complete "Part 3" successfully, 
 
 ### Part 2: running privileged commands on remote machines
 
-**WARNING** 
-
-**Running privileged commands incorrectly with sudo may cause irreparable damage to your remote machine.**
+**WARNING: Running privileged commands incorrectly with sudo may cause irreparable damage to your remote machine.**
 
 We say that running an ad-hoc fab command is very similar to the SSH command with shell commands attached at the end. Let's try both with privileged commands, like the "yum" command.
 
