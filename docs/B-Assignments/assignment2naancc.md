@@ -13,7 +13,7 @@ description: Assignment 2 for Sections NAA and NCC
 
 Create a script that presents information about process memory usage in a user friendly way.
 
-Processes are a way of abstracting the different threads on a Linux system. Whenever you run a program from the terminal, or launch an application from the GUI, you start one or more processes. Processes require memory and CPU time until they are closed or finish. You have already learned about investigating processes using commands such as ps or top. Your task will be to create a basic program similar to these.
+Processes are a way of abstracting the different threads on a Linux system. Whenever you run a program from the terminal, or launch an application from the GUI, you start one or more processes. Processes require memory and CPU time until they are closed or finish. You have already learned about investigating processes using commands such as `ps` or `top`. Your task will be to create a basic program similar to these.
 
 
 **Program Function**
@@ -48,14 +48,13 @@ Using the `-l` option with a number will adjust the length of the **bar graph**.
 
 Please see the **Sample Output** section for more details.
 
-
 **How It Works**
 
 **Total Memory Use**
 
 Information about processes can be found in the `/proc` directory. Use `ls` to investigate this location now. Pay particular attention to the directories that are named after process IDs (pids) and files such as `meminfo`.
 
-When we calculate memory usage on a Linux machine, we have to take many things into account: unused memory is considered wasted, and so available memory is often used to cache data that is no longer is use, but may need to be accessed in the future. Generally any memory that isn’t **free, or being used for buffering or caching** is considered **in use**.
+When we calculate memory usage on a Linux machine, we have to take many things into account: unused memory is considered _wasted_, and so available memory is often used to _cache_ data that is no longer is use, but may need to be accessed in the future. Generally any memory that isn’t **free, or being used for buffering or caching** is considered **in use**.
 
 Memory that is considered _available_ is that which can be used to start new applications without swapping.
 
@@ -66,7 +65,7 @@ Both of these memory amounts can be found inside the `/proc/meminfo` file.
 
 **Tracking Processes For A Running Program**
 
-For this assignment, we will ask you to get the Process ID numbers (pids) of an application using the `pidof` command. As you will discover, simple CLI programs like grep might only use a single process, whereas a more complex GUI program like Firefox will use several.
+For this assignment, we will ask you to get the Process ID numbers (pids) of an application using the `pidof` command. As you will discover, simple CLI programs like `grep` might only use a single process, whereas a more complex GUI program like Firefox will use several.
 
 
 **Memory Use Per Process**
@@ -77,7 +76,7 @@ Memory usage for a single process can be very complex. When an application start
 
 When you use a tool such as **Process Monitor** or **top**, generally the memory amount being reported is **Rss**. So for simplicity’s sake, **for this assignment the memory used by a process should be the resident total.**
 
-The total amount of Rss memory can be found in `/proc/pid`, where pid is the process id number. In this directory you will find a file called smaps. Your program will need to read this file, find each line that begins with **Rss**, and sum the number to get total Rss memory used.
+The total amount of Rss memory can be found in `/proc/pid`, where pid is the process id number. In this directory you will find a file called `smaps`. Your program will need to read this file, find each line that begins with **Rss**, and sum the number to get total Rss memory used.
 
 For more information on how memory and /proc in Linux refer to these manual pages:
 
@@ -87,17 +86,13 @@ For more information on how memory and /proc in Linux refer to these manual page
 
 **TL;DR**: The process we are using for this assignment is not accurate, but it will get us close enough!
 
-
 ### Restrictions
 
-You may **only use the following modules**:
-  
-  - argparse
-  - os
-  - sys
-
-No other modules are allowed
-
+- You may **only use the following modules**:  
+    - argparse
+    - os
+    - sys
+- No other modules are allowed
 
 ### Instructions
 
