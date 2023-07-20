@@ -62,12 +62,12 @@ You have options in how you set this up. If the computer you will be using for t
 We will demonstrate the steps for setting up a Fedora Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/Zxt2BKq-vIw) is available to walk you through the process.
 
    - Install Virtual Machine Software such as VMWare Workstation.
-   - Download the Fedora Workstation ISO file from The Fedora Website.
+   - Download the Fedora Workstation ISO file from [The Fedora Website](https://download.fedoraproject.org/pub/fedora/linux/releases/34/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-34-1.2.iso).
    - Use the steps you've already learned to create a new virtual machine from this ISO file. Your virtual machine should have 20GB of hard drive space, and you can leave all other hardware specs as default.
    - Start up your virtual machine, and at the graphical start menu select 'Install Fedora on your computer.'
    - Your installer will now be displayed. Set the correct timezone, and click on the 'Installation Destination' button under 'System'. Click the 'Done' button in the top-left to accept the automatic storage configuration.
    - Allow the installation to complete. Click the 'Finish Installation' button when it appears, and then reboot your machine.
-   - When the Virtual Machine has rebooted, you should see a welcome screen along with some more configuration options. Disable Location, as this seems to cause crashes when running as a VM. Skip the step to connect online accounts.
+   - When the Virtual Machine has rebooted, you should see a welcome screen along with some more configuration options. **Disable Location**, as this seems to cause crashes when running as a VM. Skip the step to connect online accounts.
    - Enter your name, and a password. Don't forget this password, as you will need it to become root.
 
 #### Verify Python
@@ -185,12 +185,12 @@ If you connect to the VPN using your host Windows machine, you should be able to
 
 #### Identify and explore Python versions on Matrix
 
-- Once you are on matrix.senecacollege.ca, run the python command to start a Python version 2 interactive shell at the command prompt. The last line displayed should be \>\>\>. the \>\>\> sign is referred to as the Python interactive shell prompt.
+- Once you are on matrix.senecacollege.ca, run the python command to start a Python version 2 interactive shell at the command prompt. The last line displayed should be **\>\>\>**. the **\>\>\>** sign is referred to as the Python interactive shell prompt.
      - python
      - at the **\>\>\>** prompt, type help('keywords') and record the output
      - at the **\>\>\>** prompt, type help('symbols') and record the output
-     - type exit() at the \>\>\> prompt to exit from the Python interactive shell.
-- Run the python3 command to start a Python version 3 interactive shell session at the command prompt.
+     - type exit() at the **\>\>\>** prompt to exit from the Python interactive shell.
+- Run the **python3** command to start a Python version 3 interactive shell session at the command prompt.
      - python3
      - at the **\>\>\>** prompt, type help('keywords') and record the output
      - at the **\>\>\>** prompt, type help('symbols') and record the output
@@ -202,15 +202,15 @@ If you connect to the VPN using your host Windows machine, you should be able to
 #### Task 1: Create a Github.com account
 
 - Start your web browser and go to github.com and use your own email to sign up for a new github account if you don't already have one.
-\[Note: Please be aware that Seneca's spam filter block email from github.com by default, if you use your Seneca email to sign up for an account on github.com, you might have to re-configure your email spam filter to allow confirmation email from github.com to reach your inbox.\]
+**\[Note: Please be aware that Seneca's spam filter block email from github.com by default, if you use your Seneca email to sign up for an account on github.com, you might have to re-configure your email spam filter to allow confirmation email from github.com to reach your inbox.\]**
 
 #### Task 2: Add your public key to Github
 
 Follow the Github guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add your public key to your profile:
 
 - Add one public key for each computer/VM you will be using for the course.
-- Run **ls -la ~/.ssh** and look for a public key file such as **id_rsa.pub**. If no file exists, generate a new keypair using ssh-keygen.
-- Use **cat <public key filename\>** to display the contents of the public key, and then select and copy the text.
+- Run `ls -la ~/.ssh` and look for a public key file such as **id_rsa.pub**. If no file exists, generate a new keypair using `ssh-keygen`.
+- Use `cat <public key filename>` to display the contents of the public key, and then select and copy the text.
 - Open Github in your web browser. Log in, select **Settings -\> SSH and GPG Keys**. Create new key, and paste your public key contents into the text box.
 
 You will now have permission to clone repositories using **SSH**.
@@ -265,7 +265,7 @@ python3 sample.py 2>/dev/null
 python3 sample.py test 2>/dev/null
 ```
 
-## Investigation 3 - exploring and using Python's built-in functions
+## Investigation 3 - Exploring and Using Python's Built-in Functions
 
 ### Part 1 - Interactive (learning) mode: using the Python Interactive Shell
 
@@ -476,7 +476,7 @@ python3 ./CheckLab1.py -f -v lab1a
  
 Before moving on to the next step make sure you identify any and all errors in "lab1a.py". When the check script tells you everything is "ok", you may proceed to the next step.
 
-## Investigation 4 - exploring Python's built-in Data Objects
+## Investigation 4 - Exploring Python's Built-in Data Objects
 
 In Python, a data object is used to store data for use later in the program. This data can be a string, integer, decimal number, characters, etc. We will only be covering string and integer objects in this lab. You will learn and use other Python built-in data object types in future labs.
 
@@ -622,8 +622,7 @@ python3 ./CheckLab1.py -f -v lab1c
 
    11. Before moving on to the next step make sure you identify any and all errors in "lab1c.py". When the check script tells you everything is "ok", you may proceed to the next step. Add lab1c.py to the repo and commit the change.
 
-
-## Investigation 5 - exploring on how to get Python to do math
+## Investigation 5 - Exploring on How to Get Python to do Math
 
 In the previous section, you performed a couple of simple mathematical operations. In this section, you will learn some additional mathematical operations.
 
@@ -654,9 +653,9 @@ print(100 / ((5 + 5) * 2))	# the inner most parentheses are first performing add
    3. To gain practice, complete your script with the following content and details:
 
          - The script should have a Shebang line.
-         - The object x should contain a integer with the value 10
-         - The object y should contain a integer with the value 2
-         - The object z should contain a integer with the value 5
+         - The object **x** should contain a integer with the value **10**
+         - The object **y** should contain a integer with the value **2**
+         - The object **z** should contain a integer with the value **5**
          - The script, when executed, should print out "10 + 2 * 5 = 20" (the printout should change if the values in the objects change)
 
    - Example run:
