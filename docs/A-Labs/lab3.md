@@ -940,8 +940,10 @@ if __name__ == '__main__':
    - **Additional Requirements**
 
         - The missing list should have the values: **1, 2, 3, 4, 5**
-        - The program should have a function called **add\_item\_to\_list(ordered\_list)** This function takes a single argument which is a list name itself. It will then look at the value of the last existing item in the list, it will then append a new value that is one unit bigger (i.e. **+1** and modifying that same list without returning any value).
-        - The script should have a function called **remove\_items\_from\_list(ordered\_list, items\_to\_remove)** This function takes two arguments: a list, and a list of numbers to remove from the list. This function will then check if those items exist within that list, and if they exist, then they will be removed. This function will modify the list without returning any value.
+        - The program should have a function called **add\_item\_to\_list(ordered\_list)**
+            + This function takes a single argument which is a list name itself. It will then look at the value of the last existing item in the list, it will then append a new value that is one unit bigger (i.e. **+1** and modifying that same list without returning any value).
+        - The script should have a function called **remove\_items\_from\_list(ordered\_list, items\_to\_remove)**
+            + This function takes two arguments: a list, and a list of numbers to remove from the list. This function will then check if those items exist within that list, and if they exist, then they will be removed. This function will modify the list without returning any value.
 
    - **Sample Run 1:**
 
