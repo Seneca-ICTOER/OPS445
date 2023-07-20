@@ -103,9 +103,9 @@ Now it's time to create a new script to prompt the user to enter data and displa
   2. Modify **lab2b.py** so that it prompts the user for both the user's **name** and **age**.
     
    - **Input / Output Requirements**
-      - The script should have a Shebang line
-      - The script should use an object called name
-      - The script should use an object called age
+      - The script should have a **Shebang line**
+      - The script should use an object called **name**
+      - The script should use an object called **age**
       - The script should prompt the user for "Name: "
       - The script should prompt the user for "Age: "
       - The script should store the values in the correctly spelled objects (case sensitivity counts)
@@ -339,7 +339,7 @@ Now it's time to create a new script. You will be modifying the previous Python 
   1. Make a copy of **lab2c.py** and call it **lab2d.py**.
   2. Modify **lab2d.py** by adding an if statement immediately BEFORE your print statements. This if statement should make sure that lab2d.py is using '2' additional arguments.
 
-   - Input / Output / Processing Requirements
+   - **Input / Output / Processing Requirements**
 
       - The script should have a **Shebang line**
       - The script should **import sys**
@@ -461,7 +461,7 @@ while count != 5:
 print('loop has ended')
 ```
 
-   - Sometimes you know in advance how many times a loop will execute, this is referred as a determinant loop, but often you don't. For example loops are extremely useful for error-checking in order to prevent incorrect data being accepted and causing the script not to perform correctly.
+   - Sometimes you know in advance how many times a loop will execute, this is referred as a determinant loop, but often you don't. For example loops are extremely useful for **error-checking** in order to prevent incorrect data being accepted and causing the script not to perform correctly.
 
   3. Here is an example of a loop used for error-checking. Run this code and type several incorrect passwords then the correct one to see what happens:
 
