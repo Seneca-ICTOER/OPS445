@@ -16,6 +16,7 @@ description: Lab 7 for Students to Complete and Submit
 ### Overview
 
 Object-oriented programming is conceptually one level higher than simply structured programming style as you've experienced in Bash or C. In this lab, we're going to study some features of classes and programmer-defined objects by looking at a few object-oriented programming examples using the Python language.
+
 First of all, let's review some of the basic concepts about class in Python.
 
    - A class is a type, a description of a thing, the definition of what it should look like (data attributes) and what we can do about it (function attributes).
@@ -163,13 +164,13 @@ ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/mast
 python3 ./CheckLab7.py -f -v lab7a
 ```
 
-  8. Before proceeding, make certain that you identify all errors in lab7a.py. When the checking script tells you everything is OK - proceed to the next step.
+  8. Before proceeding, make certain that you identify all errors in **lab7a.py**. When the checking script tells you everything is OK - proceed to the next step.
 
 ### Part 2 - Pure Function and Modifiers
 
 In Part 1, the sum_times() function will not make any change to any of the two time objects passed to it. This is called a pure function. In this part, we are going to create a function which changes the value (the three attributes) of a time object based on the integer value passed to the function. We call such type of function a **modifier**. The function we are going to add is called **change\_time(time, seconds)**: where **time** is the time object the function is going to modify, and **seconds** is the number of seconds the function will add to the time object.
 
-  1. Make a copy of lab7a.py and name it as **lab7b.py** in the ~/ops445/lab7 directory
+  1. Make a copy of **lab7a.py** and name it as **lab7b.py** in the ~/ops445/lab7 directory
 
 ```bash
 cd ~/ops445/lab7
@@ -288,14 +289,14 @@ def sec_to_time(seconds):
 ...
 ```
 
-  1. Make a copy of lab7b.py and name it as lab7c.py in the ~/ops445/lab7 directory:
+  1. Make a copy of **lab7b.py** and name it as **lab7c.py** in the **~/ops445/lab7** directory:
 
 ```bash
 cd ~/ops445/lab7
 cp lab7b.py lab7c.py
 ```
 
-  2. Add the above two new functions: time\_to\_sec() and sec\_to\_time() to lab7c.py after the change\_time() function.
+  2. Add the above two new functions: time\_to\_sec() and sec\_to\_time() to **lab7c.py** after the change\_time() function.
   3. Save the file, and test the two function in an Python interactive shell:
 
 ```bash
@@ -317,7 +318,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
   4. You should get the same result as shown above. If not, please troubleshoot and fix any errors.
-  5. Edit your lab7c.py again. Modify the other two functions: sum\_times() and change\_time() to use the two new functions to perform the computation operation.
+  5. Edit your **lab7c.py** again. Modify the other two functions: sum\_times() and change\_time() to use the two new functions to perform the computation operation.
   6. Create a new Python script named **lab7c1.py** and place the following content in it:
 
 ```python
@@ -510,7 +511,7 @@ Type "help", "copyright", "credits" or "license" for more information.
   4. You will still notice that typing the time object name itself on an interactive python shell, the Python interpreter will just display the type of the object and its location in memory.
   5. Let's look at the next special object method **\_\_repr\_\_()**. We can also attached code to this function to tell the python interpreter what we would like the object to look like in an interactive shell.
 
-        - Associate the following code to the __repr__ method for the Time class:
+        - **Associate the following code to the \_\_repr\_\_** method for the Time class:
         
 ```python
 def __repr__(self):
