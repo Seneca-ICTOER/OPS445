@@ -696,7 +696,7 @@ python3 ./CheckLab1.py -f -v &> lab1_yoursenecaid.txt
 Submit the following files individually to Blackboard:
 
 - [x] `lab1_yoursenecaid.txt`
-- [x] `lab1a.py, lab1b.py, lab1c.py, lab1d.py`
+- [x] `lab1a.py`, `lab1b.py`, `lab1c.py`, `lab1d.py`
 
 ### Complete the GitHub Submission
 
