@@ -20,7 +20,7 @@ As you develop your Python language skills, you may start to be "overwhelmed" wi
 Below is a table with links to useful online Python reference sites (by category). You may find these references useful for your python coding tasks, etc.
 
 | **Data Structures**	| **Lists & List Comprehension** | **Strings** | **Miscellaneous** |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | [Tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) | [Lists](https://docs.python.org/3/tutorial/introduction.html#lists) | [Strings](https://docs.python.org/3/tutorial/introduction.html#strings) | [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) |
 | [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets) | [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) | [String Comparisons](https://docs.python.org/3/library/string.html) | |
 | | [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) | | |
@@ -241,7 +241,7 @@ match:  {8, 9, 5, 6, 7}
 diff:  {1, 2, 3, 4, 10, 11, 12, 13, 14}
 ```
 
-   - Sample Run 2 (with import):
+   - **Sample Run 2 (with import):**
 
 ```python
 import lab4a
@@ -452,12 +452,13 @@ if __name__ == '__main__':
 
         - **create_dictionary()**
 
-        1. **accepts** two lists as arguments keys and values, **combines** these lists together to **create** a dictionary (**Tip**: use a while loop to access elements in both the keys and values lists at the same time)
-        2. **returns a dictionary** that has the keys and associated values from the lists
+            1. **accepts** two lists as arguments keys and values, **combines** these lists together to **create** a dictionary (**Tip**: use a while loop to access elements in both the keys and values lists at the same time)
+            2. **returns a dictionary** that has the keys and associated values from the lists
 
         - **shared_values()**
-        1. **accepts** two dictionaries as arguments and **finds** all values that are shared between the two dictionaries (**Tip**: generate sets containing only values for each dictionary, then use a function mentioned in a previous section to store the values that are common to both lists)
-        2. **returns a set** containing **ONLY values** found in **BOTH dictionaries**
+            
+            1. **accepts** two dictionaries as arguments and **finds** all values that are shared between the two dictionaries (**Tip**: generate sets containing only values for each dictionary, then use a function mentioned in a previous section to store the values that are common to both lists)
+            2. **returns a set** containing **ONLY values** found in **BOTH dictionaries**
 
    - make sure the functions have the correct number of arguments required
    - The script should show the exact output as the samples
@@ -682,23 +683,23 @@ if __name__ == '__main__':
 
         - **first_five():**
         
-        1. Accepts a single string argument
-        2. Returns a string that contains the first five characters of the argument given
+            1. Accepts a single string argument
+            2. Returns a string that contains the first five characters of the argument given
 
         - **last_seven():**
 
-        1. Accepts a single string argument
-        2. Returns a string that contains the last seven characters of the argument given
+            1. Accepts a single string argument
+            2. Returns a string that contains the last seven characters of the argument given
 
         - **middle_number():**
 
-        1. Accepts a integer as a argument
-        2. Returns a string containing the second and third characters in the number
+            1. Accepts a integer as a argument
+            2. Returns a string containing the second and third characters in the number
 
         - **first_three_last_three():**
 
-        1. Accepts two string arguments
-        2. Returns a single string that starts with the first three characters of argument1 and ends with the last three characters of argument2
+            1. Accepts two string arguments
+            2. Returns a single string that starts with the first three characters of argument1 and ends with the last three characters of argument2
 
    - Example: first\_three\_last\_three('abcdefg', '1234567') returns single string 'abc567'
 
@@ -927,12 +928,12 @@ Upload the following files individually to blackboard:
   11. List and briefly explain the following string methods: **lower()** , **upper()** , **swapcase()** , **title()** , **captilize()** , **split()**
   12. Assume you issued the following command in your ipython3 shell:
 
-   - `course_name = 'Programming with Python'`
+      - `course_name = 'Programming with Python'`
 
-   - What will be the output for each of the following Python commands?
+      - What will be the output for each of the following Python commands?
 
-        1. `course_name[3:11]`
-        2. `course_name[10:]`
-        3. `course_name[-1]`
+           1. `course_name[3:11]`
+           2. `course_name[10:]`
+           3. `course_name[-1]`
 
   13. Create a string object **text = "Seneca"** in the Python Interactive shell and study the string methods: **text.find()**, **text.count()** using the built-in help() function.
