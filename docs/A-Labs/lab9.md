@@ -55,22 +55,22 @@ You need at least two Linux systems for this lab: your account on matrix.senecac
 
      - **shell commands**
 
-     - ansible remote_machine_id \[-i inventory\] \[--private-key id\_rsa\] \[-u remote_user\] -a 'date'
+         + ansible remote_machine_id \[-i inventory\] \[--private-key id\_rsa\] \[-u remote_user\] -a 'date'
 
 - Ansible modules - code that performs a particular task such as copy a file, installing a package, etc:
 
      - **copy module**
 
-     - ansible remote_machine_id -m copy -a "src=/ops445/ansible.txt dest=/tmp/ansible.txt"
+         + ansible remote_machine_id -m copy -a "src=/ops445/ansible.txt dest=/tmp/ansible.txt"
 
      - **Package management**
 
-     - ansible remote_machine_id -m yum -a "name=epel-release state=latest"
+         + ansible remote_machine_id -m yum -a "name=epel-release state=latest"
 
 - Playbooks - contains one or multiple plays, each play defines a set of repeatable tasks on one or more managed machines. Playbooks are written in YAML. Every play in the playbook is created with environment-specific parameters for the target machines:
 
-     - ansible-playbook remote_machine_id [-i inventory] setup_webserver.yaml
-     - ansible-playbook remote_machine_id [-i inventory] firstrun.yaml
+     - ansible-playbook remote\_machine\_id \[-i inventory\] setup_webserver.yaml
+     - ansible-playbook remote\_machine\_id \[-i inventory\] firstrun.yaml
 
 ### Part 1: The Ansible package installed on matrix
 
@@ -147,7 +147,7 @@ vmlab | CHANGED => {
 
 **-u** is for specifying the user account to be used to login to the remote machine.
 
-**-m** copy is to tell ansible to use the "copy" module.
+**-m copy** is to tell ansible to use the "copy" module.
 
 after **-a** is the arguments to the copy module, which specify the source file and the destination for the copy action.
 
