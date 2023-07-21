@@ -662,7 +662,7 @@ python3 ./CheckLab2.py -f -v &> lab2_yoursenecaid.txt
 Submit the following files individually to Blackboard:
 
 - [x] `lab2_yoursenecaid.txt`
-- [x] `lab2a.py, lab2b.py lab2c.py, lab2d.py, lab2e.py, lab2f.py, and lab2g.py`
+- [x] `lab2a.py`, `lab2b.py`, `lab2c.py`, `lab2d.py`, `lab2e.py`, `lab2f.py`, and `lab2g.py`
 
 Please do not zip, or compress any file when submitting to blackboard. Double check the name of each file and make sure that they are all correct.
 
