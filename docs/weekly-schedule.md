@@ -17,17 +17,16 @@ description: Weekly Schedule for OPS445 Course
 | - Natural language & formal language | - complier, interpreter | |
 | **git and github.com** | - Debugging | |
 | **Python components:** | **Automate with Python: Chapter 1:** Python Basics | |
+| - keywords | | |
 | - symbols | | |
 | - modules | | |
 | - objects | | |
 | **Python Shell** | | |
 | - builtin modules | | |
-| - builtin functions: help(), dir(), type() | | |
+| - builtin functions: **help()**, **dir()**, **type()** | | |
 | - keyword: import | | |
 
-
 ## Week 2
-
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
@@ -37,7 +36,6 @@ description: Weekly Schedule for OPS445 Course
 | - Operators | - Python math operators and order of operations | |
 | - expressions | - String operation '+' and '\*' | |
 | - statements | **Automate with Python: Chapter 2:** Flow Control | |
-
 
 ## Week 3
 
@@ -96,6 +94,12 @@ description: Weekly Schedule for OPS445 Course
 | :--- | :--- | :--- |
 | **Mid-Term Test** | | [Assignment 1](/B-Assignments/assignment1.md) |
 | - Topics: Lab 1 to Lab 5 and All topics covered from week 1 to week 5 | | |
+
+## Study Week
+
+| **Topics** | **Reading/Reference** | **Tasks/Labs** |
+| :--- | :--- | :--- |
+| | | |
 
 ## Week 8
 
