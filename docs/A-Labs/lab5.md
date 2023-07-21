@@ -22,7 +22,7 @@ In previous labs, you have been advised to make notes and use online references.
 Below is a table with links to useful online Python reference sites (by category). You may find these references useful when performing assignments, etc.
 
 | **Category** | **Resource Link** |
-| :--- | :--- |
+| --- | --- |
 | Handling Errors & Exceptions | [Errors & Exceptions](https://docs.python.org/3/tutorial/errors.html) |
 | Built-in Exceptions | [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html) |
 | Data Manipulation via Files | [Reading & Writing Files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) |
@@ -132,7 +132,7 @@ print(method2)
 
 If your professor is asking you to submit labs on GitHub, first follow their instructions on Blackboard to clone the lab5 repository.
 
-  1. Create the ~/ops445/lab5/lab5a.py script.
+  1. Create the **~/ops445/lab5/lab5a.py** script.
   2. Use the following as a template:
 
 ```python
