@@ -991,7 +991,7 @@ python3 ./CheckLab3.py -f -v &> lab3_[seneca_id].txt
 
 Submit the following files individually to Blackboard:
 - [x] `lab3_[seneca_id].txt`
-- [x] `lab3a.py, lab3b.py, lab3c.py, lab3d.py, lab3e.py, and lab3f.py`
+- [x] `lab3a.py`, `lab3b.py`, `lab3c.py`, `lab3d.py`, `lab3e.py`, and `lab3f.py`
 
 ## Lab Review
 
