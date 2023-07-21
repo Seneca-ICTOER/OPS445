@@ -74,7 +74,7 @@ Awesome!! You’ve successfully made your first edit, move on to the [Check Chan
 
 ### Option 2: Using the GitHub Codespace Web Editor
 
-Going to the GitHub repo page for this course: https://github.com/Seneca-ICTOER/OPS445 . 
+Going to the GitHub repo page for this course: https://github.com/Seneca-ICTOER/OPS445 .
 
 **Follow the Steps below:**
 
