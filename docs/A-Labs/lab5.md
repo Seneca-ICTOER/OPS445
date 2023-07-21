@@ -642,7 +642,7 @@ Name the output of `./CheckLab5.py -f -v` as **lab5\_\[seneca\_id\].txt**
 **Submit the following files individually to Blackboard:**
 
 - [x] `lab5_[seneca_id].txt`
-- [x] `lab5a.py, lab5b.py, and lab5c.py`
+- [x] `lab5a.py`, `lab5b.py`, and `lab5c.py`
 
 ## Lab Review
 
