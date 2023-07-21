@@ -733,7 +733,7 @@ Name the output of `./CheckLab7.py -f -v` as **lab7\_\[seneca\_id\].txt**
 **Submit the following files individually to Blackboard:**
 
 - [x] `lab7_[seneca_id].txt`
-- [x] `lab7a.py, lab7b.py, lab7c.py, lab7d.py, lab7e.py, lab7f.py, and lab7i.py.`
+- [x] `lab7a.py`, `lab7b.py`, `lab7c.py`, `lab7d.py`, `lab7e.py`, `lab7f.py`, and `lab7i.py`
 
 ## Lab Review
 
