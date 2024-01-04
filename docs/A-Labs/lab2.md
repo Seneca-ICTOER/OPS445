@@ -43,7 +43,7 @@ In this section, you will learn how to prompt (ask) the user running the python 
 
 **Perform the following steps:**
 
-  1. Login to matrix or launch your Centos VM, open your code editor, and a a shell terminal (as a regular user) for executing your code.
+  1. Launch your Linux VM, open your code editor, and a a shell terminal (as a regular user) for executing your code.
   2. To begin, let's start out with a very basic script. This script will use objects that will display specific values to your terminal. Create the file **lab2a.py** in your **~/ops445/lab2** directory, containing the following content:
 
 ```python
