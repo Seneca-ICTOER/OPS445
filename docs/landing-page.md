@@ -51,14 +51,6 @@ In this course, you will use a ssd(in a usb enclosure) with your own computers t
 
 Most of the learning in this course occurs through interactive labs that give you feedbacks as you work through each task. While this feedback may help, the solutions will still need to be found by you. There are many ways to solve each problem you may encounter in this course, letting you improve through practice. The way you solved a problem at the beginning of the semester may not be the way you solve it near the end of the semester. Trying to solve previous labs, after learning new material, may prove insightful.
 
-**During the Summer 2023 semester, OPS445 is taught by:**
-
-**[Eric Brauer](mailto:eric.brauer@senecacollege.ca)**
-
-![Eric Brauer](/img/Eric_brauer.jpg "Photo of Professor Eric Brauer")
-
-(Section **NAA**, **NCC**)
-
 ## FAQ
 
 [Am I too old to learn programming?](https://inventwithpython.com/blog/2012/09/27/am-i-too-old-to-learn-programming/)
