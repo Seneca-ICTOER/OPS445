@@ -12,7 +12,7 @@ description: Lab 1 For Students to Complete and Submit
 - Using the "git clone" command to clone a repository into a new directory
 - Set up account on github.com for creating, tracking, and managing a repository
 - configure and explore a virtual machine and IDE
-- configure and explore the Python interpreter on matrix.senecacollege.ca
+- configure and explore the Python interpreter
 
 ## Overview
 
@@ -24,8 +24,7 @@ description: Lab 1 For Students to Complete and Submit
      - creating a pull request, and
      - opening and merging a pull request.
 
-- You will then use the git client (git clone) on matrix.senecacollege.ca to access and download the contents of the repository you created on github. Note: if you have your own Linux VM ready, you can also install and use the git client on your VM.
-- You will also use the git client on matrix.senecacollege.ca to clone the repository on github.com which hosts the Python scripts for lab 1.
+- You will then use the git client (git clone) to clone the repository on github.com which hosts the Python scripts for lab 1.
 - Finally, study, create and execute simple Python scripts.
 
 ## Reference
@@ -159,52 +158,14 @@ mkdir ~/ops445/a1
 mkdir ~/ops445/a2
 ```
   
-## Investigation 2 - Python on Matrix
+## Investigation 2 - Git and GitHub
   
-Matrix can not provide a graphical user interface, but it is a useful alterntative for Python development and testing. We will recommend that you use Matrix for **Lab 8 and 9**, once you have become familiar with the fundamentals on your virtual machine.
-
-If you connect to the VPN using your host Windows machine, you should be able to connect using your Linux virtual machine as well. If you are running natively, you should talk to your instructor for other options.
-
-### Part 1 - Python Versions on Matrix
-
-   - You can access the Python Interpreter on Matrix from a Linux machine or a Windows 10 machine.
-
-#### Login to matrix.senecacollege.ca from a Linux machine
-
-   - To login to matrix.senecacollege.ca you must have a active Seneca user account.
-   - The following is a screen shot showing the login from a CentOS Linux (host or vm) system with an active Seneca user name:
-
-![Centos SSH](/img/Centos_ssh.png "Centos SSH image")
-
-#### Login to matrix.senecacollege.ca from a Windows 10 machine
-
-   - Please follow the instruction at [Seneca Student VPN](https://inside.senecacollege.ca/its/services/vpn/studentvpn.html) to download and install the GlobalProtect VPN client and connect to the Seneca VPN to your Windows Machine.
-   - Login to matrix.senecacollege.ca with your Seneca user name from Windows 10's run box.
-
-![Windows 10 SSH](/img/Window10_ssh.png "Windows 10 SSH")
-
-#### Identify and explore Python versions on Matrix
-
-- Once you are on matrix.senecacollege.ca, run the python command to start a Python version 2 interactive shell at the command prompt. The last line displayed should be **\>\>\>**. the **\>\>\>** sign is referred to as the Python interactive shell prompt.
-     - python
-     - at the **\>\>\>** prompt, type help('keywords') and record the output
-     - at the **\>\>\>** prompt, type help('symbols') and record the output
-     - type exit() at the **\>\>\>** prompt to exit from the Python interactive shell.
-- Run the **python3** command to start a Python version 3 interactive shell session at the command prompt.
-     - python3
-     - at the **\>\>\>** prompt, type help('keywords') and record the output
-     - at the **\>\>\>** prompt, type help('symbols') and record the output
-     - type exit() at the "\>\>\>" prompt to exit from the Python interactive shell.
-- Compare the list of keywords and symbols for Python version 2 and version 3. Which keyword(s) is/are remove from version 2 in version 3?
-
-### Part 2 - git and github.com
-
-#### Task 1: Create a Github.com account
+### Task 1: Create a Github.com account
 
 - Start your web browser and go to github.com and use your own email to sign up for a new github account if you don't already have one.
 **\[Note: Please be aware that Seneca's spam filter block email from github.com by default, if you use your Seneca email to sign up for an account on github.com, you might have to re-configure your email spam filter to allow confirmation email from github.com to reach your inbox.\]**
 
-#### Task 2: Add your public key to Github
+### Task 2: Add your public key to Github
 
 Follow the Github guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add your public key to your profile:
 
@@ -215,7 +176,7 @@ Follow the Github guide [here](https://docs.github.com/en/authentication/connect
 
 You will now have permission to clone repositories using **SSH**.
      
-#### Task 3: Create a project and make a pull request on GitHub
+### Task 3: Create a project and make a pull request on GitHub
 
 Follow the Github "Hello World Guide" [here](https://guides.github.com/activities/hello-world/) to perform the following activities:
 
@@ -230,7 +191,7 @@ Please make the following **changes** when following the guide:
 - name the new repository using your **Seneca user name** instead of "hello-world".
 - add your full name, and OPS445 section to the README file, do not post any other personal information there.
 
-#### Task 4: Clone a Github.com repository into a new directory on a Linux system
+### Task 4: Clone a Github.com repository into a new directory on a Linux system
 
 If your professor is asking you to submit labs on GitHub, follow their instructions now to clone the lab1 repository.
 
