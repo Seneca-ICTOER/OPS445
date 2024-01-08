@@ -62,7 +62,7 @@ You have options in how you set this up. If the computer you will be using for t
 We will demonstrate the steps for setting up a Fedora Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/Zxt2BKq-vIw) is available to walk you through the process.
 
    - Install Virtual Machine Software such as VMWare Workstation.
-   - Download the Fedora Workstation ISO file from [The Fedora Website](https://download.fedoraproject.org/pub/fedora/linux/releases/34/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-34-1.2.iso).
+   - Download the Fedora Workstation ISO file from [The Fedora Website](https://fedoraproject.org/workstation/download/).
    - Use the steps you've already learned to create a new virtual machine from this ISO file. Your virtual machine should have 20GB of hard drive space, and you can leave all other hardware specs as default.
    - Start up your virtual machine, and at the graphical start menu select 'Install Fedora on your computer.'
    - Your installer will now be displayed. Set the correct timezone, and click on the 'Installation Destination' button under 'System'. Click the 'Done' button in the top-left to accept the automatic storage configuration.
