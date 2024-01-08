@@ -60,7 +60,7 @@ class Time:
 
 def format_time(t):
     """Return time object (t) as a formatted string"""
-    return '%.2d:%.2d:%.2d' % (t.hour, t.minute, t.second)
+    return f'{t.hour:02d}:{t.minute:02d}:{t.second:02d}' % (t.hour, t.minute, t.second)
 
 def sum_times(t1, t2):
     """Add two time objests and return the sum."""
@@ -389,7 +389,7 @@ class Time:
     
     def format_time(self):
         """Return time object (t) as a formatted string"""
-        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+        return f'{t.hour:02d}:{t.minute:02d}:{t.second:02d}'
  
     def sum_times(self, t2):
         """Add two time objests and return the sum."""
@@ -483,7 +483,7 @@ In this part, we are going to investigate and study the **\_\_str\_\_** and **\_
 ```python
 def __str__(self):
     '''return a string representation for the object self'''
-    return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+    return  f'{t.hour:02d}:{t.minute:02d}:{t.second:02d}'
 ```
         
   1. Make a copy of lab7d.py and name it as lab7e.py. Add the function definition for \_\_str\_\_() after the \_\_init\_\_() function in lab7e.py. Make sure that the **def \_\_str\_\_(self):** line has the same indentation level as the \_\_init\_\_() function.
