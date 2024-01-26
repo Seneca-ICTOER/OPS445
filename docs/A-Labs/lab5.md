@@ -188,7 +188,7 @@ print(lab5a.read_file_list(file_name))
 ```bash
 cd ~/ops445/lab5/
 pwd #confirm that you are in the right directory
-ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/master/CheckLab5.py?raw=true' -O CheckLab5.py
+ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/main/CheckLab5.py?raw=true' -O CheckLab5.py
 python3 ./CheckLab5.py -f -v lab5a
 ```
 
@@ -445,7 +445,7 @@ lab5b.read_file_string(file3)
 ```bash
 cd ~/ops445/lab5/
 pwd #confirm that you are in the right directory
-ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/master/CheckLab5.py?raw=true' -O CheckLab5.py
+ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/main/CheckLab5.py?raw=true' -O CheckLab5.py
 python3 ./CheckLab5.py -f -v lab5b
 ```
 
@@ -629,7 +629,7 @@ error: could not read file'
 ```bash
 cd ~/ops445/lab5/
 pwd #confirm that you are in the right directory
-ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/master/CheckLab5.py?raw=true' -O CheckLab5.py
+ls CheckLab5.py || wget 'https://github.com/senecaops445/lab5-template/blob/main/CheckLab5.py?raw=true' -O CheckLab5.py
 python3 ./CheckLab5.py -f -v lab5c
 ```
 

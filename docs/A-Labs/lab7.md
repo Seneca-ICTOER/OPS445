@@ -160,7 +160,7 @@ def sum_times(t1, t2):
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7a
 ```
 
@@ -258,7 +258,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7b
 ```
 
@@ -355,7 +355,7 @@ print('09:50:00 + 1800 sec','-->',ft(t3))
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7c
 ```
 
@@ -466,7 +466,7 @@ NameError: name 'format_time' is not defined
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7d
 ```
 
@@ -543,7 +543,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7e
 ```
 
@@ -597,7 +597,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7f
 ```
 
@@ -716,7 +716,7 @@ print() in main on schoolName: SSDO
 ```bash
 cd ~/ops445/lab7/
 pwd #confirm that you are in the right directory
-ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/master/CheckLab7.py?raw=true' -O CheckLab7.py
+ls CheckLab7.py || wget 'https://github.com/senecaops445/lab7-template/blob/main/CheckLab7.py?raw=true' -O CheckLab7.py
 python3 ./CheckLab7.py -f -v lab7i
 ```
 

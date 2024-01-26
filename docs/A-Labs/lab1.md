@@ -431,7 +431,7 @@ Download the check script and check your work. Enter the following commands from
 cd ~/ops445/lab1/
 pwd #confirm that you are in the right directory
 ls lab1a.py #confirm that you have the lab1a.py script in your directory
-ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/master/CheckLab1.py?raw=true' -O CheckLab1.py
+ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/main/CheckLab1.py?raw=true' -O CheckLab1.py
 python3 ./CheckLab1.py -f -v lab1a
 ```
  
@@ -494,7 +494,7 @@ How old are you Isaac?
 ```bash
 cd ~/ops445/lab1/
 pwd #confirm that you are in the right directory
-ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/master/CheckLab1.py?raw=true' -O CheckLab1.py
+ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/main/CheckLab1.py?raw=true' -O CheckLab1.py
 python3 ./CheckLab1.py -f -v lab1b
 ```
 
@@ -577,7 +577,7 @@ Isaac is 72 years old!
 ```bash
 cd ~/ops445/lab1/
 pwd #confirm that you are in the right directory
-ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/master/CheckLab1.py?raw=true' -O CheckLab1.py
+ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/main/CheckLab1.py?raw=true' -O CheckLab1.py
 python3 ./CheckLab1.py -f -v lab1c
 ```
 
@@ -634,7 +634,7 @@ cd ~/ops445/lab1/
 ```bash
 cd ~/ops445/lab1/
 pwd #confirm that you are in the right directory
-ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/master/CheckLab1.py?raw=true' -O CheckLab1.py
+ls CheckLab1.py || wget 'https://github.com/senecaops445/lab1-template/blob/main/CheckLab1.py?raw=true' -O CheckLab1.py
 python3 ./CheckLab1.py -f -v lab1d
 ```
 

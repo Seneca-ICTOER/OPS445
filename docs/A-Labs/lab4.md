@@ -260,7 +260,7 @@ print(lab4a.diff_sets(set1,set2))
 ```bash
 cd ~/ops445/lab4/
 pwd #confirm that you are in the right directory
-ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/master/CheckLab4.py?raw=true' -O CheckLab4.py
+ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/main/CheckLab4.py?raw=true' -O CheckLab4.py
 python3 ./CheckLab4.py -f -v lab4a
 ```
 
@@ -332,7 +332,7 @@ print(lab4b.diff_lists(list1,list2))
 ```bash
 cd ~/ops445/lab4/
 pwd #confirm that you are in the right directory
-ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/master/CheckLab4.py?raw=true' -O CheckLab4.py
+ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/main/CheckLab4.py?raw=true' -O CheckLab4.py
 python3 ./CheckLab4.py -f -v lab4b
 ```
 
@@ -501,7 +501,7 @@ print(common)
 ```bash
 cd ~/ops445/lab4/
 pwd #confirm that you are in the right directory
-ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/master/CheckLab4.py?raw=true' -O CheckLab4.py
+ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/main/CheckLab4.py?raw=true' -O CheckLab4.py
 python3 ./CheckLab4.py -f -v lab4c
 ```
 
@@ -750,7 +750,7 @@ print(lab4d.first_three_last_three(str2, str1))
 ```bash
 cd ~/ops445/lab4/
 pwd #confirm that you are in the right directory
-ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/master/CheckLab4.py?raw=true' -O CheckLab4.py
+ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/main/CheckLab4.py?raw=true' -O CheckLab4.py
 python3 ./CheckLab4.py -f -v lab4d
 ```
 
@@ -893,7 +893,7 @@ print(is_digits('-12'))
 ```bash
 cd ~/ops445/lab4/
 pwd #confirm that you are in the right directory
-ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/master/CheckLab4.py?raw=true' -O CheckLab4.py
+ls CheckLab4.py || wget 'https://github.com/senecaops445/lab4-template/blob/main/CheckLab4.py?raw=true' -O CheckLab4.py
 python3 ./CheckLab4.py -f -v lab4e
 ```
 

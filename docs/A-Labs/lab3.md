@@ -250,7 +250,7 @@ print(lab3a.return_number_value())
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3a
 ```
 
@@ -401,7 +401,7 @@ lab3b.multiply_numbers(10, 2)
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3b
 ```
 
@@ -516,7 +516,7 @@ lab3c.operate(100, 5, 'power')
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3c
 ```
 
@@ -671,7 +671,7 @@ lab3d.free_space()
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3d
 ```
 
@@ -790,7 +790,7 @@ lab3e.give_second_and_third_item()
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3e
 ```
 
@@ -975,7 +975,7 @@ print(my_list)
 ```bash
 cd ~/ops445/lab3/
 pwd #confirm that you are in the right directory
-ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/master/CheckLab3.py?raw=true' -O CheckLab3.py
+ls CheckLab3.py || wget 'https://github.com/senecaops445/lab3-template/blob/main/CheckLab3.py?raw=true' -O CheckLab3.py
 python3 ./CheckLab3.py -f -v lab3f
 ```
 

@@ -346,7 +346,7 @@ student2.displayCourses()
 ```bash
 cd ~/ops445/lab6/
 pwd #confirm that you are in the right directory
-ls CheckLab6.py || wget 'https://github.com/senecaops445/lab6-template/blob/master/CheckLab6.py?raw=true' -O CheckLab6.py
+ls CheckLab6.py || wget 'https://github.com/senecaops445/lab6-template/blob/main/CheckLab6.py?raw=true' -O CheckLab6.py
 python3 ./CheckLab6.py -f -v lab6a
 ```
 

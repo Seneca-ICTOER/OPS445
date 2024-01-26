@@ -65,7 +65,7 @@ print('Hi ' + name + ', you are ' + str(age) + ' years old.')
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2a
 ```
 
@@ -134,7 +134,7 @@ Hi Jen, you are 25 years old.
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2b
 ```
 
@@ -252,7 +252,7 @@ IndexError: list index out of range
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2c
 ```
 
@@ -384,7 +384,7 @@ Usage: ./lab2d.py name age
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2d
 ```
 
@@ -510,7 +510,7 @@ blast off!
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2e
 ```
 
@@ -568,7 +568,7 @@ blast off!
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2f
 ```
 
@@ -645,7 +645,7 @@ blast off!
 ```bash
 cd ~/ops445/lab2/
 pwd #confirm that you are in the right directory
-ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/master/CheckLab2.py?raw=true' -O CheckLab2.py
+ls CheckLab2.py || wget 'https://github.com/senecaops445/lab2-template/blob/main/CheckLab2.py?raw=true' -O CheckLab2.py
 python3 ./CheckLab2.py -f -v lab2g
 ```
 
