@@ -2,7 +2,7 @@
 id: online-assignment2
 title: Online Assignment 2
 sidebar_position: 6
-description: Assignment 2 for Section NDD
+description: Assignment 2: DuImproved 
 ---
 
 # Online Assignment 2
@@ -149,7 +149,7 @@ The first step will be to clone the Assignment 2 repository. The invite link wil
 The repo will contain a check script, a README file, and the file where you will enter your code.
 
 
-### The First Milestone (due November 25)
+### The First Milestone (due date on Blackboard)
 
 For the first milestone, you will have two functions to complete.
 
@@ -180,7 +180,7 @@ To test with the check script, run the following:
 `python3 CheckA2.py -f -v TestDuSub`
 
 
-### Second Milestone (due December 2)
+### Second Milestone (due date on Blackboard)
 
 For the second milestone you will have two more functions to complete.
 
@@ -224,7 +224,7 @@ optional arguments:
   -l LENGTH, --length LENGTH
                         Specify the length of the graph. Default is 20.
 
-Copyright 2022
+Copyright 202X
 ```
 
 Use the following to test your code:
@@ -267,7 +267,7 @@ After completing the above, you are expected to add some additional features. So
 It is expected that the additional features you provided should be useful, non-trivial, they should not require super-user privileges and should not require the installation of additional packages to work. (ie: I shouldn't have to run pip to make your assignment work).
 
 
-## The Assignment (due December 9, 11:59pm)
+## The Assignment (due date on Blackboard)
 
   - Be sure to make your final commit before the deadline. Don't forget to also use `git push` to push your code into the online repository!
   - Then, copy the contents of your **duim.py** file into a2\_yoursenecauser.py, and submit it to Blackboard along with a2\_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
@@ -278,17 +278,16 @@ It is expected that the additional features you provided should be useful, non-t
 | **Task** |	**Maximum mark** |	**Actual mark** |
 | :--- | :--- | :--- |
 | Program Authorship Declaration |	5	 | |
-| required functions design |	5 | |
-| required functions readability	| 5	| |
-| main loop design	| 10	| |
-| main loop readability	| 10	| |
-| output function design	| 5	| |
-| output function readability	| 5	| |
-| additional features implemented	| 20	| |
-| docstrings and comments	| 5	| |
+| Program Output: Correct Values | 10 | |
+| Program Output: Design and Appearance | 10 | |
+| Required Functions: Code Quality | 10 | |
+| Additional Functions: Code Quality | 5 | |
+| Main Loop: Code Quality	| 10	| |
+| Additional Features Implemented	| 10	| |
+| Docstrings and Comments	| 10 | |
+| Github.com Repository: Commit Messages and Use	| 10	| |
 | First Milestone	| 10	| |
 | Second Milestone	| 10	| |
-| github.com repository: Commit messages and use	| 10	| |
 | **Total**	| 100	| |
 
 
@@ -296,5 +295,5 @@ It is expected that the additional features you provided should be useful, non-t
 
 Please submit the following files by the due date:
 
-  - Your python script, named as 'duim.py', in your repository, and also **submitted to Blackboard** as a2\_yoursenecauser.py, by December 9 at 11:59pm.
+  - Your python script, named as 'duim.py', in your repository, and also **submitted to Blackboard** as a2\_yoursenecauser.py
   - Submit it to Blackboard along with a2\_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
