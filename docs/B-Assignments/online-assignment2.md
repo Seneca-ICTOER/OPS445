@@ -2,7 +2,7 @@
 id: online-assignment2
 title: Online Assignment 2
 sidebar_position: 6
-description: Assignment 2: DuImproved 
+description: Assignment 2 DuImproved 
 ---
 
 # Online Assignment 2
