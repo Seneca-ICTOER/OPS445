@@ -64,7 +64,7 @@ If your section is not providing an invite code to the repo, you should create a
 
 ### Permitted Modules
 
-**Your python script is allowed to import only the os, subprocess, argparse and sys modules from the standard library.**
+**Your python script is allowed to import only the subprocess, argparse and sys modules from the standard library.**
 
 ### Required Functions
 
