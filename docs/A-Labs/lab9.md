@@ -9,7 +9,7 @@ description: Lab 9 for Students to Complete and Submit
 
 ## Objective
 
-  1. Confirm and review the Ansible package installed on matrix.senecacollege.ca
+  1. Confirm and review the Ansible package installed on matrix.senecapolytechnic.ca
   2. Explore and run Ansible's ad hoc commands
   3. Explore and study a few Ansible's modules
   4. Explore, create, and run a few Ansible playbooks
@@ -29,12 +29,12 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
 
 ## System requirements
 
-- You must have a valid Seneca user account on matrix.senecacollege.ca and an VM assigned to you in myvmlab.senecacollege.ca:
+- You must have a valid Seneca user account on matrix.senecapolytechnic.ca and an VM assigned to you in myvmlab.senecapolytechnic.ca:
 
-     - control machine (matrix.senecacollege.ca)- run ansible to configure your assigned VM in myvmlab.senecacollege.ca
-     - managed machine(s) (your vm in myvmlab.senecacollege) - to be managed by the control machine
+     - control machine (matrix.senecapolytechnic.ca)- run ansible to configure your assigned VM in myvmlab.senecapolytechnic.ca
+     - managed machine(s) (your vm in myvmlab.senecapolytechnic) - to be managed by the control machine
 
-- You should be able to ssh from matrix.senecacollege.ca as a regular user to your managed machine without supplying a login password.
+- You should be able to ssh from matrix.senecapolytechnic.ca as a regular user to your managed machine without supplying a login password.
 - Your account on your managed machine is a sudoer and can run sudo with/without password.
 - Has Python 2.7+ installed on your managed machine(s).
 
@@ -42,7 +42,7 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
 
 In this investigation, we explore the main components of the Ansible configuration management system and its operating environment. We also study a simple playbook for managing the configuration of a CentOS 7.x VM.
 
-You need at least two Linux systems for this lab: your account on matrix.senecacollege.ca to be used as the control machine and your assigned VM in myvmlab.senecacollege.ca as the managed machine. The Ansible package is already installed on matrix for you.
+You need at least two Linux systems for this lab: your account on matrix.senecapolytechnic.ca to be used as the control machine and your assigned VM in myvmlab.senecapolytechnic.ca as the managed machine. The Ansible package is already installed on matrix for you.
 
 ### Key Concepts when using Ansible
 
@@ -113,8 +113,8 @@ The following commands are based on the following entries in the ansible invento
 ```bash
 ...
 [ops445]
-vmlab   ansible_host=myvmlab.senecacollege.ca ansible_port=7890
-myvm    ansible_host=myvmlab.senecacollege.ca ansible_port=7654
+vmlab   ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7890
+myvm    ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7654
 ...
 ```
 
