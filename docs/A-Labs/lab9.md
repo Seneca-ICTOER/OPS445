@@ -427,10 +427,12 @@ Create an ansible playbook named "config_ops445.yml" using the appropriate modul
 
 ### Have the following items ready to show your instructor:
 
+* The updated inventory file called "hosts" which you used to access your VM.
 * The Ansible playbook called "config\_ops445.yml" for configuring the VM.
 * The result of running the playbook "config\_ops445.yml". Save the result in a file called "lab9\_\[seneca\_id\].txt"
 
 ### Upload the following files to blackboard
 
+* hosts
 * config\_ops445.yml
 * lab9\_\[seneca\_id\].txt
