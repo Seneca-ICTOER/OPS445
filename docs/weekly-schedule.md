@@ -132,32 +132,22 @@ description: Weekly Schedule for OPS445 Course
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
-| **Configuration management:** | | [Lab 8: Configuration management](/A-Labs/lab8.md) |
-| - Fabric | | |
+| **Configuration management:** | | [Lab 8: Configuration management](/A-Labs/lab9.md) |
+| - Ansible | | |
 
 ## Week 11
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
-| **Python Networking** | | [Lab 9: Ansible](/A-Labs/lab9.md) |
-| - Ansible | | |
-| - Network Client | | |
-| - Network Server | | |
-| Asynchronous Python Networking | | |
+| **Complete Assignment 2** | | [Assignment 2](/B-Assignments/assignment2.md) |
 
 ## Week 12
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
-| **Complete Assignment 2** | | [Assignment 2](/B-Assignments/assignment2.md) |
-
-## Week 13
-
-| **Topics** | **Reading/Reference** | **Tasks/Labs** |
-| :--- | :--- | :--- |
 | **Final Assessment Review** | | |
 
-## Week 14
+## Week 13
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
