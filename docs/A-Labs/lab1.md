@@ -651,12 +651,12 @@ Again, you will be asked to submit the lab in one of two ways:
 **Run the CheckLab1.py script and capture the result**
 
 ```console
-python3 ./CheckLab1.py -f -v &> lab1_yoursenecaid.txt
+python3 ./CheckLab1.py -f -v &> laboutput.txt
 ```
 
 Submit the following files individually to Blackboard:
 
-- [x] `lab1_yoursenecaid.txt`
+- [x] `lab1output.txt`
 - [x] `lab1a.py`, `lab1b.py`, `lab1c.py`, and `lab1d.py`
 
 ### Complete the GitHub Submission
@@ -664,8 +664,8 @@ Submit the following files individually to Blackboard:
 **Run the CheckLab1.py script and capture the result**
 
 ```console
-python3 ./CheckLab1.py -f -v &> lab1_yoursenecaid.txt
-git add lab1_yoursenecaid.txt
+python3 ./CheckLab1.py -f -v &> laboutput.txt
+git add laboutput.txt
 git commit -m "completed lab"
 git push
 ```
