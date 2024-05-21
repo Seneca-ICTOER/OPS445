@@ -1,7 +1,7 @@
 ---
 id: assignment1c
 title: Assignment 1 Version C
-sidebar_position: 2
+sidebar_position: 4
 description: Assignment 1 Version C
 ---
 
