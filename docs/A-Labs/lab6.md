@@ -358,7 +358,7 @@ Name the output of `./CheckLab6.py -f -v` as **lab6\_\[seneca\_id\].txt**
 
 **Submit the following files individually to Blackboard:**
 
-- [x] `lab6_[seneca_id].txt`
+- [x] `laboutput.txt`
 - [x] `lab6a.py`
 
 ## Lab Review

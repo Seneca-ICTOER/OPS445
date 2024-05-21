@@ -986,11 +986,11 @@ python3 ./CheckLab3.py -f -v lab3f
 **Run the CheckLab3.py script and capture the result**
 
 ```bash
-python3 ./CheckLab3.py -f -v &> lab3_[seneca_id].txt
+python3 ./CheckLab3.py -f -v &> laboutput.txt
 ```
 
 Submit the following files individually to Blackboard:
-- [x] `lab3_[seneca_id].txt`
+- [x] `laboutput.txt`
 - [x] `lab3a.py`, `lab3b.py`, `lab3c.py`, `lab3d.py`, `lab3e.py`, and `lab3f.py`
 
 ## Lab Review

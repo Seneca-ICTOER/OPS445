@@ -905,7 +905,7 @@ Capture and name the output of `python3 ./CheckLab4.py -f -v` as lab4\_\[seneca\
 
 Upload the following files individually to blackboard:
 
-- [x] `lab4_[seneca_id].txt`
+- [x] `laboutput.txt`
 - [x] `lab4a.py`, `lab4b.py`, `lab4c.py`, `lab4d.py`, and `lab4e.py`
 
 ## Lab Review

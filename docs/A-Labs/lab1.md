@@ -170,7 +170,7 @@ mkdir ~/ops445/a2
 Follow the Github guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add your public key to your profile:
 
 - Add one public key for each computer/VM you will be using for the course.
-- Run `ls -la ~/.ssh` and look for a public key file such as **id_rsa.pub**. If no file exists, generate a new keypair using `ssh-keygen`.
+- Run `ls -la ~/.ssh` and look for a public key file such as **id_ed25519.pub**. If no file exists, generate a new keypair using `ssh-keygen`.
 - Use `cat <public key filename>` to display the contents of the public key, and then select and copy the text.
 - Open Github in your web browser. Log in, select **Settings -\> SSH and GPG Keys**. Create new key, and paste your public key contents into the text box.
 
@@ -651,12 +651,12 @@ Again, you will be asked to submit the lab in one of two ways:
 **Run the CheckLab1.py script and capture the result**
 
 ```console
-python3 ./CheckLab1.py -f -v &> lab1_yoursenecaid.txt
+python3 ./CheckLab1.py -f -v &> laboutput.txt
 ```
 
 Submit the following files individually to Blackboard:
 
-- [x] `lab1_yoursenecaid.txt`
+- [x] `lab1output.txt`
 - [x] `lab1a.py`, `lab1b.py`, `lab1c.py`, and `lab1d.py`
 
 ### Complete the GitHub Submission
@@ -664,8 +664,8 @@ Submit the following files individually to Blackboard:
 **Run the CheckLab1.py script and capture the result**
 
 ```console
-python3 ./CheckLab1.py -f -v &> lab1_yoursenecaid.txt
-git add lab1_yoursenecaid.txt
+python3 ./CheckLab1.py -f -v &> laboutput.txt
+git add laboutput.txt
 git commit -m "completed lab"
 git push
 ```
