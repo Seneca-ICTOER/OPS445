@@ -1,11 +1,11 @@
 ---
-id: assignment1ncc
-title: Assignment 1 NCC
+id: assignment1b
+title: Assignment 1 Version B
 sidebar_position: 3
-description: Assignment 1 for Section NCC
+description: Assignment 1 Version B
 ---
 
-# A1-S23-NCC
+# Assignment 1 Version B
 
 ## Assignment 1
 
@@ -33,10 +33,7 @@ The date 182 from now will be 2023-07-26.
 
 The assignment will be broken into two milestones and one final submission. Please update your repository for each milestone and complete the final submission in order to earn all marks.
 
-- Milestone 1 will be due on **June 8**.
-- Milestone 2 will be due on **June 14**.
-- The Final submission will be due on **June 22**.
-
+Deadlines will be given to you by your instructor.
 ---
 
 **Preparation**
