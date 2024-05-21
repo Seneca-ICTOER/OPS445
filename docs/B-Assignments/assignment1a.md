@@ -1,11 +1,11 @@
 ---
-id: assignment1naanbb
-title: Assignment 1 NAA/NBB
+id: assignment1a
+title: Assignment 1 Version A
 sidebar_position: 2
-description: Assignment 1 For Sections NAA and NBB
+description: Assignment 1 Version A
 ---
 
-# A1-S23-NAANBB
+# Assignment 1 Version A
 
 ## Assignment 1
 
@@ -32,9 +32,7 @@ The period between 2023-05-01 and 2023-05-30 includes 8 weekend days.
 
 The assignment will be broken into two milestones and one final submission. Please update your repository for each milestone and complete the final submission in order to earn all marks.
 
-- Milestone 1 will be due on **June 9 at 5:00pm**.
-- Milestone 2 will be due on **June 16 at 5:00pm**.
-- The Final submission will be due on **June 23 at 5:00pm**.
+Deadlines will be given to you by your instructor.
 
 ---
 
