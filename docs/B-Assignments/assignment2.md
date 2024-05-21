@@ -9,17 +9,13 @@ description: Assignment 2 Home Page
 
 Assignment instructions may differ depending on your section. '**Choose the correct section's assignment or you will lose marks!**'
 
-## Section NAA, NCC
+## Version A
 
-Instructions will be posted shortly.
+[\[Assignment 2\]](./assignment2a.md)
 
-[\[Assignment 2\]](./assignment2naancc.md)
+## Version B
 
-## Section NDD
-
-Instructions will be posted shortly.
-
-[\[Assignment 2\]](./online-assignment2.md)
+[\[Assignment 2\]](./assignment2b.md)
 
 ---
 

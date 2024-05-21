@@ -1,11 +1,11 @@
 ---
-id: assignment2naancc
-title: Assignment 2 NAA/NCC
+id: assignment2a
+title: Assignment 2 Version A
 sidebar_position: 5
-description: Assignment 2 for Sections NAA and NCC
+description: Assignment 2 Version A
 ---
 
-# A2-W23-NAANCC
+# Assignment 2 Version A
 
 ## Assignment 2
 
@@ -98,9 +98,7 @@ For more information on how memory and /proc in Linux refer to these manual page
 
 The assignment will be broken into two milestones and one final submission. Please update your repository for each milestone and complete the final submission in order to earn all marks.
 
-  - Milestone 1 will be due on **March 31**.
-  - Milestone 2 will be due on **April 14**.
-  - The Final submission will be due on **April 21**.
+Deadlines will be provided by your instructor.
 
 ---
 

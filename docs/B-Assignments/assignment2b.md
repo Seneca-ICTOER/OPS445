@@ -1,11 +1,11 @@
 ---
-id: online-assignment2
-title: Online Assignment 2
+id: assignment2b
+title: Assignment 2 Version B
 sidebar_position: 6
-description: Assignment 2 DuImproved 
+description: Assignment 2 Version B 
 ---
 
-# Online Assignment 2
+# Assignment 2 Version B
 
 ## Overview: du Improved
 
