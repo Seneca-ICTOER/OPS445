@@ -26,7 +26,7 @@ The end date is Fri, 29/12/2023.
 
 ## Instructions
 
-The assignment will be broken into two milestones and one final submission. Please update your repository for each milestone and complete the final submission in order to earn all marks.
+The assignment will be broken into one milestone and one final submission. Please update your repository for the milestone and complete the final submission in order to earn all marks.
 
 Deadlines will be given by your instructor.
 
@@ -63,17 +63,11 @@ This Milestone will also ask you to _refactor_ your code. This means modifying e
 
 Use the check script to verify your work so far.
 
-`python3 CheckA1.py -f -v TestAfter`
-`python3 CheckA1.py -f -v TestLeap`
-`python3 CheckA1.py -f -v TestMonMax`
+- `python3 CheckA1.py -f -v TestAfter`
+- `python3 CheckA1.py -f -v TestLeap`
+- `python3 CheckA1.py -f -v TestMonMax`
 
-#### Feedback
-
-I will provide you feedback on **GitHub**. Check the **Issues** tab, and make any changes that are required before the next deadline. You can **close the issue** to indicate that you have seen the comment.
-
----
-
-### Milestone 2
+### Continue Creating Your Functions
 
 1. Complete the `day_iter()` function. Given a starting date and number of days, `day_iter()` should call either `after()` (if the number is positive) or `before()` (if the number is negative). inside of a loop. Once the loop as completed, this function should return the end date as a DD/MM/YYYY string.
 1. Complete the `valid_date()` function. This should use error checking to make sure that any date entered by the user is valid.
@@ -85,9 +79,13 @@ Use the check script to verify your work.
 - `python3 CheckA1.py -f -v TestValidDate`
 - `python3 CheckA1.py -f -v TestDayIter`
 
-#### Feedback
+#### Feedback and Code Review
 
-Once again I will provide you feedback on **GitHub**. Check the **Issues** tab, and make any changes that are required before the next deadline. You can **close the issue** to indicate that you have seen the comment.
+Your code needs to be within scope for the course. That means refer to the code you have completed as part of labs 1 - 4. 
+
+Code that is outside the scope of the course will be flagged for code review. You will be asked to explain your code, and provide ways of making it adhere to the acceptable scope of the course. **Failure to attend code review or failure to understand the code you've submitted will be considered proof of academic dishonesty**.
+
+I will provide you feedback on **GitHub**. Check the **Issues** tab, and make any changes that are required before the next deadline. You can **close the issue** to indicate that you have seen the comment.
 
 ---
 
@@ -106,7 +104,6 @@ For the final submission you should integrate your functions into a working scri
 #### Submitting Your Code For Review
 
 1. Push your code to GitHub before the deadline.
-1. In addition, **submit your code to Blackboard**. A link will be provided.
 
 ---
 
@@ -151,15 +148,14 @@ TestAfter Checks | 3
 TestBefore Checks | 3
 TestLeap Checks  | 2
 TestMonMax Checks | 2
-**Milestone 2:** | 
 TestValidDate Checks | 4
 TestDayIter Checks | 6
 **Final Submission:** |
-TestFinal Checks | 16
-Comments and Documentation | 5
-github use | 5
-functions and style | 2
-error checking | 2
+TestFinal Checks | 8
+Comments and Documentation | 10
+github use | 6
+functions and style | 3
+error checking | 3
 
 ## Sample Output
 
