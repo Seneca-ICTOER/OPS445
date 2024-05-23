@@ -63,9 +63,9 @@ This Milestone will also ask you to _refactor_ your code. This means modifying e
 
 Use the check script to verify your work so far.
 
-- `python3 CheckA1.py -f -v TestAfter`
-- `python3 CheckA1.py -f -v TestLeap`
-- `python3 CheckA1.py -f -v TestMonMax`
+- `python3 checkA1.py -f -v TestAfter`
+- `python3 checkA1.py -f -v TestLeap`
+- `python3 checkA1.py -f -v TestMonMax`
 
 ### Continue Creating Your Functions
 
@@ -76,8 +76,8 @@ Use the check script to verify your work so far.
 
 Use the check script to verify your work.
 
-- `python3 CheckA1.py -f -v TestValidDate`
-- `python3 CheckA1.py -f -v TestDayIter`
+- `python3 checkA1.py -f -v TestValidDate`
+- `python3 checkA1.py -f -v TestDayIter`
 
 #### Feedback and Code Review
 
@@ -99,7 +99,7 @@ For the final submission you should integrate your functions into a working scri
 
 #### Final Checks
 
-- `python3 CheckA1.py -f -v TestFinal` to test the final version of your script. 
+- `python3 checkA1.py -f -v TestFinal` to test the final version of your script. 
 
 #### Submitting Your Code For Review
 
