@@ -64,6 +64,7 @@ This Milestone will also ask you to _refactor_ your code. This means modifying e
 Use the check script to verify your work so far.
 
 - `python3 checkA1.py -f -v TestAfter`
+- `python3 checkA1.py -f -v TestBefore`
 - `python3 checkA1.py -f -v TestLeap`
 - `python3 checkA1.py -f -v TestMonMax`
 
