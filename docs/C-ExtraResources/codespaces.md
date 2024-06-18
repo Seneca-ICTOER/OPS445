@@ -64,3 +64,13 @@ If you see a number next to the **Source Control** icon that doesn't go away, yo
 - If you encounter an error, notify your instructor immediately.
 
 ![Pushing Code](/img/push.png "Doing a manual push")
+
+## If You're Unable To Log Into GitHub
+
+- Launch MyApps
+- Launch **Python 3.12**. Wait for the File Explorer Window to appear.
+- Launch **VS Code 1.82**. Make sure this is VS Code, and not Visual Studio!
+- In VS Code, install the **Python Extension**. 
+- In VS Code, create a new file. Name it **script.py**.
+- After saving this file, ensure that a **Python Debugger** is specified at the bottom of your screen. If not, close VS Code and launch Python again.
+- After completing your file, **attach it to your test using the paperclip icon**. Click inside the text box to make the icons appear.
