@@ -5,683 +5,443 @@ sidebar_position: 8
 description: Lab 8 for Students to Complete and Submit
 ---
 
-# Lab 8: Configuration management
+# Lab 8: Ansible
 
-## Lab Objectives
+## Objective
 
-1. Review SSH setup and SSH remote shell command execution
-2. Explore the Fabric Python library (Fabric API) and its command line tool "fab".
-3. Create Fabric scripts utilizing Fabric's API and environment objects to define tasks for the **fab** command.
-4. Use the **fab** command to execute fabric script to perform pre-defined tasks on remote Linux machines.
+  1. Confirm and review the Ansible package installed on matrix.senecapolytechnic.ca
+  2. Explore and run Ansible's ad hoc commands
+  3. Explore and study a few Ansible's modules
+  4. Explore, create, and run a few Ansible playbooks
 
-### Prerequisites
+## Overview
 
-1. Has the user account named "student" and password for your VM with access port on myvmlab.senecacollege.ca
-2. Regular account on Matrix.senecacollege.ca
+Ansible is an agentless IT automation engine for automating cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT system administration tasks.
 
-### Overview
+Ansible uses no additional custom security infrastructure, and it uses a very simple human readable language called 'YAML', to compose an Ansible Playbook which allows you to describe the tasks you want to automate.
 
-Fabric is a Python library and command-line tool for streamlining the use of SSH for application deployment or system administration tasks. It has two major components:
+## Reference
 
-   1. a command-line interface program called "fab" which lets you execute arbitrary Python functions on local and remote machines.
-   2. a set of Python APIs that you can use and call in your Python functions to make executing shell commands over SSH much easier.
+  - For more detail information about ansible, check out the ansible web site at www.ansible.com
+  - [Overview on how ansible works](https://www.ansible.com/overview/how-ansible-works)
+  - [Ansible Latest User Guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
+  - [A System Administrator's guide to getting started with Ansible](https://www.redhat.com/en/blog/system-administrators-guide-getting-started-ansible-fast)
 
-We are going to use the Fabric API to define tasks and use the **fab** command to execute those tasks on one or more remote Linux machines.
+## System requirements
 
-### Reference
+     - control machine Install Ansible on your Linux VM or use the Matrix server
+     - managed machine(s) (your vm in myvmlab.senecapolytechnic) - to be managed by the control machine
 
-  1. These links are helpful for learning more about Fabric's features:
+- You should be able to ssh from your control machine as a regular user to your managed machine without supplying a login password.
+- Your account on your managed machine is a sudoer and can run sudo with/without password.
 
-| **Category** | **Resource Link** |
-| :--- | :--- |
-| Official Fabric tutorial | [\[1\]](http://docs.fabfile.org/en/1.13/tutorial.html) |
-| Better Fabric tutorial | [\[2\]](https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments) |
-| Official **Fabric** website | [\[3\]](http://www.fabfile.org/) |
+## Investigation 1: The Ansible Package
 
-**Please note that the version of Fabric currently installed on matrix.senecacollege.ca 1.14.0 and it supports only Python version 2**. The Fabric script files we are going to create in this lab have to meet Python version 2.x requirements. (e.g. print is a keyword, not a built-in function in Python 2.x)
+In this investigation, we explore the main components of the Ansible configuration management system and its operating environment. We also study a simple playbook for managing the configuration of a CentOS 7.x VM.
 
-  2. You should have some experience on the following topics in OPS245 and or OPS345. Please review them to prepare for the activities in this lab:
+You need at least two Linux systems for this lab: your control machine and your assigned VM in myvmlab.senecapolytechnic.ca as the managed machine. The Ansible package is already installed on matrix for you.
 
-        - create and configure a regular user on a Linux system.
-        - configure and manage sudo privilege for a regular user
-        - configure sudoers using the visudo command
-        - using the yum command to install, remove, and update rpm packages
+### Important:
 
-## Investigation 1: The Fabric Environment
+If you decide to use Matrix for this lab, please note that you may get an Ansible error related to locale. In that case, check your `.bashrc` file. Please comment out the following lines:
 
-The Fabric environment consists of the following components:
+```
+export LC_ALL=C
+export LC_COLLATE=C
+```
 
-  1. Controller workstation - the machine that has the Fabric package installed and runs the "fab" command
+Once you comment out these lines (by placing a # symbol in front of them), run `source ~/.bashrc` and try again.
 
-        1. the Fabric Python Library (aka the fabric api)- the fabric package (already installed on matrix)
-        2. the Fabric command **- fab**: runs Fabric script, name of the script is default to fabfile.py in the current working directory unless specified otherwise with the '-f' option.
-        3. Fabric script: contains fabric environment object value and Python functions (or tasks) to be executed by the **fab** command.
-  
-  2. Remote machine: the target machine on which one or more Fabric tasks will be executed.
 
-        1. running the ssh server daemon
-        2. use public key (or password based) authentication for ssh connections
+### Key Concepts when using Ansible
 
-### Part 1 - Configure and test your controller workstation
+- YAML - a human-readable data serialization language used by Ansible's playbooks. To know more, your can check out the [wikipedia page here](https://en.wikipedia.org/wiki/YAML) or a simple introduction [here](/C-ExtraResources/introduction-to-yaml.md)
+- Control machine - the host on which you use Ansible to execute tasks on the managed machines
+- Managed machine - a host that is configured by the control machine
+- [Hosts file](/C-ExtraResources/sample-ansible-hosts.md) - contains information about machines to be managed - click [here](/C-ExtraResources/sample-ansible-hosts.md) for sample hosts file
+- Idempotency - is an operation that, if applied twice to any value, gives the same result as if it were applied once.
+- Ad hoc commands - a simple one-off task:
 
-In this lab you will use your login account on matrix.senecacollege.ca as your Fabric controller workstation.
+     - **shell commands**
 
-The Fabric package version 1.14.0 has already been installed on matrix.senecacollege.ca. You should have access to the **fab** command on matrix. Login to matrix.senecacollege.ca and run the following command to confirm the version of the fabric package:
+         + ansible remote_machine_id \[-i inventory\] \[--private-key id\_rsa\] \[-u remote_user\] -a 'date'
+
+- Ansible modules - code that performs a particular task such as copy a file, installing a package, etc:
+
+     - **copy module**
+
+         + ansible remote_machine_id -m copy -a "src=/ops445/ansible.txt dest=/tmp/ansible.txt"
+
+     - **Package management**
+
+         + ansible remote_machine_id -m yum -a "name=epel-release state=latest"
+
+- Playbooks - contains one or multiple plays, each play defines a set of repeatable tasks on one or more managed machines. Playbooks are written in YAML. Every play in the playbook is created with environment-specific parameters for the target machines:
+
+     - ansible-playbook remote\_machine\_id \[-i inventory\] setup_webserver.yaml
+     - ansible-playbook remote\_machine\_id \[-i inventory\] firstrun.yaml
+
+### Part 1: The Ansible package installed on matrix
+
+You only need to have the "ansible" package on your control VM (i.e. matrix).
+
+  - Login to matrix with your Seneca account and change to the directory ~/ops445/lab9
+  - Issue the following command to check the version of the "ansible" package:
+ 
+```bash
+rpm -q ansible
+```
+
+To confirm that you have access to the Ansible package, try the following command:
 
 ```bash
-fab --version
+[raymond.chan@mtrx-node02pd lab9]$ ansible --help
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K] [-i INVENTORY] [--list-hosts]
+               [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [-k]
+               [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+               [-c CONNECTION] [-T TIMEOUT]
+               [--ssh-common-args SSH_COMMON_ARGS]
+               [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS]
+               [--ssh-extra-args SSH_EXTRA_ARGS] [-C] [--syntax-check] [-D]
+               [-e EXTRA_VARS] [--vault-id VAULT_IDS]
+               [--ask-vault-pass | --vault-password-file VAULT_PASSWORD_FILES]
+               [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+...
 ```
 
-Type the following command to get the command line options of the fab command:
+Take a look of all the available command line options for the "ansible" command. There are a lots of options when running Ansible. Let's move on to try a few simple ones.
+
+### Part 2: Sample runs for some of the Ad hoc commands
+
+The following commands are based on the following entries in the ansible inventory file called "hosts" in the current working directory:
 
 ```bash
-fab --help
+...
+[ops445]
+vmlab   ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7890
+myvm    ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7654
+...
 ```
-
-You should get something similar to the following:
 
 ```bash
-Usage: fab [options] <command>[:arg1,arg2=val2,host=foo,hosts='h1;h2',...] ...
-
-Options:
-  -h, --help            show this help message and exit
-  -d NAME, --display=NAME
-                        print detailed info about command NAME
-  -F FORMAT, --list-format=FORMAT
-                        formats --list, choices: short, normal, nested
-  -I, --initial-password-prompt
-                        Force password prompt up-front
-  --initial-sudo-password-prompt
-                        Force sudo password prompt up-front
-  -l, --list            print list of possible commands and exit
-  --set=KEY=VALUE,...   comma separated KEY=VALUE pairs to set Fab env vars
-  --shortlist           alias for -F short --list
-  -V, --version         show program's version number and exit
-  -a, --no_agent        don't use the running SSH agent
-  -A, --forward-agent   forward local agent to remote end
-  --abort-on-prompts    abort instead of prompting (for password, host, etc)
-  -c PATH, --config=PATH
-                        specify location of config file to use
-  --colorize-errors     Color error output
-  -D, --disable-known-hosts
-                        do not load user known_hosts file
-  -e, --eagerly-disconnect
-                        disconnect from hosts as soon as possible
-  -f PATH, --fabfile=PATH
-                        python module file to import, e.g. '../other.py'
-  -g HOST, --gateway=HOST
-                        gateway host to connect through
-  --gss-auth            Use GSS-API authentication
-  --gss-deleg           Delegate GSS-API client credentials or not
-  --gss-kex             Perform GSS-API Key Exchange and user authentication
-  --hide=LEVELS         comma-separated list of output levels to hide
-  -H HOSTS, --hosts=HOSTS
-                        comma-separated list of hosts to operate on
-  -i PATH               path to SSH private key file. May be repeated.
-  -k, --no-keys         don't load private key files from ~/.ssh/
-  --keepalive=N         enables a keepalive every N seconds
-  --linewise            print line-by-line instead of byte-by-byte
-  -n M, --connection-attempts=M
-                        make M attempts to connect before giving up
-  --no-pty              do not use pseudo-terminal in run/sudo
-  -p PASSWORD, --password=PASSWORD
-                        password for use with authentication and/or sudo
-  -P, --parallel        default to parallel execution method
-  --port=PORT           SSH connection port
-  -r, --reject-unknown-hosts
-                        reject unknown hosts
-  --sudo-password=SUDO_PASSWORD
-                        password for use with sudo only
-  --system-known-hosts=SYSTEM_KNOWN_HOSTS
-                        load system known_hosts file before reading user
-                        known_hosts
-  -R ROLES, --roles=ROLES
-                        comma-separated list of roles to operate on
-  -s SHELL, --shell=SHELL
-                        specify a new shell, defaults to '/bin/bash -l -c'
-  --show=LEVELS         comma-separated list of output levels to show
-  --skip-bad-hosts      skip over hosts that can't be reached
-  --skip-unknown-tasks  skip over unknown tasks
-  --ssh-config-path=PATH
-                        Path to SSH config file
-  -t N, --timeout=N     set connection timeout to N seconds
-  -T N, --command-timeout=N
-                        set remote command timeout to N seconds
-  -u USER, --user=USER  username to use when connecting to remote hosts
-  -w, --warn-only       warn, instead of abort, when commands fail
-  -x HOSTS, --exclude-hosts=HOSTS
-                        comma-separated list of hosts to exclude
-  -z INT, --pool-size=INT
-                        number of concurrent processes to use in parallel mode
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m copy -a "src=/home/raymond.chan/ops445/lab9/hosts dest=/tmp/ansible_hosts"
+vmlab | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "checksum": "bc4ffa4127e3af3228e61f0ddc4fca87c5e548a4", 
+    "dest": "/tmp/ansible_hosts", 
+    "gid": 1003, 
+    "group": "instructor", 
+    "md5sum": "17e94f6ee9ce0920ebf835bd4f6250a7", 
+    "mode": "0664", 
+    "owner": "instructor", 
+    "size": 423, 
+    "src": "/home/instructor/.ansible/tmp/ansible-tmp-1616732233.49-236519-35150082693243/source", 
+    "state": "file", 
+    "uid": 1003
+}
 ```
 
-**Please pay special attention and study the following command-line options for fab as they will be used in some of the activities in this lab:**
+**vmlab** is the remote machine ID.
 
-1. **-H**
-2. **-f**
-3. **-i**
-4. **-l**
-5. **--port**
-6. **--user**
-7. **--initial-sudo-password-prompt**
+**hosts** is the name of the ansible inventory file in the current working directory, you may also specify the inventory file with full path name, e.g. /home/raymond.chan/ops445/lab9/hosts.
 
-### Part 2: Connect to VM in myvmlab.senecacollege.ca
+**--private-key id\_rsa** is the private key for ssh key-based authentication for connecting to the remote machine.
 
-You should have received an email from ITS containing the following information:
+**-u** is for specifying the user account to be used to login to the remote machine.
 
-   - account name: (usually 'student')
-   - password: (let's assume it is 'P@ssw0rd' for the following instruction in this lab)
-   - port number for SSH access via myvmlab.senecacollege.ca (e.g. 7200)
+**-m copy** is to tell ansible to use the "copy" module.
 
-This VM will be used as the remote Linux machine in our Fabric environment. Login to matrix and try the following SSH command to test the connectivity between matrix and your assigned VM:
+after **-a** is the arguments to the copy module, which specify the source file and the destination for the copy action.
+
+If you got the same "SUCCESS" message, login to the remote machine and check the directory "/tmp" for the file ansible_hosts.
+
+### Part 3: Sample runs for using some Ansible's modules
+
+You can get a complete list of all the ansible modules installed on you system with the following command:
 
 ```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca
-student@myvmlab.senecacollege.ca's password: [type the password for the student user here]
-Last login: Fri Jul  3 11:06:24 2020 from mtrx-node05pd.dcm.senecacollege.ca
+ansible-doc --list_files
 ```
 
-Once you are on your VM, try the following commands: hostname, id, and df, and record the results for later comparison with the results of other commands:
+"yum" is a stable ansible module. You can get the detail information about any ansible module with the ansible-doc, try the following commands to see the documentation and examples for using the copy and yum modules:
 
 ```bash
-[student@centos7 ~]$ hostname
-centos7
-[student@centos7 ~]$ id
-uid=1002(student) gid=1002(student) groups=1002(student),10(wheel)
-[student@centos7 ~]$ df
-Filesystem              1K-blocks    Used Available Use% Mounted on
-devtmpfs                   878260       0    878260   0% /dev
-tmpfs                      889792       0    889792   0% /dev/shm
-tmpfs                      889792    9492    880300   2% /run
-tmpfs                      889792       0    889792   0% /sys/fs/cgroup
-/dev/mapper/centos-root  38680112 1745524  36934588   5% /
-/dev/sda2                 1038336  331228    707108  32% /boot
-/dev/sda1                  204580   11296    193284   6% /boot/efi
-/dev/mapper/centos-home  18880512   33160  18847352   1% /home
-tmpfs                      177960       0    177960   0% /run/user/1002
+ansible-doc copy
+
+ansible-doc yum
 ```
 
-  1. Logout from your VM and get back to matrix.
-  2. The previous SSH command when executed successfully, created a login shell on the remote machine. If the previous SSH command is followed by a specific bash command, it will be executed on the remote host instead of creating a login shell. Consider the following:
+The following command demonstrates how to install the "epel-release" package with the "yum" module with different module arguments and under different remote user (your result may be differ from what is show below):
 
 ```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca 'hostname;id;df'
-student@myvmlab.senecacollege.ca's password:
-centos7
-uid=1002(student) gid=1002(student) groups=1002(student),10(wheel)
-Filesystem              1K-blocks    Used Available Use% Mounted on
-devtmpfs                   878260       0    878260   0% /dev
-tmpfs                      889792       0    889792   0% /dev/shm
-tmpfs                      889792    9492    880300   2% /run
-tmpfs                      889792       0    889792   0% /sys/fs/cgroup
-/dev/mapper/centos-root  38680112 1745608  36934504   5% /
-/dev/sda2                 1038336  331228    707108  32% /boot
-/dev/sda1                  204580   11296    193284   6% /boot/efi
-/dev/mapper/centos-home  18880512   33160  18847352   1% /home
-tmpfs                      177960       0    177960   0% /run/user/1002
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m yum -a "name=epel-release state=present"
+vmlab | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "changes": {
+        "installed": [
+            "epel-release"
+        ]
+    }, 
+    "msg": "You need to be root to perform this command.\n", 
+    "rc": 1, 
+    "results": [
+        "Loaded plugins: fastestmirror\n"
+    ]
+}
 ```
 
-  3. The three shell commands: hostname, id, and df were executed sequentially. Compare the outputs above with the previous results when executing the corresponding commands in the login shell.
-  4. Please note that your VM was configured to ask for the user's password for every SSH connection attemp. We are going to change that behaviour next.
-
-### Part 3: Set up SSH login with public key authentication
-
-In order for you to run multiple tasks on multiple remote machines without typing in the password for each connection, you need to configure your VM to accept SSH public key authentication in addtion to password authentication. You've done this in both OPS245 and OPS345, and here is a summary of how to do it between your account on matrix and your VM:
-
-  1. Create a new SSH key pair (one private, and one public) under your account on matrix.senecacollege.ca.
-  2. Once you have both keys, you can use the **ssh-copy-id** command to copy your public key to the student account on your VM, replace the port number with the correct value for your VM:
+Add the '-b' option to tell ansible to invoke "sudo" when running the yum command on the remote machine:
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa.pub -p 7200 student@myvmlab.senecacollege.ca
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+vmlab | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "changes": {
+        "installed": [
+            "epel-release"
+        ]
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirror.netflash.net\n * extras: mirror.netflash.net\n * updates: mirror.calgah.com\nResolving Dependencies\n--> Running transaction check\n---> Package epel-release.noarch 0:7-11 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                Arch             Version         Repository        Size\n================================================================================\nInstalling:\n epel-release           noarch           7-11            extras            15 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 15 k\nInstalled size: 24 k\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : epel-release-7-11.noarch                                     1/1 \n  Verifying  : epel-release-7-11.noarch                                     1/1 \n\nInstalled:\n  epel-release.noarch 0:7-11                                                    \n\nComplete!\n"
+    ]
+}
 ```
 
-  3. The above command should add the contents of your pub key to ~/.ssh/authorized_keys under your student account on your VM. \[**Note**: If you want to setup another controller workstation, you can either copy the **private key** to it, or generate another SSH key pair, and copy the **public key** to the VM.\]
-
-  4. Verify and confirm that your account on matrix can SSH to your VM as 'student' without being prompted for a password:
+If you run the same command the 2nd time:
 
 ```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca
-Last login: Fri Jul  3 12:46:19 2020 from mtrx-node05pd.dcm.senecacollege.ca
-[student@centos7 ~]$ exit
-logout
-Connection to myvmlab.senecacollege.ca closed.
-
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca 'date;hostname;id'
-Fri Jul  3 12:55:22 EDT 2020
-centos7
-uid=1002(student) gid=1002(student) groups=1002(student),10(wheel)
-[raymond.chan@mtrx-node05pd lab8]$
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+vmlab | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "epel-release-7-11.noarch providing epel-release is already installed"
+    ]
+}
 ```
 
-  5. If you got similar result as shown above, you have successfully configured your controller workstation and your VM to use public key authentication.
-
-## Investigation 2: Running the fab command in ad-hoc mode
-
-The fab command relies on SSH to make the connection to the remote machine before executing the intended commands. The fab command can run in ad-hoc mode:
+Now run the similar command but with "state=latest":
 
 ```bash
-fab [options] -- [shell commands]
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=latest"
+vmlab | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "changes": {
+        "installed": [], 
+        "updated": []
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "All packages providing epel-release are up to date", 
+        ""
+    ]
+}
 ```
 
-When running the fab command in ad-hoc mode, it is very similar to running the SSH with commands attached at the end.
+Depending on the status of the packages installed on your VM, the output may not exactly the same as shown above. Please read and try to understanding the meaning of the text return by ansible. If it's been updated instead, then run the command again.
 
-### Part 1: running non-privileged shell commands on remote machines
+### Part 4: Gather software and hardware information available on remote machine
 
-In the following example, we use the **fab** to execute the "date", "hostname", and "id" command remotely on our VM. Try the following ad-hoc fab commands and record their results for later use, replace the port number with the correct value for your VM:
+One of the core ansible module is called "setup", it is automatically called by ansible playbook to gather useful "facts" about remote hosts that can be used in ansible playbooks. It can also be executed directly by the ansible command (/usr/bin/ansible) to check out what "facts" are available on a remote host.
 
 ```bash
-[raymond.chan@mtrx-node05pd lab8]$ fab --host=myvmlab.senecacollege.ca --port=7200 --user=student -- 'date;hostname;id'
-[myvmlab.senecacollege.ca] Executing task '<remainder>'
-[myvmlab.senecacollege.ca] run: date;hostname;id
-[myvmlab.senecacollege.ca] out: Fri Jul  3 13:05:39 EDT 2020
-[myvmlab.senecacollege.ca] out: centos7
-[myvmlab.senecacollege.ca] out: uid=1002(student) gid=1002(student) groups=1002(student),10(wheel)
-[myvmlab.senecacollege.ca] out:
+[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m setup
+vmlab | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.102.114.140"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::21d:d8ff:feb7:20cc"
+        ], 
+        "ansible_apparmor": {
+            "status": "disabled"
+        }, 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "11/26/2012", 
 
-
-Done.
-Disconnecting from myvmlab.senecacollege.ca:7200... done.
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-Note that there is no password prompting if you complete "Part 3" successfully, otherwise, the SSH server daemon on your VM will prompt you for a password. The output from the fab's ad-hoc mode is not much different from the SSH command with shell command attached at the end, however, please note that the additional information on the output from the fab command can be very useful for record keeping purpose - what has been done and whether the commands had been carried out successfully or not.
-
-### Part 2: running privileged commands on remote machines
-
-**WARNING: Running privileged commands incorrectly with sudo may cause irreparable damage to your remote machine.**
-
-We say that running an ad-hoc fab command is very similar to the SSH command with shell commands attached at the end. Let's try both with privileged commands, like the "yum" command.
-
-**Run the "yum" command on remote machine with SSH**
-
-  1. By default, your VM doesn't have the "tree" rpm package installed. You can verify this with the following SSH command (remember to replace the port number with the correct value for your VM):
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca "yum list tree"
-Loaded plugins: fastestmirror
-Loading mirror speeds from cached hostfile
- * base: centos.mirror.colo-serv.net
- * extras: centos.mirror.colo-serv.net
- * updates: centos.mirror.ca.planethoster.net
-Available Packages
-tree.x86_64                          1.6.0-10.el7                           base
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-Please note that the tree package is "Available", but not yet installed.
-
-  1. Let's try to install the "tree" package with the shell command "yum install tree -y":
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p student@myvmlab.senecacollege.ca "yum install tree -y"
-Loaded plugins: fastestmirror
-You need to be root to perform this command.
-```
-
-  2. Using the "yum" command to query rpm package doesn't need special privilege, however, it does when you try to install or remove rpm packages.
-  3. Your "student" account on your VM was configured to allow you to run the "sudo" command to perform software management using the "yum" command. So, let's login to your VM and try the following "sudo" command to install and then remove the "tree" rpm package:
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7200 student@myvmlab.senecacollege.ca
-Last login: Fri Jul  3 16:51:07 2020 from mtrx-node05pd.dcm.senecacollege.ca
-[student@centos7 ~]$ sudo yum install tree -y
-[sudo] password for student:
-Loaded plugins: fastestmirror
-Loading mirror speeds from cached hostfile
- * base: less.cogeco.net
- * extras: centos.mirror.colo-serv.net
- * updates: mirror.calgah.com
-Resolving Dependencies
---> Running transaction check
----> Package tree.x86_64 0:1.6.0-10.el7 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-========================================================================================================================
- Package                  Arch                       Version                             Repository                Size
-========================================================================================================================
-Installing:
- tree                     x86_64                     1.6.0-10.el7                        base                      46 k
-
-Transaction Summary
-========================================================================================================================
-Install  1 Package
-
-Total download size: 46 k
-Installed size: 87 k
-Downloading packages:
-tree-1.6.0-10.el7.x86_64.rpm                                                                     |  46 kB  00:00:00
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : tree-1.6.0-10.el7.x86_64                                                                             1/1
-  Verifying  : tree-1.6.0-10.el7.x86_64                                                                             1/1
-
-Installed:
-  tree.x86_64 0:1.6.0-10.el7
-
-Complete!
-[student@centos7 ~]$
-```
-
-  4. Please note that when you run the "sudo" command the first time, it asks you for the user's password (i.e. user student's password). Let's now remove the "tree" package:
-
-```bash
-[student@centos7 ~]$ yum remove tree -y
-Loaded plugins: fastestmirror
-You need to be root to perform this command.
-[student@centos7 ~]$ sudo yum remove tree -y
-Loaded plugins: fastestmirror
-Resolving Dependencies
---> Running transaction check
----> Package tree.x86_64 0:1.6.0-10.el7 will be erased
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-========================================================================================================================
- Package                  Arch                       Version                            Repository                 Size
-========================================================================================================================
-Removing:
- tree                     x86_64                     1.6.0-10.el7                       @base                      87 k
-
-Transaction Summary
-========================================================================================================================
-Remove  1 Package
-
-Installed size: 87 k
-Downloading packages:
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Erasing    : tree-1.6.0-10.el7.x86_64                                                                             1/1
-  Verifying  : tree-1.6.0-10.el7.x86_64                                                                             1/1
-
-Removed:
-  tree.x86_64 0:1.6.0-10.el7
-
-Complete!
-[student@centos7 ~]$
-```
-
-  5. The above tests confirmed that the student user is allowed to execute the sudo command to run the yum command to install and remove rpm packages. Now, let's logout from the VM and go back to matrix. On matrix, try to run the sudo command using SSH:
-
-```bash
-[student@centos7 ~]$ exit
-logout
-Connection to myvmlab.senecacollege.ca closed.
-[raymond.chan@mtrx-node05pd lab8]$ ssh -p 7211 student@myvmlab.senecacollege.ca "sudo yum install tree -y"
-sudo: no tty present and no askpass program specified
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-  6. The above error indicated that you need a tty for the SSH session to prompt you for the sudo password. Please look up the ssh man page to find out the option which turn on a tty for the SSH session.
-
-**Run the privileged yum command on remote machine using ad-hoc fab command**
-
-  1. Let's try the corresponding ad-hoc fab command on your VM:
-
-```bash
-fab --host=myvmlab.senecacollege.ca --port=7200 --user=student -- 'sudo yum install tree -y'
-```
-
-  2. Type in your user student's password when prompted for "sudo password", the **yum install** command should be executed successfully and install the **tree** rpm package. If the tree rpm package is already installed, you can remove it with the following ad-hoc fab command:
-
-```bash
-fab --host=myvmlab.senecacollege.ca --port=7200 --user=student -- 'sudo yum remove tree -y'
-```
-
-## Investigation 3: Running the fab command in script mode
-
-From Investigation 2, we can see that running **fab** in ad-hoc mode is quick, straightforward, and easy. However, the rich output generated can not be easily captured and processed. If you have a need to capture and process the output generated by the commands executed on the remote machines, the solution is to run the **fab** command in script mode.
-
-The first step in running the **fab** command in script mode is to create a fabric script file.
-
-Let's start with a simple fabric script file to demonstrate some basic concepts that use the API from the Fabric python library.
-
-On matrix, cd to your lab8 directory under ops445 and create a simple fabric script file named **fabfile.py** (this is the default filename used by the fab command when you invoke it without the '-f' option):
-
-### Part 1: Non-privileged task example
-
-**Create non-privileged tasks: Getting the hostname of remote machines**
-
-  1. Add the following contents to the default fabric script called "fabfile.py" in your lab8 directory:
-
-```python
-from fabric.api import *
-
-# Set the name of the user login to the remote host
-env.user = 'student'
-
-# Define the task to get the hostname of remote machines:
-def getHostname():
-    name = run("hostname")
-    print("The host name is:",name)
-```
-
-  2. To check for syntax error in the fabric script, run the following command in the lab8 directory where it contains the fabric script named "fabfile.py":
-
-```bash
-fab -l
-```
-
-  3. You should get a list of tasks defined in your fabfile.py:
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ fab -l
-Available commands:
-
-    getHostname
-```
-
-  4. To perform the task of getHostname on your VM (replace with the actual port # for connecting to your VM), run the fab command on matrix:
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ fab --hosts=myvmlab.senecacollege.ca --port=7200 getHostname
-[myvmlab.senecacollege.ca] Executing task 'getHostname'
-[myvmlab.senecacollege.ca] run: hostname
-[myvmlab.senecacollege.ca] out: centos7
-[myvmlab.senecacollege.ca] out:
-
-The host name is: centos7
-
-Done.
-Disconnecting from myvmlab.senecacollege.ca:7200... done.
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-  5. Notice that there is no need to specify the user name at the **fab** command line since we defined it in the fabric script file (env.user = 'student'). Also notice that we can capture the hostname returned from the "hostname" command and print it out together with a descriptive text in a line.
-  6. In the above executed **fab** command, the fab program imports the fabric script named "fabfile.py" and execute the getHostname function on the VM connect at port 7200 on myvmlab.senecacollege.ca. Note that the port number for your VM will likely have a different value.
-
-If you did all the setup right and you got a password prompt when executing the above command, read the prompt carefully and see who's password it was prompting you for. If it is not for the user student, verify that you have the following line in your fabfile.py and you can ssh to your VM as the user student without password:
-
-```bash
-env.user = 'student'
-```
-
-In the above output from the **fab** command, you have:
-
-   - Lines with the FQDN of the remote machine you are working on.
-   - Messages from the controller workstation (e.g. "Executing task...", and "run: ...").
-   - Output from the remote machine ("out: ...")
-   - Output generated on the controller workstation from your fab file (the print statement)
-
-You should get used to the above messages from the **fab** command. It's a lot of output but it's important to understand where each piece of information is coming from, so you are able to debug problems when they happen.
-
-### Part 2: Privileged Tasks Examples
-
-**Create privileged tasks: install and remove rpm package on remote machines**
-
-  1. Add the following two new functions to the end of the fabric script "fabfile.py" in your lab8 directory:
-
-```python
-def installPackage(pkg='dummy'):
-    cmd = 'yum install ' + pkg + ' -y'
-    status = sudo(cmd)
-    print(status)
-
-def removePackage(pkg=''):
-    if pkg == '':
-       cmd = 'yum remove dummy -y'
-    else:
-       cmd = 'yum remove ' + pkg + ' -y'
-    status = sudo(cmd)
-    print(status)
-```
-
-  2. Note that both functions take one function argument in different ways. However, if no function argument is passed when calling the function, both will default to a string value of "dummy". Both functions call the sudo() from the fabric.api to execute the command contained in the "cmd" object on the remote machine via sudo.
-  3. To check for any syntax error in your updated fabric script, run the following command in the same directory as the fabfile.py:
-
-```bash
-fab -l
-```
-
-  4. You should get a list of tasks defined similar to the following:
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ fab -l
-Available commands:
-
-    getHostname
-    installPackage
-    removePackage
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-  5. If you only need to connect to the same remote machine, you can specify the host and port number in the fabfile.py to save some typing when executing the fab command. Add the following two lines after the env.user line in your fabfile.py:
-
-```bash
-env.port = '7200' # <-- please replace with the actual value of your VM's port number
-env.hosts =['myvmlab.senecacollege.ca']
-```
-
-  6. You can also store the user's password in this file so that it will respond to the "sudo password" prompt for sudo() call. It is not safe to do so as you can configure the sudo module on the remote machine not to ask for sudo password.
-  7. Now you can run the fab command without the "--host" and "--port" options.
-  8. Run the following two fab commands, note the results and compare their difference:
-
-```bash
-fab installPackage
-
-fab installPackage:tree
-```
-
-  9. Run the following two fab commands, note the results and compare their difference:
-
-```bash
-fab removePackage
-
-fab removePackage:tree
-```
-
-### Part 3: Create remote task for updating rpm packages
-
-Add a new function called "updatePackage" to your fabfile.py according to the following requirements:
-
-   - Accept optional function argument as the rpm package name
-   - If no function argument was given when called, default to all the packages installed
-
-The output of the updatePackage when executed, should produce similar output as shown below:
-
-1. Update a single package:
-
-```bash
-fab updatePackage:tree
-```
-
-   - **Sample output:**
-
-```bash
-[raymond.chan@mtrx-node05pd lab8]$ fab updatePackage:tree
-[myvmlab.senecacollege.ca] Executing task 'updatePackage'
-[myvmlab.senecacollege.ca] sudo: yum update tree -y
-[myvmlab.senecacollege.ca] out: sudo password:
-[myvmlab.senecacollege.ca] out: Loaded plugins: fastestmirror
-[myvmlab.senecacollege.ca] out: Loading mirror speeds from cached hostfile
-[myvmlab.senecacollege.ca] out:  * base: less.cogeco.net
-[myvmlab.senecacollege.ca] out:  * extras: centos.mirror.ca.planethoster.net
-[myvmlab.senecacollege.ca] out:  * updates: less.cogeco.net
-[myvmlab.senecacollege.ca] out: No packages marked for update
-[myvmlab.senecacollege.ca] out:
-
-Loaded plugins: fastestmirror
-Loading mirror speeds from cached hostfile
- * base: less.cogeco.net
- * extras: centos.mirror.ca.planethoster.net
- * updates: less.cogeco.net
-No packages marked for update
-
-Done.
-Disconnecting from myvmlab.senecacollege.ca:7200... done.
-[raymond.chan@mtrx-node05pd lab8]$
-```
-
-2. Update all installed package:
-
-```bash
-fab updatePackage:
-```
-
-   - The following output had been trimmed, only showing the first few lines:
-
-```bash
-[myvmlab.senecacollege.ca] Executing task 'updatePackage'
-[myvmlab.senecacollege.ca] sudo: yum update -y --skip-broken
-[myvmlab.senecacollege.ca] out: sudo password:
-[myvmlab.senecacollege.ca] out: Loaded plugins: fastestmirror
-[myvmlab.senecacollege.ca] out: Loading mirror speeds from cached hostfile
-[myvmlab.senecacollege.ca] out:  * base: less.cogeco.net
-[myvmlab.senecacollege.ca] out:  * extras: centos.mirror.ca.planethoster.net
-[myvmlab.senecacollege.ca] out:  * updates: less.cogeco.net
 ...
 
-  Verifying  : systemd-219-73.el7_8.5.x86_64                                                                      53/54
-  Verifying  : systemd-libs-219-73.el7_8.5.x86_64                                                                 54/54
-
-Removed:
-  kernel.x86_64 0:3.10.0-862.el7
-
-Installed:
-  kernel.x86_64 0:3.10.0-1127.13.1.el7
-
-Updated:
-  bind-export-libs.x86_64 32:9.11.4-16.P2.el7_8.6          binutils.x86_64 0:2.27-43.base.el7_8.1
-  ca-certificates.noarch 0:2020.2.41-70.0.el7_8            device-mapper.x86_64 7:1.02.164-7.el7_8.2
-  device-mapper-event.x86_64 7:1.02.164-7.el7_8.2          device-mapper-event-libs.x86_64 7:1.02.164-7.el7_8.2
-  device-mapper-libs.x86_64 7:1.02.164-7.el7_8.2           kernel-tools.x86_64 0:3.10.0-1127.13.1.el7
-  kernel-tools-libs.x86_64 0:3.10.0-1127.13.1.el7          lvm2.x86_64 7:2.02.186-7.el7_8.2
-  lvm2-libs.x86_64 7:2.02.186-7.el7_8.2                    microcode_ctl.x86_64 2:2.1-61.10.el7_8
-  net-snmp.x86_64 1:5.7.2-48.el7_8.1                       net-snmp-agent-libs.x86_64 1:5.7.2-48.el7_8.1
-  net-snmp-libs.x86_64 1:5.7.2-48.el7_8.1                  net-snmp-utils.x86_64 1:5.7.2-48.el7_8.1
-  ntp.x86_64 0:4.2.6p5-29.el7.centos.2                     ntpdate.x86_64 0:4.2.6p5-29.el7.centos.2
-  python-perf.x86_64 0:3.10.0-1127.13.1.el7                rsyslog.x86_64 0:8.24.0-52.el7_8.2
-  selinux-policy.noarch 0:3.13.1-266.el7_8.1               selinux-policy-targeted.noarch 0:3.13.1-266.el7_8.1
-  systemd.x86_64 0:219-73.el7_8.8                          systemd-libs.x86_64 0:219-73.el7_8.8
-  systemd-sysv.x86_64 0:219-73.el7_8.8                     yum-plugin-fastestmirror.noarch 0:1.1.31-54.el7_8
-
-Complete!
-
-Done.
-Disconnecting from myvmlab.senecacollege.ca:7200... done.
-[raymond.chan@mtrx-node05pd lab8]$
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "VirtualPC", 
+        "discovered_interpreter_python": "/usr/bin/python", 
+        "gather_subset": [
+            "all"
+        ], 
+        "module_setup": true
+    }, 
+    "changed": false
+}
 ```
 
-## Lab Exercise: Create a Fabric task called makeUser()
+[Click here for complete sample contents of the above](/C-ExtraResources/ansible-setup.md)
 
-1. Study the Fabric API run(), sudo(), local(), and put() and utilize them to create a new Fabric task called makeUser()
-2. The makeUser() task should perform the following on a remote machine to:
+## Investigation 2: Ansible Playbook
 
-      - create a new user called "ops445p" with home directory "/home/ops445p".
-      - add the new user to the sudo group called "wheel".
-      - from your instructor, get the ssh public key which is posted on the BB to your controller workstation.
-      - add the ssh public key obtained from your instructor to the file named "authorized_keys" in the ~ops445p/.ssh directory on the remote machine. (Note: Make sure that you set the proper ownership and permissions on both the directory ~ops445p/.ssh (700) and the file "~ops445p/.ssh/authorized_keys (600))
+### What is a playbook?
 
-3. Add the makeUser() to your final version of fabfile.py.
-4. Run the new task makeUser() on your VM.
-5. Verify and confirm that your new makeUser() task is working correctly.
+* Playbook is one of the core features of Ansible.
+* Playbook tells Ansible what to execute by which user on the remote machine.
+* Playbook is like a to-do list for Ansible
+* Playbook is written in "YAML".
+* Playbook links a task to an ansible module and provide needed arguments to the module which requires them.
 
-## Lab 8 Sign-Off (SHOW INSTRUCTOR)
+### Part 1: A playbook to update the /etc/motd file
 
-Complete each part of the lab and upload the version of your **fabfile.py** to Blackboard by the due date.
+Name: motd-play.yml
+
+```bash
+[raymond.chan@mtrx-node02pd lab9]$ cat motd-play.yml 
+---
+- name: update motd file
+  hosts: vmlab
+  user: instructor
+  vars:
+    apache_version: 2.6
+    motd_warning: "WARNING: used by ICT faculty/students only.\n"
+    testserver: yes
+  tasks:
+    - name: setup a MOTD
+      copy:
+        dest: /etc/motd
+        content: "{{ motd_warning }}"
+```
+
+Sample Run:
+
+```bash
+[raymond.chan@mtrx-node02pd lab9]$ ansible-playbook -i hosts -b motd-play.yml 
+
+PLAY [update motd file] *******************************************************************
+
+TASK [Gathering Facts] ********************************************************************
+ok: [vmlab]
+
+TASK [setup a MOTD] ***********************************************************************
+changed: [vmlab]
+
+PLAY RECAP ********************************************************************************
+vmlab   ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+```
+
+Try to run it the 2nd time and pay attention to the result. What conclusion can you draw?
+
+### Part 2: A playbook to install and start Apache Server
+
+Name: httpd-play.yml
+
+```bash
+---
+- hosts: vmlab
+  user: instructor
+  become: yes
+  vars:
+    apache_version: 2.6
+    motd_warning: "WARNING: used by ICT faculty/students only.\n"
+    testserver: yes
+  tasks:
+    - name: install apache
+      action: yum name=httpd state=installed
+    
+    - name: restart apache
+      service: 
+        name: httpd
+        state: restarted
+```
+
+Sample Run:
+
+```bash
+[rchan@centos7 playbooks]$ ansible-playbook -i hosts httpd-play.yml
+
+PLAY [vmlab] ********************************************************************
+
+TASK [Gathering Facts] **********************************************************
+ok: [vmlab]
+
+TASK [install apache] ***********************************************************
+changed: [vmlab]
+
+TASK [restart apache] ***********************************************************
+changed: [vmlab]
+
+PLAY RECAP **********************************************************************
+vmlab : ok=3  changed=2  unreachable=0  failed=0  skipped=0  rescued=0  ignored=0
+```
+
+## Investigation 3: Using Playbook to configure an OPS445 Linux VM machine
+
+Assume you have just installed the latest version of CentOS 7.x on a VM with GNOME Desktop. You need to configure it so that you can use it for doing the Labs for OPS445.
+
+Study the documentation and examples of following ansible modules:
+
+   - copy
+   - file
+   - hostname
+   - template
+   - user
+   - yum
+
+Create an ansible playbook named "config_ops445.yml" using the appropriate modules to perform the following configuration tasks on your assigned VM:
+
+  - update Apache (httpd) installed in the Investigation 2 - Part 2
+  - install extra packages repository for enterprise Linux (EPEL) if it is not already installed
+  - remove 'tree' package
+  - set the hostname to your Seneca username (Seneca ID)
+  - create a new user with your Seneca_ID with sudo access
+  - configure the new user account you created above so that you can ssh to it without password
+  - setup a directory structure **using a loop** for completing and organizing labs as shown below:
+     
+```bash
+      /home/[seneca_id]/ops445/lab1
+      /home/[seneca_id]/ops445/lab2
+      /home/[seneca_id]/ops445/lab3
+      /home/[seneca_id]/ops445/lab4
+      /home/[seneca_id]/ops445/lab5
+      /home/[seneca_id]/ops445/lab6
+      /home/[seneca_id]/ops445/lab7
+      /home/[seneca_id]/ops445/lab8
+      /home/[seneca_id]/ops445/lab9
+```
+
+  - when it's ready, run your playbook
+  - in order to test it, log into the VM with the newly created user (your Seneca_ID), install the 'tree' package with sudo, and check the directory structure with the 'tree' command
+  - if everything is correct, capture its output for a successful run of your playbook to a file named "lab9\_\[seneca\_id\].txt"
+
+## Lab 8 Sign-off (Show Instructor)
+
+### Have the following items ready to show your instructor:
+
+* The updated inventory file called "hosts" which you used to access your VM.
+* The Ansible playbook called "config\_ops445.yml" for configuring the VM.
+* The result of running the playbook "config\_ops445.yml". Save the result in a file called "lab9\_\[seneca\_id\].txt"
+
+### Upload the following files to blackboard
+
+* hosts
+* config\_ops445.yml
+* lab9\_\[seneca\_id\].txt
