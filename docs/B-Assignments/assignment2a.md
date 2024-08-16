@@ -130,6 +130,10 @@ This will require you to use a _scaling_ formula.
 
 `get_sys_mem()` and `get_avail_mem()` will both use `open()` to open the `/proc/meminfo` file, and return the relevant memory amounts as **integers.**
 
+*Note For WSL Users:*
+
+For whatever reason, WSL does not include the `MemAvailable` row. But you can easily get this value by returning the sum of `MemFree` and `SwapFree`.
+
 Once you have completed these functions, you have everything you need to **print the total memory used graph** as you have seen at the top of this page!
 
 

@@ -132,7 +132,7 @@ description: Weekly Schedule for OPS445 Course
 
 | **Topics** | **Reading/Reference** | **Tasks/Labs** |
 | :--- | :--- | :--- |
-| **Configuration management:** | | [Lab 8: Configuration management](/A-Labs/lab9.md) |
+| **Configuration management:** | | [Lab 8: Configuration management](/A-Labs/lab8.md) |
 | - Ansible | | |
 
 ## Week 11
