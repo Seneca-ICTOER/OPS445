@@ -34,6 +34,12 @@ If you see a number, please be patient and wait for about a minute. The number s
 
 If the number doesn't disappear, please see the section **Committing Manually** below.
 
+Return to your repository landing page and **reload** it. Verify that your script file has been changed. It should look like this:
+
+![Recent Change](/img/script-changed.png "Recent changes")
+
+If no recent change is detected, you will have to **commit manually**.
+
 ## Starting A Codespace Manually
 
 If the codespace doesn't start when you click the "Open As Codespace" button, you can start it manually from the repository landing page.
