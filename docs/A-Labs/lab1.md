@@ -9,22 +9,20 @@ description: Lab 1 For Students to Complete and Submit
 
 ## Lab Objectives
 
+- Set up a development environment for the course
 - Using the "git clone" command to clone a repository into a new directory
 - Set up account on github.com for creating, tracking, and managing a repository
-- configure and explore a virtual machine and IDE
-- configure and explore the Python interpreter
+- Configure and explore the Python interpreter
 
 ## Overview
 
-- In this lab, you will create an account on github.com and follow the Github "Hello World guide" to create a new public repository on github to and explore the basic workflow of using github to track and manage revisions of software or other contents. The essential operations provided by Github includes
+- In this lab, you will create Linux virtual machine to complete your course work. Additionally you will create an account on Github to explore the basic workflow of using version control. The essential operations provided by Github includes
 
-     - creating new repository,
-     - creating a new branch,
+     - cloning a new repository,
      - making changes to files,
-     - creating a pull request, and
-     - opening and merging a pull request.
+     - creating a commit, and
+     - pushing your changes.
 
-- You will then use the git client (git clone) to clone the repository on github.com which hosts the Python scripts for lab 1.
 - Finally, study, create and execute simple Python scripts.
 
 ## Reference
@@ -37,13 +35,6 @@ description: Lab 1 For Students to Complete and Submit
 - git - a distributed revision control system with rich command set that provides both high-level operations and full access to git's internals.
 - github.com - a code hosting platform for version control and collaboration that lets people work together on software projects from anywhere.
 
-## Unit Feedback Script : CheckLabX.py
-
-**Unit Feedback Scripts**
-
-Each **Part** (within an 'Investigation) is referred to as a **Unit**. Each Unit will require that the student download and run a **Unit Feedback Script**, which provides the OPS445 student "real-time feedback" of their completed work.
-
-This feedback is not considered to be perfect or fool-proof; however, it may provide feedback (hints) in case a student gets stuck or experiences an error when performing administration tasks or when creating their Python scripts. These unit feedback scripts can also be used to confirm that the student's Python script is on the right track, and provide a consistent record of their Python scripting progress throughout their labs.
 
 ## Investigation 1 - Set Up A Development Environment
 
@@ -54,50 +45,37 @@ In order to proceed in the course you're going to need a Linux-based development
    - it has a web browser installed, and
    - it has a text editor with modern development tools installed. (syntax highlighting, linting, etc.)
 
-You have options in how you set this up. If the computer you will be using for this course is powerful and has at least 16 GB of RAM, you will probably want to set up a Virtual Machine.
+You have options in how you set this up. If the computer you will be using for this course is powerful and has at least 16 GB of RAM, you will probably want to set up a Virtual Machine. Otherwise, skip this step and proceed to **Use WSL** below.
 
 ### Option 1: Create a Linux Virtual Machine
 
-We will demonstrate the steps for setting up a Fedora Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/Zxt2BKq-vIw) is available to walk you through the process.
+We will demonstrate the steps for setting up a Linux Mint Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/NhIKNYxCNps)w is available to walk you through the process.
 
-   - Install Virtual Machine Software such as VMWare Workstation.
-   - Download the Fedora Workstation ISO file from [The Fedora Website](https://fedoraproject.org/workstation/download/).
-   - Use the steps you've already learned to create a new virtual machine from this ISO file. Your virtual machine should have 20GB of hard drive space, and you can leave all other hardware specs as default.
-   - Start up your virtual machine, and at the graphical start menu select 'Install Fedora on your computer.'
-   - Your installer will now be displayed. Set the correct timezone, and click on the 'Installation Destination' button under 'System'. Click the 'Done' button in the top-left to accept the automatic storage configuration.
-   - Allow the installation to complete. Click the 'Finish Installation' button when it appears, and then reboot your machine.
-   - When the Virtual Machine has rebooted, you should see a welcome screen along with some more configuration options. **Disable Location**, as this seems to cause crashes when running as a VM. Skip the step to connect online accounts.
+   - Find the [VirtualBox Website](https://www.virtualbox.org) and follow the instructions to install VirtualBox for your specific operating system.
+   - Download the Linux Mint ISO file from [Linux Mint Website](https://www.linuxmint.com).
+   - Create a new virtual machine from this ISO file. Your virtual machine should have **at least 8GB of memory and 20GB of hard drive space**, and you can leave all other hardware specs as default.
+   - Start up your virtual machine, and at the graphical start menu select 'Install on your computer.'
+   - Your installer will now be displayed. Set language, timezone, and accept defaults for drive partitioning. Enter your username and password.
+   - Allow the installation to complete, and then reboot your machine.
+   - When the Virtual Machine has rebooted, you should see a welcome screen along with some more configuration options.
    - Enter your name, and a password. Don't forget this password, as you will need it to become root.
 
 #### Verify Python
 
-Fedora should have the required software (with the exception of VS Code) already installed. We will verify this before moving on.
+Linux Mint should have the required software (with the exception of VS Code) already installed. We will verify this before moving on.
 
-   - Open a terminal by clicking on the 'Activities' button in the top-left corner, and then clicking the 'Show Applications' buttons in the task bar below.
-   - Enter the command **python3 --version** and verify that the installed version is at least **python 3.4.** If no version of Python is installed, run **sudo dnf install python3**.
-   - Enter the command **git --version** and verify that the installed version is at least **git 1.2.** If no version of Python is installed, run **sudo dnf install git**.
-   - Run **sudo dnf update** to update the system software.
+   - Open a terminal by clicking on the start button in the bottom-left corner.
+   - Enter the command **python3 --version** and verify that the installed version is at least **python 3.11.** If no version of Python is installed, run **sudo apt install python3**.
+   - Enter the command **git --version** and verify that the installed version is at least **git 1.2.** If no version of Python is installed, run **sudo apt install git**.
+   - Run **sudo apt update && sudo apt upgrade** to update the system software.
 
 #### Install Visual Studio Code and Extensions
 
-Visual Studio Code has an excellent Debugger for Python, and so it is the recommended editor for this course. However, you may use a different editor at your discretion. Pycharm Community also has a very good debugger, works on Fedora, and is free for students.
+Visual Studio Code has an excellent Debugger for Python, and so it is the recommended editor for this course. However, you may use a different editor at your discretion. Pycharm Community also has a very good debugger, works on Linux Mint, and is free for students.
 
-   - We will need to add the Microsoft Repository to our list of accepted repositories. These instructions are [The Microsoft page](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions): Copy the following command into your terminal:
-
-```console
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-```
-
-   - You may need to enter your sudo password once again. When that process is complete, run:
-
-```console
-sudo dnf check-update
-sudo dnf install code
-```
-
-   - Launch Visual Studio Code. Click 'Activities' and type 'code', you should see the launcher for Visual Studio Code appear.
-   - Now install the Python extension. Press Control+Shift+x to open Extensions in the sidebar. (Or click on the Extensions icon on left side of the window).
+   - We will need to add the Microsoft Repository to our list of accepted repositories. These instructions are on [The Microsoft page](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions).
+   - Launch Visual Studio Code. Click the Start button and type 'code', you should see the launcher for Visual Studio Code appear.
+   - Now install the Python extension. Press **Control+Shift+x** to open Extensions in the sidebar. (Or click on the Extensions icon on left side of the window).
    - Type 'Python' into the search bar, and click 'Install' when you find the extension created by Microsoft. You may wish to explore other extensions to customize your workspace.
 
 ### Option 2: Use WSL
@@ -153,7 +131,6 @@ mkdir ~/ops445/lab5
 mkdir ~/ops445/lab6
 mkdir ~/ops445/lab7
 mkdir ~/ops445/lab8
-mkdir ~/ops445/lab9
 mkdir ~/ops445/a1
 mkdir ~/ops445/a2
 ```
@@ -176,22 +153,7 @@ Follow the Github guide [here](https://docs.github.com/en/authentication/connect
 
 You will now have permission to clone repositories using **SSH**.
      
-### Task 3: Create a project and make a pull request on GitHub
-
-Follow the Github "Hello World Guide" [here](https://guides.github.com/activities/hello-world/) to perform the following activities:
-
-- Create a repository
-- Create a branch
-- Make and commit changes
-- Open a pull request, and
-- Merge your pull request
-
-Please make the following **changes** when following the guide:
-
-- name the new repository using your **Seneca user name** instead of "hello-world".
-- add your full name, and OPS445 section to the README file, do not post any other personal information there.
-
-### Task 4: Clone a Github.com repository into a new directory on a Linux system
+### Task 3: Clone a Github.com repository into a new directory on a Linux system
 
 If your professor is asking you to submit labs on GitHub, follow their instructions now to clone the lab1 repository.
 
@@ -333,6 +295,14 @@ ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__', '__debug__'
 ```console
 >>> type(print)
 ```
+
+## Unit Feedback Script : CheckLabX.py
+
+**Unit Feedback Scripts**
+
+Each **Part** (within an 'Investigation) is referred to as a **Unit**. Each Unit will require that the student download and run a **Unit Feedback Script**, which provides the OPS445 student "real-time feedback" of their completed work.
+
+This feedback is not considered to be perfect or fool-proof; however, it may provide feedback (hints) in case a student gets stuck or experiences an error when performing administration tasks or when creating their Python scripts. These unit feedback scripts can also be used to confirm that the student's Python script is on the right track, and provide a consistent record of their Python scripting progress throughout their labs.
 
 ### Part 2 - Script (execution) mode: creating Python script
 
