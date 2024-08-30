@@ -49,7 +49,7 @@ You have options in how you set this up. If the computer you will be using for t
 
 ### Option 1: Create a Linux Virtual Machine
 
-We will demonstrate the steps for setting up a Linux Mint Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/NhIKNYxCNps)w is available to walk you through the process.
+We will demonstrate the steps for setting up a Linux Mint Virtual Machine with Visual Studio Code installed. A [short video](https://youtu.be/NhIKNYxCNps) is available to walk you through the process.
 
    - Find the [VirtualBox Website](https://www.virtualbox.org) and follow the instructions to install VirtualBox for your specific operating system.
    - Download the Linux Mint ISO file from [Linux Mint Website](https://www.linuxmint.com).
@@ -142,7 +142,21 @@ mkdir ~/ops445/a2
 - Start your web browser and go to github.com and use your own email to sign up for a new github account if you don't already have one.
 **\[Note: Please be aware that Seneca's spam filter block email from github.com by default, if you use your Seneca email to sign up for an account on github.com, you might have to re-configure your email spam filter to allow confirmation email from github.com to reach your inbox.\]**
 
-### Task 2: Add your public key to Github
+### Task 2: Configure Git On Your Development Machine
+
+Please note that git and GitHub are independent of one another, so you will also need to set up some things locally with git. 
+
+- If it isn't still running, start the VM you just created for the course, and open a terminal. Enter the following commands:
+
+```bash
+git config --global user.name "Firstname Lastname"
+git config --global user.email "mysenecaid@myseneca.ca"
+git config --global pull.rebase false
+```
+
+Please note **you must use your valid myseneca email address** in this configuration, otherwise you may not get credit for some of your work. You will need to configure this **for each machine you are using for lab work**.
+
+### Task 3: Add your public key to Github
 
 Follow the Github guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add your public key to your profile:
 
@@ -153,7 +167,7 @@ Follow the Github guide [here](https://docs.github.com/en/authentication/connect
 
 You will now have permission to clone repositories using **SSH**.
      
-### Task 3: Clone a Github.com repository into a new directory on a Linux system
+### Task 4: Clone a Github.com repository into a new directory on a Linux system
 
 If your professor is asking you to submit labs on GitHub, follow their instructions now to clone the lab1 repository.
 
