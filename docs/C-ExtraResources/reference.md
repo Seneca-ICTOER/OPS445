@@ -7,8 +7,8 @@ description: Reference Sheet For Acceptable Code For Assessments
 
 # OPS445 Reference Sheet For Assessments
 
-_Note_: words in \<lt;these\>gt; indicate a thing you will have to write, it is not part of the syntax.
-_Note_: variable placeholders will use **x**, **y**, and so on.
+- _Note_: words in (these) indicate a thing you will have to write, the parentheses are **not** part of the syntax.
+- _Note_: variable placeholders will use **x**, **y**, and so on.
 
 ## First Quiz
 
@@ -26,26 +26,26 @@ _Note_: variable placeholders will use **x**, **y**, and so on.
 ### Conditions
 
 ```python
-if \<lt;condition1>gt;:
-    \<lt;action1>gt;
-elif \<lt;condition2>gt;:
-    \<lt;action2>gt;
+if (condition):
+    (action1);
+elif (condition2):
+    (action2);
 else:
-    \<lt;action3>gt;
+    (action);
 ```
 
 ### Loops
 
 ```python
-while \<lt;condition>gt;:
-    \<lt;action>gt;
-    if \<lt;condition2>gt;:
+while (condition1):
+    (action);
+    if (condition2):
         break
 ```
 
 ```python
 for x in y:
-    \<lt;action>gt;
+    (action)
 ```
 
 ### Command Line Arguments
@@ -58,13 +58,15 @@ sys.argv
 
 ### Import Keywords
 
-- `from \<lt;module>gt; import \<lt;something>gt;`
-- `import \<lt;module>gt; as \<lt;alias>gt;`
+- `from (module) import (something)`
+- `import (module) as (alias)
 
 ### Comparison Operators
 
- \<lt; | >gt;
-\<lt;= | >gt;=
+Col 1 | Col 2
+--- | ---
+&lt; | &gt;
+&lt;= | &gt;=
 == | !=
 
 ### Logical Operators
@@ -75,6 +77,8 @@ sys.argv
 
 ### Math Operators
 
+Col 1 | Col 2
+--- | ---
 + | -
 * | **
 / | //
