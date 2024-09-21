@@ -27,18 +27,18 @@ description: Reference Sheet For Acceptable Code For Assessments
 
 ```python
 if (condition):
-    (action1);
+    (action1)
 elif (condition2):
-    (action2);
+    (action2)
 else:
-    (action);
+    (action)
 ```
 
 ### Loops
 
 ```python
 while (condition1):
-    (action);
+    (action)
     if (condition2):
         break
 ```
