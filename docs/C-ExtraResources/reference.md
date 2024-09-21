@@ -59,7 +59,7 @@ sys.argv
 ### Import Keywords
 
 - `from (module) import (something)`
-- `import (module) as (alias)
+- `import (module) as (alias)`
 
 ### Comparison Operators
 
@@ -84,13 +84,13 @@ Col 1 | Col 2
 / | //
 += | -=
 *= | /=
-%
+% | 
 
 ### Boolean Keywords
 
-- True
-- False
-- None
+- `True`
+- `False`
+- `None`
 
 ## Second Quiz
 
