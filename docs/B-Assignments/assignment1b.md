@@ -64,7 +64,7 @@ after('2023-01-25')
 
 Use the check script to verify your work so far.
 
-`python3 CheckA1.py -f -v TestBefore`
+`python3 checkA1.py -f -v TestBefore`
 
 
 **Feedback**
@@ -74,10 +74,8 @@ I will provide you feedback on **GitHub**. Check the **Issues** tab, and make an
 
 **Submission**
 
-  - Take the screenshots of the output of check scripts. Add the screenshots in the files named: milstone1_testBefore.jpg
   - Commit this file to the repository.
-  - Commits must be done before the deadline, a 20% deduction of marks applies to late submissions per day.
-  - In addition submit the file milstone1\_testBefore.jpg to Blackbaord, a link will be provided.
+  - Commits must be done before the deadline. No exceptions.
 
 ---
 
@@ -85,26 +83,24 @@ I will provide you feedback on **GitHub**. Check the **Issues** tab, and make an
 
 This Milestone will ask you to _refactor_ your code. This means modifying existing code to make it more portable.
 
-  1. Complete the `leap_year()` function, using the relevant code that’s already inside `after()`.
-  2. Edit your `after()` function. Replace any code that calculates leap years with a `leap_year` function call.
-  3. Verify that `after()` still works.
+  1. Complete the `leap_year()` and `mon_max()` functions, using the relevant code that’s already inside `after()`.
+  2. Edit your `after()` and `before()` functions. Replace any relevant code function calls to `mon_max()` or `leap_year()`.
+  3. Verify that everything still works.
   4. Complete the `dbda()` function. Given a starting date and number of days, `dbda()` should call either `before()` or `after()` inside of a loop and return the end date. A negative number of days should return a date _before_ start\_date, and a postive number should return a date _after_ start\_date.
 
 **Check Your Work**
 
 Use the check script to verify your work.
 
-  - `python3 CheckA1.py -f -v TestLeap` to test your `leap_year()` function.
-  - `python3 CheckA1.py -f -v TestAfter` to test `after()` and ensure it’s still working.
-  - `python3 CheckA1.py -f -v TestDBDA` to test `dbda()`.
+  - `python3 checkA1.py -f -v TestLeap` to test your `leap_year()` function.
+  - `python3 checkA1.py -f -v TestMonMax` to test your `mon_max()` function.
+  - `python3 checkA1.py -f -v TestAfter` to test `after()` and ensure it’s still working.
+  - `python3 checkA1.py -f -v TestBefore` to test `before()` and ensure it’s still working.
+  - `python3 checkA1.py -f -v TestDBDA` to test `dbda()`.
 
 **Submission**
 
-  - Take the screenshots of the output of check scripts. Add the screenshots in the files named: milstone2\_leap.jpg, milstone2\_after.jpg, milstone2\_dbda.jpg
-  - Commit these three files to repository.
-  - Commits must be done before the deadline, a 20% deduction of marks applies to late submissions per day.
-  - In addition submit these three files to Blackboard, a link will be provided.
-
+  - Commits must be done before the deadline. No exceptions.
 
 ---
 
@@ -126,21 +122,21 @@ At this point you have a working script. Implement error checking:
 
 **Final Checks**
 
-  - `python3 CheckA1.py -f -v TestValidDate` to test your `valid_date()` function.
-  - `python3 CheckA1.py -f -v TestFinal` to test the final version of your script.
+  - `python3 checkA1.py -f -v TestValidDate` to test your `valid_date()` function.
+  - `python3 checkA1.py -f -v TestFinal` to test the final version of your script.
 
 **Submitting Your Code For Review**
 
   1. Push your code to GitHub before the deadline.
 
-        - Take the screenshots of the output of check scripts. Add the screenshots in the files named: finalSubmission\_TestValidDate.jpg, finalSubmission\_TestFinal.jpg
-        - Commit these two files to repository.
-        - Commits must be done before the deadline, a 20% deduction of marks applies to late submissions per day.
-
-  2. In addition, **submit your code and the screenshots (finalSubmission\_TestValidDate.jpg, finalSubmission\_TestFinal.jpg) to Blackboard**. A link will be provided
-
+        - Commits must be done before the deadline, a 10% deduction of marks applies to late submissions per day.
 
 ---
+
+### Appropriate
+
+All code must be **within scope for the course material.** Use of **LLMs is not permitted, and code that is outside of what has been taught in class will be given a zero and subject to an Academic Integrity Review**.
+
 
 ### Formatting And Style
 
@@ -184,14 +180,17 @@ A workplace will have its own policy about how often to commit, and how to docum
 | Documentation for `after` function | 4 |
 | TestBefore Checks | 6 |
 | **Milestone 2:** |  |
-| TestAfter Checks | 6 |
+| TestAfter Checks | 2 |
+| TestBefore Checks | 2 |
+| TestMonMax Checks | 2 |
 | TestLeap Checks | 2 |
-| TestDBDA Checks	 | 2 |
+| TestDBDA Checks | 2 |
 | **Final Submission:** |  |
-| TestValidDate Checks | 4 |
-| TestFinal Checks | 12 |
-| Comments and Documentation | 2 |
-| github use | 2 |
+| TestValidDate Checks | 2 |
+| TestFinal Checks | 6 |
+| Appropriate Code | 6 |
+| Comments and Documentation | 10 |
+| github use | 6 |
 
 
 ### Sample Output
