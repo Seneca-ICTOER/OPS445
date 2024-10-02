@@ -12,6 +12,12 @@ description: Reference Sheet For Acceptable Code For Assessments
 
 ## First Quiz
 
+### Shebang
+
+```python
+#!/usr/bin/env python3
+```
+
 ### Built-in Functions
 
 - `help()`
@@ -92,6 +98,99 @@ Col 1 | Col 2
 - `False`
 - `None`
 
+---
+
 ## Second Quiz
 
-Coming Soon...
+### Functions
+
+```python
+def func_name(x='Default value'):
+    return y
+```
+
+### Main Block
+
+```python
+if __name__ == "__main__":
+```
+
+### Shell Commands
+
+```python
+os.system('x')
+os.popen('x').read()
+p = subprocess.Popen(['x'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+s = p.communicate()
+s[0].decode('utf-8')
+```
+
+### Lists
+
+```python
+x = []
+x.append(x)
+x.insert(x, y)
+x.remove(x)
+x.sort()
+x.pop()
+
+y in x
+```
+
+
+### Tuples
+
+```python
+x = (y, )
+x = (y, z)
+```
+
+### Sets
+
+```python
+x = {x, y}
+x.add(x)
+```
+
+```python
+x = {}
+y = {}
+x & y
+x - y
+x ^ y
+x | y
+```
+
+### Dictionaries
+
+```python
+x = {y: z, a: b}
+x[y] = z
+
+x.keys()
+x.values()
+x.items()
+```
+
+### Slicing
+
+```python
+x = 'PYTHON'
+x[:z]
+x[y:]
+x[y:z]
+```
+
+### Strings
+
+- `upper()`
+- `lower()`
+- `strip()`
+- `split()`
+- `join()`
+- `center()`
+- `replace()`
+- `startswith()`
+
+
