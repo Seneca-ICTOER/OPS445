@@ -193,4 +193,42 @@ x[y:z]
 - `replace()`
 - `startswith()`
 
+---
 
+## Third Quiz
+
+### File Operations
+
+```python
+f = open(filename, operation_flag)
+```
+
+#### File Object Methods
+
+- `read`
+- `write`
+- `readline`
+- `readlines`
+- `close`
+
+### Exception Handling
+
+```python
+try:
+    ...
+except (error1, error2):
+    ...
+except error3:
+    ...
+except:
+    ...
+```
+
+#### Common Exceptions
+
+- `NameError`
+- `SyntaxError`
+- `IndexError`
+- `ValueError`
+- `FileNotFoundError`
+- `KeyError`
