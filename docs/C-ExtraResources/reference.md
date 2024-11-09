@@ -232,3 +232,71 @@ except:
 - `ValueError`
 - `FileNotFoundError`
 - `KeyError`
+
+---
+
+## Fourth Quiz
+
+### F-Strings
+
+```python
+print(f'Hello World')
+x = 'John'
+print(f'Hello {x}')
+
+y = 3
+print(f'Formatted: {y:02d} minutes.')
+```
+
+### Classes
+
+```python
+class Name:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def method(self):
+        ...
+
+
+n1 = Name(x, y)
+```
+
+### Magic Methods
+
+```python
+class Name:
+
+    def __eq__(self, other):
+        return self == other
+
+```
+
+### Equality Operators
+
+- `__eq__`
+- `__ne__`
+- `__gt__`
+- `__lt__`
+- `__ge__`
+- `__le__`
+
+### Math Operators
+
+- `__add__`
+- `__sub__`
+- `__mul__`
+- `__truediv__`
+- `__mod__`
+- `__floordiv__`
+- `__pow__`
+
+### Other Dunders
+
+- `__len__`
+- `__str__`
+- `__repr__`
+
+
