@@ -85,7 +85,7 @@ Once you comment out these lines (by placing a # symbol in front of them), run `
 
 You only need to have the "ansible" package on your control VM (i.e. matrix).
 
-  - Login to matrix with your Seneca account and change to the directory ~/ops445/lab9
+  - Login to matrix with your Seneca account and change to the directory ~/ops445/lab8
   - Issue the following command to check the version of the "ansible" package:
  
 ```bash
@@ -95,7 +95,7 @@ rpm -q ansible
 To confirm that you have access to the Ansible package, try the following command:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible --help
+[raymond.chan@mtrx-node02pd lab8]$ ansible --help
 usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
                [--become-user BECOME_USER] [-K] [-i INVENTORY] [--list-hosts]
                [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [-k]
@@ -128,7 +128,7 @@ myvm    ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7654
 ```
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m copy -a "src=/home/raymond.chan/ops445/lab9/hosts dest=/tmp/ansible_hosts"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m copy -a "src=/home/raymond.chan/ops445/lab8/hosts dest=/tmp/ansible_hosts"
 vmlab | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -150,7 +150,7 @@ vmlab | CHANGED => {
 
 **vmlab** is the remote machine ID.
 
-**hosts** is the name of the ansible inventory file in the current working directory, you may also specify the inventory file with full path name, e.g. /home/raymond.chan/ops445/lab9/hosts.
+**hosts** is the name of the ansible inventory file in the current working directory, you may also specify the inventory file with full path name, e.g. /home/raymond.chan/ops445/lab8/hosts.
 
 **--private-key id\_rsa** is the private key for ssh key-based authentication for connecting to the remote machine.
 
@@ -181,7 +181,7 @@ ansible-doc yum
 The following command demonstrates how to install the "epel-release" package with the "yum" module with different module arguments and under different remote user (your result may be differ from what is show below):
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m yum -a "name=epel-release state=present"
 vmlab | FAILED! => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -203,7 +203,7 @@ vmlab | FAILED! => {
 Add the '-b' option to tell ansible to invoke "sudo" when running the yum command on the remote machine:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
 vmlab | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -225,7 +225,7 @@ vmlab | CHANGED => {
 If you run the same command the 2nd time:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
 vmlab | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -242,7 +242,7 @@ vmlab | SUCCESS => {
 Now run the similar command but with "state=latest":
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=latest"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=latest"
 vmlab | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -268,7 +268,7 @@ Depending on the status of the packages installed on your VM, the output may not
 One of the core ansible module is called "setup", it is automatically called by ansible playbook to gather useful "facts" about remote hosts that can be used in ansible playbooks. It can also be executed directly by the ansible command (/usr/bin/ansible) to check out what "facts" are available on a remote host.
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m setup
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m setup
 vmlab | SUCCESS => {
     "ansible_facts": {
         "ansible_all_ipv4_addresses": [
@@ -315,7 +315,7 @@ vmlab | SUCCESS => {
 Name: motd-play.yml
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ cat motd-play.yml 
+[raymond.chan@mtrx-node02pd lab8]$ cat motd-play.yml 
 ---
 - name: update motd file
   hosts: vmlab
@@ -334,7 +334,7 @@ Name: motd-play.yml
 Sample Run:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab9]$ ansible-playbook -i hosts -b motd-play.yml 
+[raymond.chan@mtrx-node02pd lab8]$ ansible-playbook -i hosts -b motd-play.yml 
 
 PLAY [update motd file] *******************************************************************
 
@@ -425,12 +425,11 @@ Create an ansible playbook named "config_ops445.yml" using the appropriate modul
       /home/[seneca_id]/ops445/lab6
       /home/[seneca_id]/ops445/lab7
       /home/[seneca_id]/ops445/lab8
-      /home/[seneca_id]/ops445/lab9
 ```
 
   - when it's ready, run your playbook
   - in order to test it, log into the VM with the newly created user (your Seneca_ID), install the 'tree' package with sudo, and check the directory structure with the 'tree' command
-  - if everything is correct, capture its output for a successful run of your playbook to a file named "lab9\_\[seneca\_id\].txt"
+  - if everything is correct, capture its output for a successful run of your playbook to a file named "lab8\_\[seneca\_id\].txt"
 
 ## Lab 8 Sign-off (Show Instructor)
 
@@ -438,10 +437,10 @@ Create an ansible playbook named "config_ops445.yml" using the appropriate modul
 
 * The updated inventory file called "hosts" which you used to access your VM.
 * The Ansible playbook called "config\_ops445.yml" for configuring the VM.
-* The result of running the playbook "config\_ops445.yml". Save the result in a file called "lab9\_\[seneca\_id\].txt"
+* The result of running the playbook "config\_ops445.yml". Save the result in a file called "lab8\_\[seneca\_id\].txt"
 
 ### Upload the following files to blackboard
 
 * hosts
 * config\_ops445.yml
-* lab9\_\[seneca\_id\].txt
+* lab8\_\[seneca\_id\].txt
