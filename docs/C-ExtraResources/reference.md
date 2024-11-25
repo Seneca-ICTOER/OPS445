@@ -28,6 +28,7 @@ description: Reference Sheet For Acceptable Code For Assessments
 - `str()`
 - `float()`
 - `len()`
+- `round()`
 
 ### Conditions
 
@@ -51,6 +52,11 @@ while (condition1):
 
 ```python
 for x in y:
+    (action)
+```
+
+```python
+for i in range(x, y):
     (action)
 ```
 
