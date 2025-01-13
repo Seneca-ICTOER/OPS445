@@ -174,11 +174,10 @@ A workplace will have its own policy about how often to commit, and how to docum
 | TestValidDate Checks | 4 |
 | TestDayCount Checks | 6 |
 | **Final Submission:** |  |
-| TestFinal Checks | 16 |
-| Comments and Documentation | 5 |
-| github use | 5 |
+| TestFinal Checks | 8 |
+| Comments and Documentation | 10 |
+| github use | 10 |
 | functions and style | 2 |
-| error checking | 2 |
 
 
 ### Sample Output
