@@ -583,6 +583,13 @@ print(10 / 5)    # division
 print(10 ** 5)   # exponents
 ```
 
+In addition to the normal way of doing division, try the following:
+
+```python
+print(5 // 2)    # integer division
+print(5 % 2)     # returns remainder of integer division
+```
+
    - NOTE: You must be careful when combining more complex math operators together. Python uses **PEMDAS** (**P**arentheses, **E**xponents, **M**ultiplication and **D**ivision, **A**ddition and **S**ubtraction) to resolve math.
 
      2. Go over the below examples and see if you understand each situation:
