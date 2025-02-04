@@ -192,6 +192,9 @@ x[y:z]
 
 - `upper()`
 - `lower()`
+- `capitalize()`
+- `swapcase()`
+- `title()`
 - `strip()`
 - `split()`
 - `join()`
