@@ -78,9 +78,8 @@ The function looks like this:
     if lyear == 0:
         feb_max = 29 # this is a leap year
 
-    tmp_day = day + 1 # next day
-
     mon_max = { 1:31, 2:feb_max, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
+
     tmp_day = day + 1  # next day
 
     if tmp_day > mon_max[month]:
