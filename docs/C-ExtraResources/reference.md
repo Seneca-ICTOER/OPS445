@@ -159,14 +159,15 @@ x = {x, y}
 x.add(x)
 ```
 
-```python
-x = {}
-y = {}
-x & y
-x - y
-x ^ y
-x | y
-```
+#### Combinations
+
+Method 1 | Method 2
+---------|---------
+`x & y` | `x.intersection(y)`
+`x - y` | `x.difference(y)`
+`x ^ y` | `x.symmetric_difference(y)`
+`x | y` | `x.union(y)`
+
 
 ### Dictionaries
 
