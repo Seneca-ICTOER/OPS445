@@ -309,4 +309,40 @@ class Name:
 - `__str__`
 - `__repr__`
 
+## Fifth Quiz
 
+### Ansible Ad-Hoc
+
+`ansible remote_machine_id [-i inventory] [--private-key id_rsa] [-u remote_user] -a 'date'`
+
+### Playbooks
+
+```ansible
+- hosts: 
+  user: 
+  become: 
+  vars:
+  tasks:
+    - name: 
+      yum: name= state=
+    
+    - name: 
+      service: 
+        name: 
+        state: 
+
+    - name:  
+      copy:
+        dest: 
+        src:
+        owner:
+        group:
+        mode:
+
+    - name:
+      user:
+        name:
+        comment:
+        group:
+        append:
+```
