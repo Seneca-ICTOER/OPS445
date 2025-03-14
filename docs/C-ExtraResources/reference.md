@@ -255,7 +255,8 @@ x = 'John'
 print(f'Hello {x}')
 
 y = 3
-print(f'Formatted: {y:02d} minutes.')
+print(f'Formatted: {y:02d} minutes.')  # 03
+print(f'Formatted: {y:.2f} dollars.')  # 3.00
 ```
 
 ### Classes
