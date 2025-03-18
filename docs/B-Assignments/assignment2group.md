@@ -77,6 +77,8 @@ Instructions for these processes are listed below.
 - From GitHub, it is recommended that you create a branch for each member of your group. Click the 'main' drop-down and select 'Create a new branch'. Enter your name, or a label for the feature you are working on.
 - From your local computer, run `git clone` to clone your repo.
 - Now you will need to checkout your specific branch in order to commit. Run `git checkout <name of branch>`
+- If you get an error that the branch doesn't exist, you can create it locally by running `git checkout -b <name of branch>`
+- Verify the branch you are on by using `git status`
 - You will now be able to commit and push to that branch.
 
 #### Pull Requests
