@@ -88,7 +88,7 @@ When group members finish a feature that will become part of the assignment, the
 - From GitHub, select the 'main' branch. You will see a message that your branch is 'X commits ahead of main' and an option to 'Open a Pull Request'. Click that. 
 - Describe your changes. You will now need approval from 1-2 members of the group to approve your pull request.
 
-I have prepared a [short video](https://youtu.be/u_WPSQ655LA) that demonstrates this entire process.
+I have prepared a [short video](https://youtu.be/gqa59TkMH1w) that demonstrates this entire process.
 
 ### Completing the Assignment
 
