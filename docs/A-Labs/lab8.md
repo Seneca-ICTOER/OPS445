@@ -11,7 +11,7 @@ description: Lab 8 for Students to Complete and Submit
 
   1. Confirm and review the Ansible package installed on matrix.senecapolytechnic.ca
   2. Explore and run Ansible's ad hoc commands
-  3. Explore and study a few Ansible's modules
+  3. Explore and study a few of Ansible's modules
   4. Explore, create, and run a few Ansible playbooks
 
 ## Overview
@@ -29,9 +29,12 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
 
 ## System requirements
 
-     - control machine Install Ansible on your Linux VM or use the Matrix server
-     - managed machine(s) (your vm in myvmlab.senecapolytechnic) - to be managed by the control machine
+Control Machine:
 
+- Install Ansible on your Linux VM or use the Matrix server
+
+Managed Machine(s) (your vm in myvmlab.senecapolytechnic):
+- To be managed by the control machine
 - You should be able to ssh from your control machine as a regular user to your managed machine without supplying a login password.
 - Your account on your managed machine is a sudoer and can run sudo with/without password.
 
@@ -85,14 +88,33 @@ Once you comment out these lines (by placing a # symbol in front of them), run `
 
 You only need to have the "ansible" package on your control VM (i.e. matrix).
 
-  - Login to matrix with your Seneca account and change to the directory ~/ops445/lab8
+  - Login to matrix with your Seneca account.
+  - Change to the directory ~/ops445 and clone your repository from GitHub. NOTE: you will have to add a public key from Matrix to your GitHub account if you haven't done so already.
   - Issue the following command to check the version of the "ansible" package:
  
 ```bash
-rpm -q ansible
+[raymond.chan@mtrx-node02pd lab8]$ ansible --version
 ```
 
-To confirm that you have access to the Ansible package, try the following command:
+It's a good idea to include the Ansible version number if you run into problems.
+
+### Part 2: Setting Up Managed Machine
+
+- SSH into your `myvmlab` remote machine from your control machine. You will have to specify the port number and password that were emailed to you.
+- Once you can connect successfully, you should **disconnect** from `myvmlab`. Now copy your public key to `myvmlab` and verify that you can SSH without supplying a password. If you forget how to do this, [review the lab from OPS245](https://seneca-ictoer.github.io/OPS245/A-Labs/lab7#part-1-generating-private-and-public-keys-public-key-infrastructure).
+- You should be logged into `myvmlab` once again. Configure the `sudoers` file so that members of the `wheel` group can run sudo commands without a password. 
+
+:::danger
+
+**WARNING**: If you make a mistake here, you might be locked out of the remote machine altogether. Use `visudo` to modify the sudoers file. If you need a refresher, review [the relevant lab from OPS245](https://seneca-ictoer.github.io/OPS245/A-Labs/lab4#part-1-finding-out-why-your-first-user-can-do-anything).
+
+:::
+
+- Once you have verified that sudo commands don't require a password, **log out** of `myvmlab` and proceed with the rest of the lab from your **control machine**.
+
+### Part 3: Using Ansible
+
+To confirm that you have access to the Ansible package on Matrix, try the following command:
 
 ```bash
 [raymond.chan@mtrx-node02pd lab8]$ ansible --help
@@ -115,7 +137,7 @@ usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
 
 Take a look of all the available command line options for the "ansible" command. There are a lots of options when running Ansible. Let's move on to try a few simple ones.
 
-### Part 2: Sample runs for some of the Ad hoc commands
+### Part 4: Sample runs for some of the Ad hoc commands
 
 The following commands are based on the following entries in the ansible inventory file called "hosts" in the current working directory:
 
@@ -128,7 +150,7 @@ myvm    ansible_host=myvmlab.senecapolytechnic.ca ansible_port=7654
 ```
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m copy -a "src=/home/raymond.chan/ops445/lab8/hosts dest=/tmp/ansible_hosts"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -m copy -a "src=~/ops445/lab8/hosts dest=/tmp/ansible_hosts"
 vmlab | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -137,12 +159,12 @@ vmlab | CHANGED => {
     "checksum": "bc4ffa4127e3af3228e61f0ddc4fca87c5e548a4", 
     "dest": "/tmp/ansible_hosts", 
     "gid": 1003, 
-    "group": "instructor", 
+    "group": "student", 
     "md5sum": "17e94f6ee9ce0920ebf835bd4f6250a7", 
     "mode": "0664", 
-    "owner": "instructor", 
+    "owner": "student", 
     "size": 423, 
-    "src": "/home/instructor/.ansible/tmp/ansible-tmp-1616732233.49-236519-35150082693243/source", 
+    "src": "/home/student/.ansible/tmp/ansible-tmp-1616732233.49-236519-35150082693243/source", 
     "state": "file", 
     "uid": 1003
 }
@@ -162,7 +184,7 @@ after **-a** is the arguments to the copy module, which specify the source file 
 
 If you got the same "SUCCESS" message, login to the remote machine and check the directory "/tmp" for the file ansible_hosts.
 
-### Part 3: Sample runs for using some Ansible's modules
+### Part 5: Sample runs for using some Ansible's modules
 
 You can get a complete list of all the ansible modules installed on you system with the following command:
 
@@ -181,7 +203,7 @@ ansible-doc yum
 The following command demonstrates how to install the "epel-release" package with the "yum" module with different module arguments and under different remote user (your result may be differ from what is show below):
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -m yum -a "name=epel-release state=present"
 vmlab | FAILED! => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -203,7 +225,7 @@ vmlab | FAILED! => {
 Add the '-b' option to tell ansible to invoke "sudo" when running the yum command on the remote machine:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -b -m yum -a "name=epel-release state=present"
 vmlab | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -225,7 +247,7 @@ vmlab | CHANGED => {
 If you run the same command the 2nd time:
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=present"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -b -m yum -a "name=epel-release state=present"
 vmlab | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -242,7 +264,7 @@ vmlab | SUCCESS => {
 Now run the similar command but with "state=latest":
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -b -m yum -a "name=epel-release state=latest"
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -b -m yum -a "name=epel-release state=latest"
 vmlab | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -263,12 +285,12 @@ vmlab | SUCCESS => {
 
 Depending on the status of the packages installed on your VM, the output may not exactly the same as shown above. Please read and try to understanding the meaning of the text return by ansible. If it's been updated instead, then run the command again.
 
-### Part 4: Gather software and hardware information available on remote machine
+### Part 6: Gather software and hardware information available on remote machine
 
 One of the core ansible module is called "setup", it is automatically called by ansible playbook to gather useful "facts" about remote hosts that can be used in ansible playbooks. It can also be executed directly by the ansible command (/usr/bin/ansible) to check out what "facts" are available on a remote host.
 
 ```bash
-[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u instructor -m setup
+[raymond.chan@mtrx-node02pd lab8]$ ansible vmlab -i hosts --private-key ~/.ssh/id_rsa -u student -m setup
 vmlab | SUCCESS => {
     "ansible_facts": {
         "ansible_all_ipv4_addresses": [
@@ -429,7 +451,7 @@ Create an ansible playbook named "config_ops445.yml" using the appropriate modul
 
   - when it's ready, run your playbook
   - in order to test it, log into the VM with the newly created user (your Seneca_ID), install the 'tree' package with sudo, and check the directory structure with the 'tree' command
-  - if everything is correct, capture its output for a successful run of your playbook to a file named "lab8\_\[seneca\_id\].txt"
+  - if everything is correct, capture the output of the Ansible command running your playbook successfully to a file named "lab8\_\[seneca\_id\].txt"
 
 ## Lab 8 Sign-off (Show Instructor)
 
