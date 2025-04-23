@@ -166,6 +166,13 @@ Follow the Github guide [here](https://docs.github.com/en/authentication/connect
 - Open Github in your web browser. Log in, select **Settings -\> SSH and GPG Keys**. Create new key, and paste your public key contents into the text box.
 
 You will now have permission to clone repositories using **SSH**.
+
+#### (Optional) Turn off GitHub Action Notifications
+
+While you're in your GitHub Settings menu, I'd recommend turning off emails for when your checks fail. This isn't a big deal for us, since we are learning and failure is just part of that process!
+
+- Go to the 'Notifications' section
+- Under 'System' change the 'Actions' notifications to 'Don't Notify'.
      
 ### Task 4: Clone a Github.com repository into a new directory on a Linux system
 
