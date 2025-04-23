@@ -171,7 +171,26 @@ You will now have permission to clone repositories using **SSH**.
 
 If your professor is asking you to submit labs on GitHub, follow their instructions now to clone the lab1 repository.
 
-Otherwise, download the sample.py script from https://github.com/ahadalioglu/ops445-lab1 repository to ~/ops445/lab1 directory
+- Go to Blackboard. Find the link to accept your first GitHub assignment. Click the title.
+- Find your myseneca username in the drop-down list. If you don't see your username, click on the link at the top that says **skip this step**.
+
+:::danger
+
+**DO NOT click another person's username on this list!! If you do so, you will lost marks for this lab permanently.**
+
+If you don't see your name, click 'skip this step' and you will be added later.
+
+:::
+
+- Click the green button that says 'Accept Assignment'.
+- Click the link to your newly-created Lab 1 repository.
+- Follow the steps found in the README file to clone your repository.
+
+:::info
+
+If your professor has another method of submission, you can download the sample.py script from https://github.com/ahadalioglu/ops445-lab1. Plece this file in your ~/ops445/lab1 directory.
+
+:::
 
 - Study and Explore the sample.py python script and identify the following sections:
      - the shebang line
@@ -405,6 +424,8 @@ git push
 
 Your first script is now submitted. The process for each part of the lab will be similar.
 
+:::info
+
 **Submitting Your Lab Work Through Blackboard**
 
 If you did not clone your lab through GitHub, you may download the check script by following these steps:
@@ -420,6 +441,8 @@ python3 ./CheckLab1.py -f -v lab1a
 ```
  
 Before moving on to the next step make sure you identify any and all errors in "lab1a.py". When the check script tells you everything is "ok", you may proceed to the next step.
+
+:::
 
 ## Investigation 4 - Exploring Python's Built-in Data Objects
 
@@ -637,6 +660,20 @@ python3 ./CheckLab1.py -f -v lab1d
 
 Again, you will be asked to submit the lab in one of two ways:
 
+
+### Complete the GitHub Submission
+
+**Run the CheckLab1.py script and capture the result**
+
+```console
+python3 ./CheckLab1.py -f -v &> laboutput.txt
+git add laboutput.txt
+git commit -m "completed lab"
+git push
+```
+
+:::info
+
 ### Upload the following files individually to Blackboard
 
 **Run the CheckLab1.py script and capture the result**
@@ -650,16 +687,7 @@ Submit the following files individually to Blackboard:
 - [x] `lab1output.txt`
 - [x] `lab1a.py`, `lab1b.py`, `lab1c.py`, and `lab1d.py`
 
-### Complete the GitHub Submission
-
-**Run the CheckLab1.py script and capture the result**
-
-```console
-python3 ./CheckLab1.py -f -v &> laboutput.txt
-git add laboutput.txt
-git commit -m "completed lab"
-git push
-```
+:::
 
 ## Lab Review
 
