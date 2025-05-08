@@ -21,8 +21,12 @@ The end date is Fri, 29/12/2023.
 
 ## Restrictions
 
+:::danger
+
 - You may **only use `sys` for parsing command line arguments**.
 - No other modules are allowed
+
+:::
 
 ## Instructions
 
@@ -149,14 +153,15 @@ TestAfter Checks | 3
 TestBefore Checks | 3
 TestLeap Checks  | 2
 TestMonMax Checks | 2
+**Milestone 2:** | 
 TestValidDate Checks | 4
 TestDayIter Checks | 6
 **Final Submission:** |
 TestFinal Checks | 8
 Comments and Documentation | 10
-github use | 6
-functions and style | 3
-error checking | 3
+Github Use | 6
+Functions And Style | 3
+Error Checking | 3
 
 ## Sample Output
 
