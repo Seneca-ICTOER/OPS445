@@ -46,11 +46,11 @@ Deadlines will be given by your instructor.
 
 ### Milestone 1
 
-1. You are provided with a function called `after()`. This function is complete and should successfully return the next day's date when provided with a starting date in `DD/MM/YYYY` format. You can experiment with this function by importing it into the Python interpreter:
+1. You are provided with a function called `after()`. This function is complete and should successfully return the next day's date when provided with a starting date in `DD/MM/YYYY` format. You can experiment with this function by calling it in your main block. Then use the debugger inside VS Code to set a breakpoint and **step into** the function:
 
 ```python
-from assignment1 import after
-after('25/01/2023')
+if __name__ == "__main__":
+    after('25/01/2023')
 ```
 
 2. Use your understanding of `after()` to complete the `before()` function. This should return a previous day's date.
@@ -86,7 +86,7 @@ Use the check script to verify your work.
 
 #### Feedback and Code Review
 
-Your code needs to be within scope for the course. That means refer to the code you have completed as part of labs 1 - 4. 
+Your code needs to be within scope for the course. That means refer to the code you have completed as part of labs 1 - 5. 
 
 Code that is outside the scope of the course will be flagged for code review. You will be asked to explain your code, and provide ways of making it adhere to the acceptable scope of the course. **Failure to attend code review or failure to understand the code you've submitted will be considered proof of academic dishonesty**.
 
