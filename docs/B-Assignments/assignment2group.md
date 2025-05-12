@@ -66,7 +66,7 @@ Once you have gotten approval for your script, you will get access to your repos
 
 ### Contributing to the Assignment
 
-:::warn
+:::warning
 
 In order to measure your contributions to the assignment, **I will be looking at the commits you make that become part of the main branch**. Read the next section carefully. If you attempt to bypass the proper procedure for making commits and pull requests, you will not receive marks for your contributions.
 
