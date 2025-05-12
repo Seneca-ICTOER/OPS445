@@ -66,6 +66,12 @@ Once you have gotten approval for your script, you will get access to your repos
 
 ### Contributing to the Assignment
 
+:::warn
+
+In order to measure your contributions to the assignment, **I will be looking at the commits you make that become part of the main branch**. Read the next section carefully. If you attempt to bypass the proper procedure for making commits and pull requests, you will not receive marks for your contributions.
+
+:::
+
 There is an additional restriction: **Don't push to the main branch**. This is a common restriction in the workplace, where the main branch is protected.
 
 Group members should decide which functions they are working on, and then create a branch to commit to. Once a function is complete, they will open a pull request and their group members can approve it. The code then becomes part of the 'main' branch.
@@ -143,11 +149,11 @@ Group is prepared, and brings good ideas | 5
 Script is demonstrated | 2
 Authors can explain their code | 8
 **Final Submission:** | 
-Assignment is relevant, useful, and shows ambition | 2
-Assignment has clean, organized output | 1
-Assignment executes without error | 2
+Assignment fulfills minimum viable product | 2
+Assignment has clean, organized output | 2
+Assignment has sensible arguments, default behaviour | 3
 Code is well documented | 5
-Appropriate Code Commits and Use of GitHub | 5
+Appropriate Code Commits and Use of GitHub | 3
 
 ### Individual
 

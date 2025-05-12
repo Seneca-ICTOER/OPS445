@@ -19,9 +19,7 @@ Example:
 The end date is Fri, 29/12/2023.
 ```
 
-## Restrictions
-
-:::danger
+:::warn[Restrictions]
 
 - You may **only use `sys` for parsing command line arguments**.
 - No other modules are allowed
