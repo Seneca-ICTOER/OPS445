@@ -70,7 +70,7 @@ Use the check script to verify your work so far.
 - `python3 checkA1.py -f -v TestLeap`
 - `python3 checkA1.py -f -v TestMonMax`
 
-### Continue Creating Your Functions
+### Milestone 2
 
 1. Complete the `day_iter()` function. Given a starting date and number of days, `day_iter()` should call either `after()` (if the number is positive) or `before()` (if the number is negative). inside of a loop. Once the loop as completed, this function should return the end date as a DD/MM/YYYY string.
 1. Complete the `valid_date()` function. This should use error checking to make sure that any date entered by the user is valid.
