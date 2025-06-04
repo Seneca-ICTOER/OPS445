@@ -28,7 +28,7 @@ The end date is Fri, 29/12/2023.
 
 ## Instructions
 
-The assignment will be broken into one milestone and one final submission. Please update your repository for the milestone and complete the final submission in order to earn all marks.
+The assignment will be broken into two milestones and one final submission. Please update your repository for the milestones and complete the final submission in order to earn all marks.
 
 Deadlines will be given by your instructor.
 
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     after('25/01/2023')
 ```
 
-2. Use your understanding of `after()` to complete the `before()` function. This should return a previous day's date.
+2. Use your understanding of `after()` to make **in-line comments** inside `after()`. Then, use your understanding to complete the `before()` function. This should return a previous day's date.
 
 This Milestone will also ask you to _refactor_ your code. This means modifying existing code to make it more portable.
 
@@ -147,10 +147,10 @@ A workplace will have its own policy about how often to commit, and how to docum
 Element | Marks
 --------|------:
 **Milestone 1:** | 
-TestAfter Checks | 3
-TestBefore Checks | 3
-TestLeap Checks  | 2
-TestMonMax Checks | 2
+TestAfter Checks and Comments | 3
+TestBefore Checks and Comments | 3
+TestLeap Checks: was it refactored?  | 2
+TestMonMax Checks: was it refactored? | 2
 **Milestone 2:** | 
 TestValidDate Checks | 4
 TestDayIter Checks | 6
