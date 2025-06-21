@@ -35,13 +35,31 @@ Other options are possible. Bring your ideas to the first meeting for approval.
 - All the code and required files will be inside your repository. You should clone your repo onto the Linux machine you are using to demonstrate your assignment, and I should be able to run `git log` to see the commits you've made.
 - Any additional configuration needed to get your assignment working (ie. you need to make changes to system configuration files) must be documented and included in your repository.
 
-## Process
+## The Design Process (As It Occurs In The Real World)
+
+All project plans are focused on identifying _blocking tasks_ (that is, tasks that need to completed before other tasks can even be started on) and then prioritising those tasks. Researching possible solutions, for example, is necessary before we ever start writing a line of code. 
+
+The design process should look like this:
+
+1. Identify problems
+1. Research solutions
+1. Break the solutions into 1 or more functions (with input and output)
+1. Complete the required functions
+1. TEST!
+1. Complete the main block
+1. TEST!
+1. Write comments and documentation
+1. Merge into the main branch
+
+When you complete this process for your Minimum Viable Product, you can start to _iterate_ upon the code. Suggest improvements, polish the presentation of the output, experiment with additional features. 
+
+## The Design Process (For This Assignment)
 
 This assignment will take some time to complete. Be sure to start early and identify obstacles as quickly as possible.
 
 ### Initial Meetup
 
-- You will be assigned to a group. Meet with your group members, and arrange methods of communication (email, Teams, etc.)
+- You will be assigned to a group. Meet with your group members, and arrange methods of communication (email, Teams, etc.) A **Discussion Topic** on **Blackboard** is provided for you.
 - Begin discussing a topic for your assignment. **It is strongly recommended you have 2-3 ideas** in case your first choice isn't suitable.
 - Every group member should verify that their **git** configuration is set to identify them using their **myseneca email**. Note: use `git config user.email` on each of your devices to verify this. 
 
@@ -53,12 +71,17 @@ These will be done either online or in-person, and it is expected that **all gro
 - Be prepared to answer some questions:
     - How will your program gather required input?
     - How will your program accomplish its requirements? 
-    - How will output be presented?
+    - What output will be presented?
     - What arguments or options will be included?
     - What aspects of development do you think will present the most challenge?
-    - When do you estimate you will complete each part of the task? Provide a rough timeline for planning, coding, testing, and documenting your assignment.
+- Provide a plan for completion, and a method for dividing the work:
+    - What research will be required to make things work? 
+    - Identify functions that _need_ to be complete before other parts will work.
+    - Who will write these functions? Who will work on the main block?
+    - How will you test your work?
+    - How much progress do you hope to have made by next week? By the end of week 2?
 
-This meeting will be a dialogue, since there might be some changes or suggestions that come up during our initial meeting. 
+This meeting will be a dialogue, since there might be some changes or suggestions that come up during our initial meeting. It's not necessary to **get everything right on the first try**, projects often go longer than expected! But you should have at least thought about some of these questions.
 
 Once you have gotten approval for your script, you will get access to your repository for development. **Include the description, overview and summary of the above questions** inside your repository's `README.md` file.
 
@@ -96,6 +119,10 @@ When group members finish a feature that will become part of the assignment, the
 
 I have prepared a [short video](https://youtu.be/gqa59TkMH1w) that demonstrates this entire process.
 
+###  Research
+
+Your research findings should be included as comments in the `assignment2.py` file, or in the README. Your research should include **links to any websites or external resources** that you used. You should bring any **books** you used to code review for inspection.
+
 ### Completing the Assignment
 
 Once the code is considered complete, you will use a new feature to define the final version of your code: tag your commit 'final' when you have completed the assignment.
@@ -118,14 +145,12 @@ I will be verifying this when it's time to demonstrate your assignment.
 On the day of your demonstration, again **all group members are expected to
 attend**. 
 
-- The assignment should be running on Matrix, MyVMLab, or one of your Linux VMs.
-- Students can demonstrate what the assignment does, and why it's useful. 
-- Demonstrate additional options and arguments. Please also note what
-  configuration changes were needed (if any)
+- For in-person sections, the assignment should be running on Matrix, MyVMLab, or one of your Linux VMs.
+- For online sections, I will clone your repository and run it locally.
 - Use `git status` and `git log` in the repository directory.
+- I will run the code, and evaluate the user experience, command line arguments, and readability of the output.
 - I will ask you specific questions about how your code works. If you wrote the
   code, you will be required to explain.
-- Code that cannot be explained will **result in a penalty for the entire group**.
 
 At the conclusion of your Code Review, the assignment is considered complete. I will use the commit tagged 'final' on **GitHub** to evaluate your work. 
 
@@ -145,19 +170,20 @@ Criteria | Points
 ---------|--------
 **Proposal:** |
 Group is prepared, and brings good ideas | 5
-**Code Review:** |
-Script is demonstrated | 2
-Authors can explain their code | 8
-**Final Submission:** | 
+**Code Review:** | 
+GitHub Tag Used | 1
 Assignment fulfills minimum viable product | 2
 Assignment has clean, organized output | 2
 Assignment has sensible arguments, default behaviour | 3
+**Final Submission:** | 
+Research and References | 5
 Code is well documented | 5
-Appropriate Code Commits and Use of GitHub | 3
+Appropriate Code Commits and Use of GitHub | 2
 
 ### Individual
 
 Criteria | Points
 ---------|--------
+Code Review Participation | 5
 Contributed Commits | 10
 Post Mortem | 10 
