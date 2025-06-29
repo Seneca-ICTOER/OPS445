@@ -182,7 +182,7 @@ Wrong number of arguments:
 `assignment1.py 21/05/2023`
 
 ```
-Usage: assignment1.py YYYY-MM-DD NN
+Usage: assignment1.py DD/MM/YYYY NN
 ```
 
 If either the date or the number is invalid, print usage:
@@ -190,5 +190,5 @@ If either the date or the number is invalid, print usage:
 `assignment1.py 31/02/2023 gorilla`
 
 ```
-Usage: assignment1.py YYYY-MM-DD NN
+Usage: assignment1.py DD/MM/YYYY NN
 ```
