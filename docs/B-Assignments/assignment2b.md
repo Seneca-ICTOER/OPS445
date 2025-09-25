@@ -99,11 +99,11 @@ You will need to complete the functions inside the provided file called `duim.py
 
 ### Additional Functions
 
-You may create any other functions that you think appropriate, especially when you begin to build additional functionality. Part of your evaluation will be on how "re-usable" your functions are, and sensible use of arguments and return values.
+You may create any other functions that you think appropriate, especially when you begin to build additional functionality. 
 
 ### Use of GitHub
 
-You will be graded partly on the quality of your Github commits. You may make as many commits as you wish, it will have no impact on your grade. The only exception to this is **assignments with very few commits**. These will receive low marks for GitHub use and may be flagged for possible academic integrity violations. **Assignments that do not adhere to these requirements may not be accepted**.
+You will be graded partly on the quality of your Github commits. **Assignments with very few commits will receive low marks for GitHub use and may be flagged for possible academic integrity violations.**
 
 Professionals generally follow these guidelines:
 
@@ -117,12 +117,9 @@ After fixing a problem, make a commit and push your code.
 
 **GitHub is your backup and your proof of work.**
 
-These guidelines are not always possible, but you will be expected to follow these guidelines as much as possible. Break your problem into smaller pieces, and work iteratively to solve each small problem. Test your code after each small change you make, and address errors as soon as they arise. It will make your life easier!
-
-
 ### Coding Standard
 
-Your python script must follow the following coding guide:
+Your python script should follow the following coding guide:
 
   - [PEP-8 -- Style Guide for writing Python Code](https://www.python.org/dev/peps/pep-0008/)
 
@@ -132,7 +129,7 @@ There are three types of comments in programming and your assignment should cont
 
   - The top-level docstring should contain information about what your script does. This is included in the duim.py file. **Please complete the top-level docstring**.
   - Use Python's function docstrings to document how each of the functions work. The docstring should describe what each function does.
-  - Your script should also include in-line comments to explain anything that isn't immediately obvious to a beginner programmer. For these comments, it's always better to explain _why_ your code is doing what it does rather than _what_ it's doing. Also: **It is expected that you will be able to explain how each part of your code works in detail**.
+  - Your script should also include **in-line comments** to explain anything that isn't immediately obvious to a beginner programmer. For these comments, it's always better to explain _why_ your code is doing what it does rather than _what_ it's doing. Also: **It is expected that you will be able to explain how each part of your code works in detail**.
 
 
 **Authorship Declaration**
@@ -166,12 +163,15 @@ In order to complete `percent_to_graph()`, it's helpful to know the equation for
 
 In this equation, \`\`x\`\` refers to your input value percent, and \`\`y\`\` will refer to the number of symbols to print. The max of percent is 100 and the min of percent is 0. Be sure that you are rounding to an integer, and then print that number of symbols to represent the percentage. The number of spaces that you print will be the inverse.
 
-Test your functions with the Python interpreter. Use `python3`, then:
+Test your functions with the VS Code debugger. Modify your main block:
 
 ```python
-   import duim
-   duim.percent_to_graph(50, 10)
+if __name__ == "__main__":   
+   percent_to_graph(50, 10)
+   pass
 ```
+
+Set a break point on the function call, then _step into_ the function. Is it returning the output you expect? If not, why not?
 
 To test with the check script, run the following:
 
@@ -249,12 +249,11 @@ Once you have achieved the Milestones, you will have to do the following to get 
        - For each subdirectory of target directory, you will need to calculate a percentage, using the total of the target directory.
        - Once you've calculated percentage, call `percent_to_graph` with a max\_size of your choice.
        - For every subdirectory, print _at least_ the percent, the bar graph, and the name of the subdirectory.
-       - The target directory **should not** have a bar graph.
 
 
 ## Additional Features
 
-After completing the above, you are expected to add some additional features. Some improvements you could make are:
+After completing the above, you could add some additional features. Some improvements you could make are:
 
   - Format the output in a way that is easy to read.
   - Add colour to the output.
@@ -270,30 +269,16 @@ It is expected that the additional features you provided should be useful, non-t
 ## The Assignment (due date on Blackboard)
 
   - Be sure to make your final commit before the deadline. Don't forget to also use `git push` to push your code into the online repository!
-  - Then, copy the contents of your **duim.py** file into a2\_yoursenecauser.py, and submit it to Blackboard along with a2\_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
 
 
 ## Rubric
 
 | **Task** |	**Maximum mark** |	**Actual mark** |
 | :--- | :--- | :--- |
-| Program Authorship Declaration |	5	 | |
-| Program Output: Correct Values | 10 | |
-| Program Output: Design and Appearance | 10 | |
-| Required Functions: Code Quality | 10 | |
-| Additional Functions: Code Quality | 5 | |
-| Main Loop: Code Quality	| 10	| |
-| Additional Features Implemented	| 10	| |
+| Program Output: Correct Values | 5 | |
+| Program Output: Design and Appearance | 5 | |
 | Docstrings and Comments	| 10 | |
 | Github.com Repository: Commit Messages and Use	| 10	| |
 | First Milestone	| 10	| |
 | Second Milestone	| 10	| |
-| **Total**	| 100	| |
-
-
-## Due Date and Final Submission requirement
-
-Please submit the following files by the due date:
-
-  - Your python script, named as 'duim.py', in your repository, and also **submitted to Blackboard** as a2\_yoursenecauser.py
-  - Submit it to Blackboard along with a2\_output.txt generated from **CheckA2.py -f -v** script. _I will use GitHub to evaluate your deadline, but submitting to Blackboard tells me that you wish to be evaluated_.
+| **Total**	| 50	| |
