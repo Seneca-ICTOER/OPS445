@@ -54,14 +54,6 @@ In your repository you will find a file called **duim.py**. This file contains s
 
 Also in your repository you will find **CheckA2.py**. You can use this check script to check your work.
 
-**Alternative Starting Code**
-
-If your section is not providing an invite code to the repo, you should create a GitHub repo, add your instructor as an owner of the repo, and download the following files:
-
-  - [duim.py (starting code)](https://raw.githubusercontent.com/OPS445-W22/a2/files/duim.py)
-  - [CheckA2.py (check script)](https://raw.githubusercontent.com/OPS445-W22/a2/files/CheckA2.py)
-
-
 ### Permitted Modules
 
 **Your python script is allowed to import only the subprocess, argparse and sys modules from the standard library.**
