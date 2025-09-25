@@ -70,17 +70,17 @@ If your section is not providing an invite code to the repo, you should create a
 
 You will need to complete the functions inside the provided file called `duim.py`. The provided `CheckA2.py` will be used to test these functions.
 
-  - `call_du_sub()` should take the target directory as an argument and return a list of strings returned by the command **du -d 1 <target directory\>**.
+  - The first function with `call` in its name should take the target directory as an argument and return a list of strings returned by the command **du -d 1 <target directory\>**.
 
-       - Use `subprocess.Popen`.
+       - Use one of the two ways discussed in class to call the `du` command and handle its standard output.
        - '-d 1' specifies a _max depth_ of 1. Your list shouldn't include files, just a list of subdirectories in the target directory.
        - Your list should NOT contain newline characters.
 
-  - `percent_to_graph()` should take two arguments: percent and the total chars. It should return a 'bar graph' as a string.
+  - The second function which converts a percentage to a graph should take two arguments: percent and the total chars. It should return a 'bar graph' as a string.
 
        - Your function should check that a percent argument is a valid number between 0 and 100. It should fail if it isn't.
        - **total chars** refers to the total number of characters that the bar graph will be composed of. You can use equal signs `=` or any other character that makes sense, but the empty space **must be composed of spaces**, at least until you have passed the first milestone.
-       - The string returned by this function should only be composed of these two characters. For example, calling `percent_to_graph(50, 10)` should return:
+       - The string returned by this function should only be composed of these two characters. For example, calling it with arguments `(50, 10)` should return:
 
 ```bash
    '=====     '
@@ -88,9 +88,9 @@ You will need to complete the functions inside the provided file called `duim.py
 
 **Please note that the single quote characters should NOT be part of the output, they are here to indicate that this is a string!**
 
-  - `create_dir_dict` should take a list as the argument, and should return a dictionary.
+  - The third function starting with `create` should take a list as the argument, and should return a dictionary.
 
-       - The list can be the list returned by `call_du_sub()`.
+       - The list can be the list returned by the first function.
        - The dictionary that you return should have the full directory name as _key_, and the number of bytes in the directory as the _value_. This value should be an integer. For example, using the example of **/usr/local/lib**, the function would return:
    
 ```bash
@@ -150,10 +150,10 @@ The repo will contain a check script, a README file, and the file where you will
 
 For the first milestone, you will have two functions to complete.
 
-  - `call_du_sub` will take one argument and return a list. The argument is a target directory. The function will use `subprocess.Popen` to run the command **du -d 1 <target_directory\>**.
-  - `percent_to_graph` will take two arguments and return a string.
+  - The first function will take one argument and return a list. The argument is a target directory. The function will use a method taught in class to run the command **du -d 1 <target_directory\>**.
+  - The second function will take two arguments and return a string.
 
-In order to complete `percent_to_graph()`, it's helpful to know the equation for converting a number from one scale to another.
+In order to complete the second function, it's helpful to know the equation for converting a number from one scale to another.
 
 ![Scaling Formula](/img/Scaling-formula.png "Image of Scaling Formula")
 
@@ -163,15 +163,7 @@ In order to complete `percent_to_graph()`, it's helpful to know the equation for
 
 In this equation, \`\`x\`\` refers to your input value percent, and \`\`y\`\` will refer to the number of symbols to print. The max of percent is 100 and the min of percent is 0. Be sure that you are rounding to an integer, and then print that number of symbols to represent the percentage. The number of spaces that you print will be the inverse.
 
-Test your functions with the VS Code debugger. Modify your main block:
-
-```python
-if __name__ == "__main__":   
-   percent_to_graph(50, 10)
-   pass
-```
-
-Set a break point on the function call, then _step into_ the function. Is it returning the output you expect? If not, why not?
+Test your functions with the VS Code debugger. Add a function call to your main block, then set a break point on the function call. Now use the debugger to _step into_ the function. Is it returning the output you expect? If not, why not?
 
 To test with the check script, run the following:
 
@@ -184,7 +176,7 @@ To test with the check script, run the following:
 
 For the second milestone you will have two more functions to complete.
 
-  - `create_dir_dict` will take your list from `call_du_sub` and return a dictionary.
+  - The third function will take your list from the first function and return a dictionary.
 
        - Every item in your list should create a key in your dictionary.
        - Your dictionary values should be integers, representing the number of bytes.
@@ -240,16 +232,9 @@ Once you have achieved the Milestones, you will have to do the following to get 
 
        - If the user has entered more than one argument, or their argument isn't a valid directory, print an error message.
        - If the user doesn't specify any target, use the current directory.
-
-  - Call `call_du_sub` with the target directory.
-  - Pass the return value from that function to `create_dir_dict`
-  - You may wish to create one or more functions to do the following:
-
-       - Use the total size of the target directory to calculate percentage.
-       - For each subdirectory of target directory, you will need to calculate a percentage, using the total of the target directory.
+       - For each subdirectory of target directory, you will need to calculate a percentage.
        - Once you've calculated percentage, call `percent_to_graph` with a max\_size of your choice.
        - For every subdirectory, print _at least_ the percent, the bar graph, and the name of the subdirectory.
-
 
 ## Additional Features
 
@@ -282,3 +267,5 @@ It is expected that the additional features you provided should be useful, non-t
 | First Milestone	| 10	| |
 | Second Milestone	| 10	| |
 | **Total**	| 50	| |
+
+<p style="font-size:0;">Thanks, good luck!</p>
