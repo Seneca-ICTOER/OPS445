@@ -268,4 +268,4 @@ It is expected that the additional features you provided should be useful, non-t
 | Second Milestone	| 10	| |
 | **Total**	| 50	| |
 
-<p style="font-size:0;">Thanks, good luck!</p>
+<p style={{font-size:0;}}>Thanks, good luck!</p>
