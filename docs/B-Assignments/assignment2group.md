@@ -85,7 +85,7 @@ This meeting will be a dialogue, since there might be some changes or suggestion
 
 Once you have gotten approval for your script, you will get access to your repository for development. **Include the description, overview and summary of the above questions** inside your repository's `README.md` file.
 
-::: important
+:::important
 
 You will receive an email from GitHub inviting you to collaborate on the group repository. **Accept the invite ASAP because it will expire after a couple of days**. If you miss the first invite, you will get a second chance but **you will lose 50% of marks for commits.** If you miss the second invite, you will receive a **zero** for assignment 2.
 
@@ -114,7 +114,7 @@ Instructions for these processes are listed below.
 - Verify the branch you are on by using `git status`
 - You will now be able to commit and push to that branch.
 
-::: warning
+:::warning
 
 **Do not commit another group member's code, or share the repository with students with no access**. In the workplace, this would be considered a **security breach** and is a **fireable offense**. If you commit another student's code or share the repository with someone that lacks permission, **you will receive a zero for the assignment**.
 
