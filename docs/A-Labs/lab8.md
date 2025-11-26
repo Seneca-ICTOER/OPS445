@@ -31,7 +31,13 @@ Ansible uses no additional custom security infrastructure, and it uses a very si
 
 Control Machine:
 
-- Install Ansible on your Linux VM or use the Matrix server
+- Install Ansible on your Linux VM
+
+:::tip
+
+You will need **Ansible Version 2.16 or older** in order to complete this lab. As of 2025, if you are using Linux Mint, you can run `apt install ansible` to get version **2.10** which will be fine. Use `ansible --version` to verify your version of Ansible moving forward.
+
+:::
 
 Managed Machine(s) (your vm in myvmlab.senecapolytechnic):
 - To be managed by the control machine
@@ -42,7 +48,7 @@ Managed Machine(s) (your vm in myvmlab.senecapolytechnic):
 
 In this investigation, we explore the main components of the Ansible configuration management system and its operating environment. We also study a simple playbook for managing the configuration of a CentOS 7.x VM.
 
-You need at least two Linux systems for this lab: your control machine and your assigned VM in myvmlab.senecapolytechnic.ca as the managed machine. The Ansible package is already installed on matrix for you.
+You need at least two Linux systems for this lab: your control machine and your assigned VM in myvmlab.senecapolytechnic.ca as the managed machine.
 
 :::tip
 
