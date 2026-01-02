@@ -75,6 +75,7 @@ Visual Studio Code has an excellent Debugger for Python, and so it is the recomm
 
    - We will need to add the Microsoft Repository to our list of accepted repositories. These instructions are on [The Microsoft page](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions).
    - Launch Visual Studio Code. Click the Start button and type 'code', you should see the launcher for Visual Studio Code appear.
+   - Navigate to **File -> Preferences -> Settings** and then Find the Section called **Features -> Chat**. Find the option that says **Disable AI Features** and set to **True**.
    - Now install the Python extension. Press **Control+Shift+x** to open Extensions in the sidebar. (Or click on the Extensions icon on left side of the window).
    - Type 'Python' into the search bar, and click 'Install' when you find the extension created by Microsoft. You may wish to explore other extensions to customize your workspace.
 
