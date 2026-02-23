@@ -9,7 +9,7 @@ description: Assignment 2 Group Assignment
 
 ## Overview
 
-This will be a group assignment. You will be working in a group of 4 - 5 students. Every student will need to contribute code to their assignment. 
+This will be a group assignment. You will be working in a group of 4 - 5 students. Every student will need to contribute **code** to their assignment. 
 
 You are asked to **choose a task** for this assignment. Consider the topics you have learned during your college career. What topics could be completed using a Python script? What are some common jobs you might expect to do on a Linux machine running in the workplace?
 
@@ -28,18 +28,16 @@ Other options are possible. Bring your ideas to the first meeting for approval.
 
 ## Restrictions
 
-- Your assignment should be contained in one or more .py files, but should be executed from a file called `assignment2.py`.
+- Your finished code will be put into a file called `assignment2.py`.
 - You can import any modules from the Python standard library, but third-party modules are not permitted. 
 - Your assignment should use the `argparse` module to handle command line options and arguments. Refer to their [documentation](https://docs.python.org/3/howto/argparse.html) for help.
-- Your assignment must be able to run on either **Matrix**, **MyVMLab**, or one the **virtual machines** you have set up for this course. You will demonstrate the usage of your assignment on one of these machines.
+- Your assignment must be able to run on a Linux machine. You will demonstrate the usage of your assignment in class.
 - All the code and required files will be inside your repository. You should clone your repo onto the Linux machine you are using to demonstrate your assignment, and I should be able to run `git log` to see the commits you've made.
 - Any additional configuration needed to get your assignment working (ie. you need to make changes to system configuration files) must be documented and included in your repository.
 
 ## The Design Process (As It Occurs In The Real World)
 
-All project plans are focused on identifying _blocking tasks_ (that is, tasks that need to completed before other tasks can even be started on) and then prioritising those tasks. Researching possible solutions, for example, is necessary before we ever start writing a line of code. 
-
-The design process should look like this:
+The design process looks like this:
 
 1. Identify problems
 1. Research solutions
@@ -55,7 +53,7 @@ When you complete this process for your Minimum Viable Product, you can start to
 
 ## The Design Process (For This Assignment)
 
-This assignment will take some time to complete. Be sure to start early and identify obstacles as quickly as possible.
+This assignment is **broken into steps** and will take some time to complete. Be sure to start early and identify obstacles as quickly as possible.
 
 ### Initial Meetup
 
@@ -69,19 +67,12 @@ These will be done either online or in-person, and it is expected that **all gro
 
 - Provide your 2 - 3 topic ideas
 - Be prepared to answer some questions:
-    - How will your program gather required input?
-    - How will your program accomplish its requirements? 
-    - What output will be presented?
-    - What arguments or options will be included?
-    - What aspects of development do you think will present the most challenge?
-- Provide a plan for completion, and a method for dividing the work:
-    - What research will be required to make things work? 
-    - Identify functions that _need_ to be complete before other parts will work.
-    - Who will write these functions? Who will work on the main block?
-    - How will you test your work?
-    - How much progress do you hope to have made by next week? By the end of week 2?
+    - How will your program gather required **input**?
+    - What **output** will be presented?
+    - What kind of **processing** will be required to turn input into output?
+    - Are there things you don't know yet? What will you have to research?
 
-This meeting will be a dialogue, since there might be some changes or suggestions that come up during our initial meeting. It's not necessary to **get everything right on the first try**, projects often go longer than expected! But you should have at least thought about some of these questions.
+We will approve a topic and define the **Minimum Viable Product** (MVP) for the assignment. There will probably be some changes or suggestions that come up during our initial meeting. It's not necessary to **get everything right on the first try**, projects often go longer than expected! But you should have at least thought about some of these questions.
 
 Once you have gotten approval for your script, you will get access to your repository for development. **Include the description, overview and summary of the above questions** inside your repository's `README.md` file.
 
@@ -91,7 +82,44 @@ You will receive an email from GitHub inviting you to collaborate on the group r
 
 :::
 
-### Contributing to the Assignment
+### Milestone 1
+
+The milestone will be another meeting during our scheduled class. An approved proposal is a prerequisite for this milestone. Again, all group members are expected to attend. At this milestone you are expected to have:
+
+- Finished your research. You should know how you will collect data, what modules or shell commands will accomplish your goals.
+- Created function definitions for each step in your process. You should know what inputs/output each function will require. 
+- Entered comments in your main block to demonstrate how each function interacts with the next.
+
+You are **not required** to have full functions written at this point. We will discuss the workflow of your program and identify possible issues before moving forward. **Groups showing completed code at this point will receive a zero for this milestone**. 
+
+### Milestone 2
+
+Milestone is a prerequisite for this milestone. At this point you are expected to have:
+
+- Completed the **required functions** which were discussed in milestone 1.
+- **Tested** the functions.
+
+Once your functions are completed and approved, you can complete your main block and design your **argparse** function. Additional options may change how your fucntions behave. 
+
+### Assignment Demonstration and Code Review
+
+Completing at least one milestone is a prerequisite for the code review. On the day of your demonstration, again **all group members are expected to
+attend**. 
+
+- Your code **must be complete** before class begins.
+- For in-person sections, the assignment should be running on Matrix, MyVMLab, or one of your Linux VMs.
+- For online sections, I will clone your repository and run it locally.
+- Use `git status` and `git log` in the repository directory.
+- I will run the code, and evaluate the user experience, command line arguments, and readability of the output.
+- I will ask you specific questions about how your code works. If you wrote the code, you will be required to explain.
+
+At the conclusion of your Code Review, the assignment is considered complete. I will use the commit you **demonstrated in class** to evaluate your work. 
+
+### Post-Mortem
+
+There is an additional **Post-Mortem** due on Blackboard. These forms are **individual** each student must write their own.
+
+## Contributing to the Assignment
 
 :::warning
 
@@ -105,7 +133,7 @@ Group members should decide which functions they are working on, and then create
 
 Instructions for these processes are listed below.
 
-#### Setting Up Branches
+### Setting Up Branches
 
 - From GitHub, it is recommended that you create a branch for each member of your group. Click the 'main' drop-down and select 'Create a new branch'. Enter your name, or a label for the feature you are working on.
 - From your local computer, run `git clone` to clone your repo.
@@ -120,7 +148,7 @@ Instructions for these processes are listed below.
 
 :::
 
-#### Pull Requests
+### Pull Requests
 
 When group members finish a feature that will become part of the assignment, they will need to open a _pull request_. 
 
@@ -132,41 +160,6 @@ I have prepared a [short video](https://youtu.be/gqa59TkMH1w) that demonstrates 
 ###  Research
 
 Your research findings should be included as comments in the `assignment2.py` file, or in the README. Your research should include **links to any websites or external resources** that you used. You should bring any **books** you used to code review for inspection.
-
-### Completing the Assignment
-
-Once the code is considered complete, you will use a new feature to define the final version of your code: tag your commit 'final' when you have completed the assignment.
-
-#### Adding The Final Tag
-
-This should be your final step, once you have completed your work, approved all pull requests, and your 'main' branch now contains all required code and documentation.
-
-- From GitHub, find the section called 'Releases' inside the right panel.
-- Click on 'Create A New Release'.
-- Click on 'Choose a tag' and create a new tag called 'v1.0'. Make sure that branch is set to 'main'.
-- Complete the form to give the release a title of 'Final' and add a description of what's working and what isn't.
-- Click on 'Publish Release'.
-- Use this version of the code for your demonstration. From your demonstration machine, do a `git pull` command. Use `git log` to verify that you have checked out the main branch, and that the tag for the most recent commit is 'v1.0'.
-
-I will be verifying this when it's time to demonstrate your assignment.
-
-### Assignment Demonstration and Code Review
-
-On the day of your demonstration, again **all group members are expected to
-attend**. 
-
-- For in-person sections, the assignment should be running on Matrix, MyVMLab, or one of your Linux VMs.
-- For online sections, I will clone your repository and run it locally.
-- Use `git status` and `git log` in the repository directory.
-- I will run the code, and evaluate the user experience, command line arguments, and readability of the output.
-- I will ask you specific questions about how your code works. If you wrote the
-  code, you will be required to explain.
-
-At the conclusion of your Code Review, the assignment is considered complete. I will use the commit tagged 'final' on **GitHub** to evaluate your work. 
-
-### Post-Mortem
-
-There is an additional **Post-Mortem** due on Blackboard. These forms are **individual** each student must write their own.
 
 ### Commits
 
@@ -180,9 +173,12 @@ Criteria | Points
 ---------|--------
 **Proposal:** |
 Group is prepared, and brings good ideas | 5
+**Milestone 1:** |
+Research and function definitions complete | 2
+**Milestone 2:** |
+Functions complete and tested | 3
 **Code Review:** | 
-GitHub Tag Used | 1
-Assignment fulfills minimum viable product | 2
+Assignment fulfills minimum viable product | 3
 Assignment has clean, organized output | 2
 Assignment has sensible arguments, default behaviour | 3
 **Final Submission:** | 
@@ -195,5 +191,5 @@ Appropriate Code Commits and Use of GitHub | 2
 Criteria | Points
 ---------|--------
 Code Review Participation | 5
-Contributed Commits | 10
+Contributed Commits | 5
 Post Mortem | 10 
